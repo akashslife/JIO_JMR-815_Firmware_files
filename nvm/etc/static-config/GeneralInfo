@@ -1,0 +1,24 @@
+
+config group Release
+	option GenParam1 '0'
+	option GenParam2 '0'
+	option GenParam3 '0'
+	option GenParam4 '0'
+	option GenParam5 '0'
+
+config group Vendor
+	option GenParam1 '0'
+	option GenParam2 '0'
+	option GenParam3 '0'
+	option GenParam4 '0'
+	option GenParam5 '0'
+
+config group Client
+	option GenParam1 '0'
+	option GenParam2 '0'
+	option GenParam3 '0'
+	option GenParam4 '0'
+	option GenParam5 '0'
+
+
+

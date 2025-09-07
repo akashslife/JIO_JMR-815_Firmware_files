@@ -1,0 +1,31 @@
+#!/bin/sh
+
+response_format()
+{
+
+/usr/bin/atcmd /tmp/atsw4 'AT+CEREG=2' 1 &
+/usr/bin/atcmd /tmp/atsw5 'AT+CREG=2' 1 &
+
+}
+
+# for led blinking during sleep
+tstlte()
+{
+/etc/ue_lte/at.sh 'at%tstlte="op_pwr_timers","normal"' 1 &
+}
+
+
+
+case "$1" in
+  start)
+	response_format
+	tstlte
+	;;
+  stop)
+	;;
+  *)
+	;;
+esac
+
+exit $?
+

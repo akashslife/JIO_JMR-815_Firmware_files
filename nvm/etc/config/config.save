@@ -1,0 +1,65 @@
+
+Device.
+
+Device.DeviceInfo.
+  ProvisioningCode = 
+
+Device.DeviceInfo.VendorLogFile.1.
+
+Device.IP.Diagnostics.IPPing.
+  DiagnosticsState = None
+  Interface = 
+  Host = 
+  NumberOfRepetitions = 0
+  Timeout = 0
+  DataBlockSize = 0
+  DSCP = 0
+
+Device.ManagementServer.
+  EnableCWMP = true
+  URL = https://macs.oss.jio.com:8443/ftacs-digest/ACS
+  Username = RNTMFKD00544811
+  Password = h5maCMMrNYnskVWYMnrazw==
+  PeriodicInformEnable = 1
+  PeriodicInformInterval = 86400
+  PeriodicInformTime = 0001-01-01T00:00:00Z
+  ConnectionRequestUsername = 
+  ConnectionRequestPassword = 
+  UpgradesManaged = 0
+  CWMPRetryMinimumWaitInterval = 0
+  CWMPRetryIntervalMultiplier = 0
+
+Device.X_RJIL_COM_LTE.SIM_Information.
+  IMSI = n/a
+
+Device.X_RJIL_COM_LTE.LTE_System.
+  APN1 = n/a
+
+Device.WiFi.SSID.1.
+  Enable = true
+  SSID = JioFi_10831B2
+
+Device.WiFi.AccessPoint.1.
+  Enable = true
+  SSIDAdvertisementEnabled = true
+  MaxAssociatedDevices = 31
+
+Device.WiFi.AccessPoint.1.Security.
+  ModeEnabled = WPA2-Personal
+  KeyPassphrase = jur1yi9c5v
+
+Device.WiFi.AccessPoint.1.WPS.
+  Enable = true
+
+Device.WiFi.Radio.1.
+  Channel = 1
+  AutoChannelEnable = true
+
+Device.X_RJIL_Device_Settings.
+  SleepMode = true
+  SleepMode_Timer = 30
+
+Device.X_RJIL_MacFiltering.
+  Enable = false
+  Mode =  
+

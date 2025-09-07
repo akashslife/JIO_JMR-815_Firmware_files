@@ -1,0 +1,15 @@
+#!/bin/sh
+case "$1" in
+        start)
+	        /usr/local/bin/FactoryValue.sh
+		
+		#150209, restore config [START]
+		if [ -f /nvm/etc/backup_config/backup_config ];then
+		   echo ">>> Backup Config Restore start. >>>" >> /dev/kmsg
+		   /usr/local/bin/backup_config.sh restore
+		   sync
+		fi
+		#150209, restore config [END]
+                ;;
+esac
+

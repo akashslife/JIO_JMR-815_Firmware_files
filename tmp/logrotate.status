@@ -1,0 +1,27 @@
+logrotate state -- version 2
+"/tmp/ue_fileif-app.log" 1970-1-1-0:0:0
+"/tmp/vesyslog.log" 1970-1-1-0:0:0
+"/tmp/logs/mald-app.log" 1970-1-1-0:0:0
+"/tmp/logs/atswitch.log" 1970-1-1-0:3:34
+"/tmp/logs/confmng.log" 1970-1-1-0:0:0
+"/tmp/logs/vdmc-app.log" 1970-1-1-0:0:0
+"/tmp/veapp.log" 1970-1-1-0:0:0
+"/tmp/logs/ecm.log" 1970-1-1-0:0:0
+"/tmp/logs/ue_fileif-app.log" 1970-1-1-0:0:0
+"/tmp/logs/apfd_debug.log" 1970-1-1-0:0:0
+"/tmp/ModemLog/ModemFW.bin" 1970-1-1-0:0:0
+"/tmp/logs/mald-vvm-app.log" 1970-1-1-0:0:0
+"/tmp/logs/cat.log" 1970-1-1-0:0:0
+"/tmp/logs/dhcpd.log" 1970-1-1-0:0:0
+"/nvm/etc/Log_Cutoff" 1970-1-1-0:0:0
+"/tmp/logs/elc.log" 1970-1-1-0:0:0
+"/tmp/logs/mbimd.log" 1970-1-1-0:0:0
+"/tmp/logs/pwrt_sm-status.txt" 1970-1-1-0:0:0
+"/tmp/logs/SM.log" 1970-1-1-0:0:0
+"/tmp/logs/consold.log" 1970-1-1-0:0:0
+"/tmp/logs/lighttpd.error.log" 1970-1-1-0:0:0
+"/nvm/etc/Log" 1970-1-1-0:0:0
+"/tmp/logs/pwrt_sm-app.log" 1970-1-1-0:0:0
+"/tmp/logs/dhclient.log" 1970-1-1-0:0:0
+"/tmp/logs/vdm.log" 1970-1-1-0:0:0
+"/tmp/logs/db_probe.log" 1970-1-1-0:0:0

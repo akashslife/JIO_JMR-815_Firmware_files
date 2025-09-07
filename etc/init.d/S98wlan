@@ -1,0 +1,54 @@
+#!/bin/sh
+#
+#
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+
+if [ -e /proc/device-tree/soc/sdhci0@bfcf6000/status ]; then
+        sdio_status=$(cat /proc/device-tree/soc/sdhci0@bfcf6000/status);
+else
+        sdio_status="disabled";
+fi
+
+local rtl_wlan_modules_dir="/lib/modules/`uname -r`/extra/wlan_rtl"
+        WLAN_TYPE=$(cat /proc/device-tree/wlan_type);
+
+if [ -e /proc/device-tree/wifi ]; then
+	RTL_WIFI=`cat /proc/device-tree/wifi`  #jclee, check chipset rtl8192/8189
+fi
+
+WIFI_ENABLED=`uci get wifi.wifi.wifi_enabled`
+WIFI_AUTO_ENABLE=`uci get /etc/config/wifi.wifi_start.auto_enable`
+case "$1" in
+  start)
+        if ([ $PROJECT_TYPE == "WRT" ] || [ $PROJECT_TYPE == "PWRT" ]) && [ $sdio_status != "disabled" ] ; then
+                if [ $WIFI_ENABLED == "enable" ]; then
+                    #NTmore added, for more fast blue wifi on.
+                    echo 255 > /sys/class/leds/Wifi_BLUE/brightness
+                    enable-wifi.sh
+                fi
+        fi
+        echo "OK"
+        ;;
+  stop)
+        if ([ $PROJECT_TYPE == "WRT" ] || [ $PROJECT_TYPE == "PWRT" ]) && [ $sdio_status != "disabled" ] ; then
+                echo PROJECT_TYPE $PROJECT_TYPE
+                if [ $WLAN_TYPE == "ATH" ] ; then
+                        wifi-control.sh stop
+                else
+                        ifconfig wlan0 down
+			rmmod ${RTL_WIFI}es.ko
+
+                fi
+        fi
+        echo "OK"
+        ;;
+  restart|reload)
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?
+

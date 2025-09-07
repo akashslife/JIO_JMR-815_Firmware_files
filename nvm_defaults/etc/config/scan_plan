@@ -1,0 +1,8 @@
+
+config 'scan_plan' 'value'
+	option 'scan_plan_en' '1'
+	option 'SP_MODE' '2'
+	option 'SP_SCHED_SCHEME' '1'
+	option 'SP_SCHED_COUNTER' '4'
+	option 'tested' '0'
+

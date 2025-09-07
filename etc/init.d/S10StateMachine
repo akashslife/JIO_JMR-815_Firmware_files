@@ -1,0 +1,47 @@
+#!/bin/sh
+#
+#
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+
+if [ -e /proc/device-tree/wlan_type ]; then
+        WLAN_TYPE=$(cat /proc/device-tree/wlan_type);
+else
+        WLAN_TYPE="ATH"
+fi
+
+if [ -e /proc/device-tree/altair_compatible_hw ] ; then
+	ALTAIR_HW_COMPAT=$(cat /proc/device-tree/altair_compatible_hw);
+else
+	ALTAIR_HW_COMPAT="0"
+fi
+	    
+if [ $PROJECT_TYPE != "PWRT" -o $ALTAIR_HW_COMPAT != "1" ]; then 
+	echo "not PWRT skipping script "$0  > /dev/kmsg       
+	exit 0
+fi
+
+case "$1" in
+  start)
+        if [ $PROJECT_TYPE == "PWRT" ]; then
+
+		if [ -f /pwrt_sm ];then
+		    echo "pwrt_sm update.....">/dev/kmsg
+		    mv /pwrt_sm /usr/bin/
+		    chmod a+x /usr/bin/pwrt_sm
+		fi
+		pwrt_sm $WLAN_TYPE &
+           fi
+        ;;
+  stop)
+        killall pwrt_sm
+        echo "OK"
+        ;;
+  restart|reload)
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

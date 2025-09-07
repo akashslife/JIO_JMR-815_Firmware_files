@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# GPL $Id: telnetd,v 1.2 2005/03/22 15:06:14 cvonk Exp $
+# system init for Telnet server
+
+SERVICE_STATUS=`uci get admin.services.telnet`
+
+case "$1" in
+    start)
+        if [ $SERVICE_STATUS != "enable" ]
+        then
+            exit 0
+        fi
+
+        telnetd -l /bin/sh
+        ;;
+    stop)
+        killall telnetd 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof telnetd | sed "s/$$\$//" | grep -q [0-9] ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

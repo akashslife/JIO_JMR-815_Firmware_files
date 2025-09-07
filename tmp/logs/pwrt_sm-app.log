@@ -1,0 +1,941 @@
+00:00:12.103 DEVICE TYPE RTL
+00:00:12.106 Starting State Machine
+00:00:12.149 PWRT SM start: wifi auto enable = true
+00:00:12.150 change_state: state OFF         (0), new state OPERATIONAL (2) ,new_event 8 data 0
+00:00:12.151 ST_OPERATIONAL_entry ENTRY: pCurrState 2 at state 2 event 8 data 0x0
+00:00:12.206 ST_OPERATIONAL WIFI_START when no callback
+00:00:12.258 at socket openned
+00:00:12.258 send AT command: AT+CIMI
+ (len 9)
+00:00:12.262 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:12.268 at socket openned
+00:00:12.269 send AT command: AT+CIMI
+ (len 9)
+00:00:12.272 get AT RSP : AT+CIMIERROR
+ (len 15)
+00:00:12.278 at socket openned
+00:00:12.278 send AT command: AT+CIMI
+ (len 9)
+00:00:12.279 err: send AT command tv_sec : 10
+00:00:12.282 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:12.287 err: AT+CIMI error 
+00:00:13.304 at socket openned
+00:00:13.305 send AT command: AT+CIMI
+ (len 9)
+00:00:13.308 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:13.313 at socket openned
+00:00:13.314 send AT command: AT+CIMI
+ (len 9)
+00:00:13.316 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:13.322 at socket openned
+00:00:13.322 send AT command: AT+CIMI
+ (len 9)
+00:00:13.323 err: send AT command tv_sec : 10
+00:00:13.325 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:13.331 err: AT+CIMI error 
+00:00:14.331 at socket openned
+00:00:14.332 send AT command: AT+CIMI
+ (len 9)
+00:00:14.335 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:14.340 at socket openned
+00:00:14.341 send AT command: AT+CIMI
+ (len 9)
+00:00:14.343 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:14.349 at socket openned
+00:00:14.349 send AT command: AT+CIMI
+ (len 9)
+00:00:14.350 err: send AT command tv_sec : 10
+00:00:14.352 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:14.358 err: AT+CIMI error 
+00:00:15.359 at socket openned
+00:00:15.359 send AT command: AT+CIMI
+ (len 9)
+00:00:15.362 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:15.368 at socket openned
+00:00:15.368 send AT command: AT+CIMI
+ (len 9)
+00:00:15.371 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:15.377 at socket openned
+00:00:15.377 send AT command: AT+CIMI
+ (len 9)
+00:00:15.377 err: send AT command tv_sec : 10
+00:00:15.380 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:15.386 err: AT+CIMI error 
+00:00:16.386 at socket openned
+00:00:16.387 send AT command: AT+CIMI
+ (len 9)
+00:00:16.390 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:16.395 at socket openned
+00:00:16.396 send AT command: AT+CIMI
+ (len 9)
+00:00:16.399 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:16.405 at socket openned
+00:00:16.405 send AT command: AT+CIMI
+ (len 9)
+00:00:16.405 err: send AT command tv_sec : 10
+00:00:16.408 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:16.414 err: AT+CIMI error 
+00:00:17.415 at socket openned
+00:00:17.415 send AT command: AT+CIMI
+ (len 9)
+00:00:17.418 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:17.423 at socket openned
+00:00:17.424 send AT command: AT+CIMI
+ (len 9)
+00:00:17.426 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:17.432 at socket openned
+00:00:17.433 send AT command: AT+CIMI
+ (len 9)
+00:00:17.433 err: send AT command tv_sec : 10
+00:00:17.436 get AT RSP : AT+CIMI
+ERROR
+ (len 16)
+00:00:17.441 err: AT+CIMI error 
+00:00:17.442 at socket openned
+00:00:17.442 send AT command: AT%STATUS="USIM"
+ (len 18)
+00:00:17.445 get AT RSP : AT%STATUS="USIM"
+USIM: NO USIM, Activated 1 times, Verified 1 times
+OK
+ (len 74)
+00:00:17.462 at socket openned
+00:00:17.462 send AT command: AT%MBMSCMD="service_en",0
+ (len 27)
+00:00:17.467 get AT RSP : AT%MBMSCMD="service_en",0
+OK
+ (len 31)
+00:00:17.473 at socket openned
+00:00:17.473 send AT command: AT+CFUN=4
+ (len 11)
+00:00:17.474 err: send AT command tv_sec : 40
+00:00:17.711 get AT RSP : AT+CFUN=4
+OK
+ (len 15)
+00:00:19.717 at socket openned
+00:00:19.717 send AT command: at%tstlte="op_pwr_timers","normal"
+ (len 36)
+00:00:19.720 get AT RSP : at%tstlte="op_pwr_timers","normal"
+OK
+ (len 40)
+00:00:19.726 AT%TSTLTE VALUE is normal
+00:00:19.728 pwrt_sm_wps_button_thread_entry_pt entry
+00:00:19.730 pwrt_sm_cli_events_thread_entry_pt: entry
+00:00:19.745 pwrt_cut_off_thread_entry_pt: entry
+00:00:19.745 Connecting to /sys/class/gpio/gpio45/value
+00:00:19.747 connected to /sys/class/gpio/gpio45/value (fd 6)
+00:00:19.747 WPS button released 
+00:00:19.747 pwrt_sm_restore_button_thread_entry_pt: entry
+00:00:19.747 pwrt_sm_lte_leds_thread_entry_pt entry
+00:00:19.747 pwrt_sm_wifi_station_monitor_thread_entry_pt: entry
+00:00:19.747 ---> pwrt_sm_charger_thread_entry_pt entry
+00:00:19.756 -> BQ24295_init: entry
+00:00:19.756 pwrt_sm_battey_monitor_thread_entry_pt: entry
+00:00:19.756 pwrt_sm_pmu_thread_entry_pt entry 
+00:00:19.758 pwrt_sm_read_value_from_phys_mem: addr B0238548 value F2008401
+00:00:19.760 pwrt_sm_write_value_to_phys_mem: addr B0238548 value F2008401
+00:00:19.760 pwrt_sm_main_thread: entry
+00:00:19.765 -> BQ24295_init write 1B to 1
+00:00:19.768 -> BQ24295_setBatteryVolatge settint to 4300 mV writing CA to 4
+00:00:19.776 0	32
+00:00:19.778 1	1B
+00:00:19.781 2	20
+00:00:19.783 3	11
+00:00:19.785 4	CA
+00:00:19.787 5	8C
+00:00:19.789 6	93
+00:00:19.791 7	4B
+00:00:19.794 8	45
+00:00:19.796 9	02
+00:00:19.811 Connecting to /sys/class/gpio/gpio35/value
+00:00:19.812 connected to /sys/class/gpio/gpio35/value (fd 7)
+00:00:19.812 [pwrt_sm_charger_thread_entry_pt]  use_poll: 1 infinite_timeout: -1
+00:00:19.819 start Restore Default thread on GPIO 85 (fd 5) config short 1, long 5
+00:00:19.850 pwrt_cut_off_thread_entry_pt,cut_off periodic_time : [30000]
+00:00:19.851 cut_off_periodic_time will be configure to 30000
+00:00:19.880 poll_period=5000
+00:00:19.881 no_station_timeout=1800
+00:00:19.881 pwrt_sm_register_wifi_station_cb register callback
+00:00:19.881 send EV_STA_MONITOR_INIT event to SM
+00:00:19.881 postEvent: got event station monitor init  (9) with data 00000000
+00:00:19.882 pwrt_sm_main_thread: signalled 
+00:00:19.882 pwrt_sm_main_thread: cur state 2 got event 9 data 0
+00:00:19.882 ST_OPERATIONAL_handler: pCurrState 2 at state 2 event 9 data 0x0
+00:00:19.883 wifi_station_monitoring_enable_cb on_off=1
+00:00:19.883 start polling_timer to long period 5:0
+00:00:19.883 ST_OPERATIONAL: wifi_station_cb called when pwrt_wifi_state=0
+00:00:19.884 WIFI STA MONITOR THREAD EXIT
+00:00:19.891 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:19.891 err: pwrt_sm_battey_monitor_thread_entry_pt: battery not presetnt - battery monitor thread is stopped00:00:19.910 pwrt_sm_pmu_thread_entry_pt longDurationMs 2000 ms
+00:00:19.912 Connecting to /sys/class/gpio/gpio82/value
+00:00:19.913 connected to /sys/class/gpio/gpio82/value fd 13
+00:00:19.990 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:19.991 Gauge reading failed indicating no battery
+00:00:19.993 -> BQ24295_getStatus : NotCharging, status: 0
+00:00:19.993 charger getStatus=PreCharge
+00:00:19.993 postEvent: got event Charger Disconnected  (4) with data 00000000
+00:00:19.994 charger int received! (2)
+00:00:19.994 handleCharger - charger interrupt occured
+00:00:19.994 pwrt_sm_main_thread: signalled 
+00:00:19.995 pwrt_sm_main_thread: cur state 2 got event 4 data 0
+00:00:19.995 ST_OPERATIONAL_handler: pCurrState 2 at state 2 event 4 data 0x0
+00:00:19.995 ST_OPERATIONAL: wifi_station_cb called when pwrt_wifi_state=0
+00:00:19.996 wifi_station_monitoring_enable_cb on_off=1
+00:00:19.996 start polling_timer to long period 5:0
+00:00:20.029 pwrt_cut_off_thread_entry_pt,cut_off count : [6]
+00:00:20.030 cut_off_count will be configure to 6
+00:00:20.030 ev cli file name (from config /tmp/pwrt_sm_event_file) is /tmp/pwrt_sm_event_file
+00:00:20.060 pwrt_cut_off_thread_entry_pt,cut_off temperature : [70]
+00:00:20.070 pwrt_sm_battey_monitor_thread_entry_pt: poll period 5 s, low threshold 10 
+00:00:20.085 pwrt_cut_off_get_enable_config,pwrt_cut_off_config enable : [enable]
+00:00:20.090 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:20.091 Gauge reading failed indicating no battery
+00:00:20.091 [handleCharger]  CHARGING 
+00:00:20.099 USIM Status : NO USIM
+00:00:20.111 pwrt_cut_off_thread_entry_pt,charging_ctrl_high_temp : [55]
+00:00:20.121 pwrt_cut_off_thread_entry_pt,charging_ctrl_mid_temp : [52]
+00:00:20.130 pwrt_cut_off_thread_entry_pt,charging_ctrl_low_temp : [20]
+00:00:20.139 pwrt_charging_ctrl_get_enable_config,charging_ctrl_enable enable : [enable]
+00:00:20.165 [handleCharger]  g_nBatteryLevel=-1 Calling pwrt_sm_battey_monitor_battery_level
+00:00:20.200 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:20.300 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:20.301 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:20.301 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:20.301 [pwrt_sm_battey_monitor_thread_entry_pt] No-Battery!! Setting Battery LED_GREEN fixed 
+00:00:20.322 [BATT LED]g_nBatteryLevel -1 color: 1 ntrigger 0
+00:00:20.353 err: error: battery reported full capacity as 0 mAh!
+00:00:20.400 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:20.500 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:20.501 [handleCharger]  Battery Level: 0 
+00:00:20.510 [BATT LED]g_nBatteryLevel -1 color: 1 ntrigger 0
+00:00:20.577 -> pwrt_sm_action_detect_power_source: entry osd 0
+00:00:20.579 usb_if=osd_algo
+00:00:20.579 last_os=6
+00:00:20.579 -> pwrt_sm_action_detect_power_source: entry osd 0 usb_if osd_algo last os 6
+00:00:20.580 -> pwrt_sm_action_detect_power_source: exit charging src = 1(0-no, 1 host 2 charger)00:00:20.580 HOST source detected 
+00:00:20.581 -> BQ24295_setBatteryVolatge settint to 4300 mV writing CA to 4
+00:00:20.585 Cable Status: 1 (0: UnKnown, 1: Host, 2: Adapter, 3: OTG)
+00:00:20.587 cableStatus 1 chargingSource 1
+00:00:20.588 -> BQ24295_setUSBLimit: 1 0-UltarLow,1-Low,2-High,3-CurrentLow,4-LowTemp
+00:00:20.589 -> BQ24295_setBatteryVolatge settint to 4300 mV writing CA to 4
+00:00:20.593 -> BQ24295_setUSBlimitLow write 32 to 0
+00:00:20.596 -> BQ24295_setUSBlimitLow write 0 to 2
+00:00:20.598 postEvent: got event Charger Connected     (3) with data 00000000
+00:00:20.599 pwrt_sm_main_thread: signalled 
+00:00:20.599 pwrt_sm_main_thread: cur state 2 got event 3 data 0
+00:00:20.599 ST_OPERATIONAL_handler: pCurrState 2 at state 2 event 3 data 0x0
+00:00:25.097 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:25.205 USIM Status : NO USIM
+00:00:25.450 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:25.550 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:25.551 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:25.551 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:25.551 err: error: battery reported full capacity as 0 mAh!
+00:00:26.972 pwrt_sm_cli_events_thread_entry_pt: Received external event: WIFI_START
+
+00:00:26.972 postEvent: got event external cli event    (11) with data 0043BD00
+00:00:26.973 pwrt_sm_main_thread: signalled 
+00:00:26.973 pwrt_sm_main_thread: cur state 2 got event 11 data 43BD00
+00:00:26.973 ST_OPERATIONAL_handler: pCurrState 2 at state 2 event 11 data 0x43BD00
+00:00:26.974 ST_OPERATIONAL got ext ev: WIFI_START
+ (len 11)
+00:00:26.974 SM WIFI_START by CLI
+00:00:30.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:30.293 USIM Status : NO USIM
+00:00:30.334 connected : 0 
+00:00:30.335 at socket openned
+00:00:30.335 send AT command: AT+CPIN?
+ (len 10)
+00:00:30.338 get AT RSP : AT+CPIN?
+ERROR
+ (len 17)
+00:00:30.343 err: AT+CPIN? error 
+00:00:30.614 Charger polling timeout
+00:00:30.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:30.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:30.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:30.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:30.811 err: error: battery reported full capacity as 0 mAh!
+00:00:30.813 -> BQ24295_getStatus : NotCharging, status: 0
+00:00:30.815 -> BQ24295_getFault : FaultChargeNormal 0
+00:00:30.816 -> BQ24295_getFault : FaultColdOver 1
+00:00:30.816 -> BQ24295_getFault : FaultHotNormal 0
+00:00:30.816 err: Charger error blinking: Falut Type 0x2
+00:00:35.073 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:35.381 USIM Status : NO USIM
+00:00:35.910 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:36.010 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:36.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:36.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:36.011 err: error: battery reported full capacity as 0 mAh!
+00:00:40.087 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:40.419 USIM Status : NO USIM
+00:00:40.826 Charger polling timeout
+00:00:40.828 -> BQ24295_getStatus : NotCharging, status: 0
+00:00:40.830 -> BQ24295_getFault : FaultChargeNormal 0
+00:00:40.830 -> BQ24295_getFault : FaultColdOver 1
+00:00:40.831 -> BQ24295_getFault : FaultHotNormal 0
+00:00:40.831 err: Charger error blinking: Falut Type 0x2
+00:00:41.110 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:41.210 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:41.211 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:41.211 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:41.211 err: error: battery reported full capacity as 0 mAh!
+00:00:45.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:45.458 USIM Status : NO USIM
+00:00:46.310 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:46.410 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:46.411 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:46.411 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:46.411 err: error: battery reported full capacity as 0 mAh!
+00:00:50.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:50.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:00:50.231 err: [TEMP]Read Error : Batt EXT temparature
+00:00:50.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:00:50.331 err: [CURRENT]Read Error : Batt current
+00:00:50.331 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:00:50.502 USIM Status : NO USIM
+00:00:50.539 connected : 0 
+00:00:50.539 at socket openned
+00:00:50.540 send AT command: AT+CPIN?
+ (len 10)
+00:00:50.543 get AT RSP : AT+CPIN?
+ERROR
+ (len 17)
+00:00:50.548 err: AT+CPIN? error 
+00:00:50.841 Charger polling timeout
+00:00:50.843 -> BQ24295_getStatus : NotCharging, status: 0
+00:00:50.845 -> BQ24295_getFault : FaultChargeNormal 0
+00:00:50.846 -> BQ24295_getFault : FaultColdOver 1
+00:00:50.846 -> BQ24295_getFault : FaultHotNormal 0
+00:00:50.846 err: Charger error blinking: Falut Type 0x2
+00:00:51.510 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:51.610 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:51.611 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:51.611 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:51.611 err: error: battery reported full capacity as 0 mAh!
+00:00:55.103 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:00:55.592 USIM Status : NO USIM
+00:00:56.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:00:56.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:00:56.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:00:56.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:00:56.811 err: error: battery reported full capacity as 0 mAh!
+00:01:00.075 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:00.629 USIM Status : NO USIM
+00:01:00.857 Charger polling timeout
+00:01:00.859 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:00.861 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:00.861 -> BQ24295_getFault : FaultColdOver 1
+00:01:00.862 -> BQ24295_getFault : FaultHotNormal 0
+00:01:00.862 err: Charger error blinking: Falut Type 0x2
+00:01:01.910 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:02.010 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:02.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:02.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:02.011 err: error: battery reported full capacity as 0 mAh!
+00:01:05.077 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:05.666 USIM Status : NO USIM
+00:01:07.110 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:07.210 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:07.211 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:07.211 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:07.211 err: error: battery reported full capacity as 0 mAh!
+00:01:10.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:10.704 USIM Status : NO USIM
+00:01:10.744 connected : 0 
+00:01:10.744 at socket openned
+00:01:10.744 send AT command: AT+CPIN?
+ (len 10)
+00:01:10.747 get AT RSP : AT+CPIN?
+ERROR
+ (len 17)
+00:01:10.753 err: AT+CPIN? error 
+00:01:10.870 Charger polling timeout
+00:01:10.872 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:10.874 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:10.875 -> BQ24295_getFault : FaultColdOver 1
+00:01:10.875 -> BQ24295_getFault : FaultHotNormal 0
+00:01:10.875 err: Charger error blinking: Falut Type 0x2
+00:01:12.310 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:12.410 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:12.411 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:12.411 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:12.411 err: error: battery reported full capacity as 0 mAh!
+00:01:15.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:15.790 USIM Status : NO USIM
+00:01:17.510 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:17.611 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:17.611 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:17.612 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:17.612 err: error: battery reported full capacity as 0 mAh!
+00:01:20.076 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:20.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:01:20.431 err: [TEMP]Read Error : Batt EXT temparature
+00:01:20.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:01:20.531 err: [CURRENT]Read Error : Batt current
+00:01:20.531 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:01:20.886 Charger polling timeout
+00:01:20.888 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:20.890 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:20.890 -> BQ24295_getFault : FaultColdOver 1
+00:01:20.890 -> BQ24295_getFault : FaultHotNormal 0
+00:01:20.891 err: Charger error blinking: Falut Type 0x2
+00:01:22.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:22.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:22.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:22.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:22.811 err: error: battery reported full capacity as 0 mAh!
+00:01:25.078 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:27.910 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:28.010 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:28.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:28.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:28.011 err: error: battery reported full capacity as 0 mAh!
+00:01:30.233 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:30.900 Charger polling timeout
+00:01:30.903 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:30.905 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:30.905 -> BQ24295_getFault : FaultColdOver 1
+00:01:30.905 -> BQ24295_getFault : FaultHotNormal 0
+00:01:30.906 err: Charger error blinking: Falut Type 0x2
+00:01:33.110 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:33.210 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:33.211 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:33.211 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:33.211 err: error: battery reported full capacity as 0 mAh!
+00:01:35.124 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:38.310 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:38.410 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:38.411 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:38.411 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:38.411 err: error: battery reported full capacity as 0 mAh!
+00:01:40.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:40.916 Charger polling timeout
+00:01:40.918 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:40.920 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:40.920 -> BQ24295_getFault : FaultColdOver 1
+00:01:40.921 -> BQ24295_getFault : FaultHotNormal 0
+00:01:40.921 err: Charger error blinking: Falut Type 0x2
+00:01:43.510 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:43.610 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:43.611 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:43.611 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:43.611 err: error: battery reported full capacity as 0 mAh!
+00:01:45.115 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:48.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:48.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:48.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:48.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:48.811 err: error: battery reported full capacity as 0 mAh!
+00:01:50.089 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:50.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:01:50.631 err: [TEMP]Read Error : Batt EXT temparature
+00:01:50.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:01:50.731 err: [CURRENT]Read Error : Batt current
+00:01:50.731 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:01:50.930 Charger polling timeout
+00:01:50.932 -> BQ24295_getStatus : NotCharging, status: 0
+00:01:50.934 -> BQ24295_getFault : FaultChargeNormal 0
+00:01:50.935 -> BQ24295_getFault : FaultColdOver 1
+00:01:50.935 -> BQ24295_getFault : FaultHotNormal 0
+00:01:50.935 err: Charger error blinking: Falut Type 0x2
+00:01:53.911 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:54.011 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:54.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:54.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:54.011 err: error: battery reported full capacity as 0 mAh!
+00:01:55.103 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:01:59.110 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:01:59.210 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:01:59.211 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:01:59.211 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:01:59.211 err: error: battery reported full capacity as 0 mAh!
+00:02:00.136 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:00.946 Charger polling timeout
+00:02:00.948 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:00.950 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:00.950 -> BQ24295_getFault : FaultColdOver 1
+00:02:00.950 -> BQ24295_getFault : FaultHotNormal 0
+00:02:00.951 err: Charger error blinking: Falut Type 0x2
+00:02:04.310 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:04.410 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:04.411 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:04.411 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:04.411 err: error: battery reported full capacity as 0 mAh!
+00:02:05.077 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:09.511 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:09.610 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:09.611 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:09.611 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:09.611 err: error: battery reported full capacity as 0 mAh!
+00:02:10.145 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:10.960 Charger polling timeout
+00:02:10.962 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:10.966 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:10.966 -> BQ24295_getFault : FaultColdOver 1
+00:02:10.966 -> BQ24295_getFault : FaultHotNormal 0
+00:02:10.966 err: Charger error blinking: Falut Type 0x2
+00:02:14.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:14.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:14.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:14.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:14.811 err: error: battery reported full capacity as 0 mAh!
+00:02:15.105 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:19.910 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:20.010 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:20.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:20.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:20.011 err: error: battery reported full capacity as 0 mAh!
+00:02:20.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:20.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:02:20.831 err: [TEMP]Read Error : Batt EXT temparature
+00:02:20.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:02:20.931 err: [CURRENT]Read Error : Batt current
+00:02:20.931 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:02:20.977 Charger polling timeout
+00:02:20.979 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:20.981 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:20.981 -> BQ24295_getFault : FaultColdOver 1
+00:02:20.981 -> BQ24295_getFault : FaultHotNormal 0
+00:02:20.982 err: Charger error blinking: Falut Type 0x2
+00:02:25.078 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:25.110 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:25.210 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:25.211 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:25.211 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:25.211 err: error: battery reported full capacity as 0 mAh!
+00:02:30.078 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:30.310 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:30.410 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:30.411 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:30.411 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:30.411 err: error: battery reported full capacity as 0 mAh!
+00:02:30.992 Charger polling timeout
+00:02:30.994 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:30.996 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:30.996 -> BQ24295_getFault : FaultColdOver 1
+00:02:30.997 -> BQ24295_getFault : FaultHotNormal 0
+00:02:30.997 err: Charger error blinking: Falut Type 0x2
+00:02:35.078 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:35.510 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:35.610 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:35.611 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:35.611 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:35.611 err: error: battery reported full capacity as 0 mAh!
+00:02:40.088 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:40.710 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:40.810 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:40.811 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:40.811 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:40.811 err: error: battery reported full capacity as 0 mAh!
+00:02:41.007 Charger polling timeout
+00:02:41.009 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:41.011 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:41.012 -> BQ24295_getFault : FaultColdOver 1
+00:02:41.012 -> BQ24295_getFault : FaultHotNormal 0
+00:02:41.012 err: Charger error blinking: Falut Type 0x2
+00:02:45.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:45.910 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:46.010 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:46.011 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:46.011 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:46.011 err: error: battery reported full capacity as 0 mAh!
+00:02:50.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:51.022 Charger polling timeout
+00:02:51.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:02:51.031 err: [TEMP]Read Error : Batt EXT temparature
+00:02:51.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:02:51.130 err: [CURRENT]Read Error : Batt current
+00:02:51.131 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:02:51.133 -> BQ24295_getStatus : NotCharging, status: 0
+00:02:51.135 -> BQ24295_getFault : FaultChargeNormal 0
+00:02:51.135 -> BQ24295_getFault : FaultColdOver 1
+00:02:51.135 -> BQ24295_getFault : FaultHotNormal 0
+00:02:51.136 err: Charger error blinking: Falut Type 0x2
+00:02:51.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:51.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:51.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:51.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:51.331 err: error: battery reported full capacity as 0 mAh!
+00:02:55.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:02:56.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:02:56.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:02:56.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:02:56.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:02:56.531 err: error: battery reported full capacity as 0 mAh!
+00:03:00.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:01.146 Charger polling timeout
+00:03:01.148 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:01.150 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:01.150 -> BQ24295_getFault : FaultColdOver 1
+00:03:01.151 -> BQ24295_getFault : FaultHotNormal 0
+00:03:01.151 err: Charger error blinking: Falut Type 0x2
+00:03:01.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:01.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:01.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:01.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:01.731 err: error: battery reported full capacity as 0 mAh!
+00:03:05.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:06.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:06.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:06.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:06.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:06.931 err: error: battery reported full capacity as 0 mAh!
+00:03:10.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:11.161 Charger polling timeout
+00:03:11.163 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:11.165 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:11.166 -> BQ24295_getFault : FaultColdOver 1
+00:03:11.166 -> BQ24295_getFault : FaultHotNormal 0
+00:03:11.166 err: Charger error blinking: Falut Type 0x2
+00:03:12.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:12.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:12.130 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:12.131 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:12.131 err: error: battery reported full capacity as 0 mAh!
+00:03:15.079 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:17.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:17.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:17.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:17.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:17.331 err: error: battery reported full capacity as 0 mAh!
+00:03:20.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:21.176 Charger polling timeout
+00:03:21.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:03:21.231 err: [TEMP]Read Error : Batt EXT temparature
+00:03:21.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:03:21.331 err: [CURRENT]Read Error : Batt current
+00:03:21.331 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:03:21.333 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:21.335 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:21.335 -> BQ24295_getFault : FaultColdOver 1
+00:03:21.335 -> BQ24295_getFault : FaultHotNormal 0
+00:03:21.336 err: Charger error blinking: Falut Type 0x2
+00:03:22.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:22.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:22.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:22.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:22.531 err: error: battery reported full capacity as 0 mAh!
+00:03:25.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:27.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:27.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:27.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:27.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:27.731 err: error: battery reported full capacity as 0 mAh!
+00:03:30.094 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:31.346 Charger polling timeout
+00:03:31.348 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:31.350 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:31.350 -> BQ24295_getFault : FaultColdOver 1
+00:03:31.351 -> BQ24295_getFault : FaultHotNormal 0
+00:03:31.351 err: Charger error blinking: Falut Type 0x2
+00:03:32.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:32.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:32.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:32.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:32.931 err: error: battery reported full capacity as 0 mAh!
+00:03:35.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:38.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:38.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:38.131 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:38.131 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:38.131 err: error: battery reported full capacity as 0 mAh!
+00:03:40.137 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:41.361 Charger polling timeout
+00:03:41.363 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:41.365 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:41.366 -> BQ24295_getFault : FaultColdOver 1
+00:03:41.366 -> BQ24295_getFault : FaultHotNormal 0
+00:03:41.366 err: Charger error blinking: Falut Type 0x2
+00:03:43.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:43.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:43.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:43.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:43.331 err: error: battery reported full capacity as 0 mAh!
+00:03:45.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:48.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:48.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:48.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:48.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:48.531 err: error: battery reported full capacity as 0 mAh!
+00:03:50.080 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:51.376 Charger polling timeout
+00:03:51.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:03:51.431 err: [TEMP]Read Error : Batt EXT temparature
+00:03:51.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:03:51.530 err: [CURRENT]Read Error : Batt current
+00:03:51.531 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:03:51.533 -> BQ24295_getStatus : NotCharging, status: 0
+00:03:51.535 -> BQ24295_getFault : FaultChargeNormal 0
+00:03:51.535 -> BQ24295_getFault : FaultColdOver 1
+00:03:51.535 -> BQ24295_getFault : FaultHotNormal 0
+00:03:51.535 err: Charger error blinking: Falut Type 0x2
+00:03:53.631 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:53.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:53.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:53.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:53.731 err: error: battery reported full capacity as 0 mAh!
+00:03:55.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:03:58.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:03:58.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:03:58.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:03:58.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:03:58.931 err: error: battery reported full capacity as 0 mAh!
+00:04:00.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:01.546 Charger polling timeout
+00:04:01.548 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:01.550 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:01.550 -> BQ24295_getFault : FaultColdOver 1
+00:04:01.551 -> BQ24295_getFault : FaultHotNormal 0
+00:04:01.551 err: Charger error blinking: Falut Type 0x2
+00:04:04.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:04.131 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:04.131 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:04.132 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:04.132 err: error: battery reported full capacity as 0 mAh!
+00:04:05.081 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:09.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:09.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:09.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:09.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:09.331 err: error: battery reported full capacity as 0 mAh!
+00:04:10.099 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:11.561 Charger polling timeout
+00:04:11.563 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:11.565 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:11.566 -> BQ24295_getFault : FaultColdOver 1
+00:04:11.566 -> BQ24295_getFault : FaultHotNormal 0
+00:04:11.566 err: Charger error blinking: Falut Type 0x2
+00:04:14.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:14.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:14.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:14.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:14.531 err: error: battery reported full capacity as 0 mAh!
+00:04:15.082 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:19.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:19.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:19.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:19.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:19.731 err: error: battery reported full capacity as 0 mAh!
+00:04:20.094 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:21.576 Charger polling timeout
+00:04:21.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:04:21.631 err: [TEMP]Read Error : Batt EXT temparature
+00:04:21.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:04:21.731 err: [CURRENT]Read Error : Batt current
+00:04:21.731 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:04:21.733 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:21.735 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:21.735 -> BQ24295_getFault : FaultColdOver 1
+00:04:21.735 -> BQ24295_getFault : FaultHotNormal 0
+00:04:21.736 err: Charger error blinking: Falut Type 0x2
+00:04:24.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:24.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:24.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:24.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:24.931 err: error: battery reported full capacity as 0 mAh!
+00:04:25.082 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:30.031 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:30.093 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:30.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:30.131 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:30.131 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:30.131 err: error: battery reported full capacity as 0 mAh!
+00:04:31.740 Charger polling timeout
+00:04:31.742 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:31.744 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:31.745 -> BQ24295_getFault : FaultColdOver 1
+00:04:31.745 -> BQ24295_getFault : FaultHotNormal 0
+00:04:31.745 err: Charger error blinking: Falut Type 0x2
+00:04:35.102 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:35.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:35.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:35.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:35.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:35.331 err: error: battery reported full capacity as 0 mAh!
+00:04:40.120 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:40.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:40.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:40.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:40.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:40.531 err: error: battery reported full capacity as 0 mAh!
+00:04:41.750 Charger polling timeout
+00:04:41.752 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:41.754 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:41.755 -> BQ24295_getFault : FaultColdOver 1
+00:04:41.755 -> BQ24295_getFault : FaultHotNormal 0
+00:04:41.755 err: Charger error blinking: Falut Type 0x2
+00:04:45.131 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:45.630 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:45.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:45.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:45.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:45.731 err: error: battery reported full capacity as 0 mAh!
+00:04:50.085 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:50.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:50.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:50.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:50.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:50.931 err: error: battery reported full capacity as 0 mAh!
+00:04:51.766 Charger polling timeout
+00:04:51.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:04:51.831 err: [TEMP]Read Error : Batt EXT temparature
+00:04:51.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:04:51.931 err: [CURRENT]Read Error : Batt current
+00:04:51.931 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:04:51.933 -> BQ24295_getStatus : NotCharging, status: 0
+00:04:51.935 -> BQ24295_getFault : FaultChargeNormal 0
+00:04:51.935 -> BQ24295_getFault : FaultColdOver 1
+00:04:51.935 -> BQ24295_getFault : FaultHotNormal 0
+00:04:51.936 err: Charger error blinking: Falut Type 0x2
+00:04:55.126 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:04:56.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:04:56.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:04:56.131 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:04:56.131 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:04:56.131 err: error: battery reported full capacity as 0 mAh!
+00:05:00.087 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:05:01.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:05:01.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:05:01.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:05:01.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:05:01.331 err: error: battery reported full capacity as 0 mAh!
+00:05:01.946 Charger polling timeout
+00:05:01.948 -> BQ24295_getStatus : NotCharging, status: 0
+00:05:01.950 -> BQ24295_getFault : FaultChargeNormal 0
+00:05:01.950 -> BQ24295_getFault : FaultColdOver 1
+00:05:01.951 -> BQ24295_getFault : FaultHotNormal 0
+00:05:01.951 err: Charger error blinking: Falut Type 0x2
+00:05:05.119 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:05:06.430 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:05:06.530 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:05:06.531 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:05:06.531 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:05:06.531 err: error: battery reported full capacity as 0 mAh!
+00:05:10.107 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:05:11.631 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:05:11.730 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:05:11.731 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:05:11.731 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:05:11.731 err: error: battery reported full capacity as 0 mAh!
+00:05:11.962 Charger polling timeout
+00:05:11.965 -> BQ24295_getStatus : NotCharging, status: 0
+00:05:11.967 -> BQ24295_getFault : FaultChargeNormal 0
+00:05:11.967 -> BQ24295_getFault : FaultColdOver 1
+00:05:11.968 -> BQ24295_getFault : FaultHotNormal 0
+00:05:11.968 err: Charger error blinking: Falut Type 0x2
+00:05:15.085 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:05:16.830 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:05:16.930 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:05:16.931 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:05:16.931 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:05:16.931 err: error: battery reported full capacity as 0 mAh!
+00:05:20.107 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1
+00:05:21.970 Charger polling timeout
+00:05:22.030 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 2) : No such file or directory
+00:05:22.031 err: [TEMP]Read Error : Batt EXT temparature
+00:05:22.130 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 10) : No such file or directory
+00:05:22.131 err: [CURRENT]Read Error : Batt current
+00:05:22.131 pwrt_cut_off_polling_timer_handler, skip measure temperature N/A = -100
+00:05:22.133 -> BQ24295_getStatus : NotCharging, status: 0
+00:05:22.136 -> BQ24295_getFault : FaultChargeNormal 0
+00:05:22.136 -> BQ24295_getFault : FaultColdOver 1
+00:05:22.136 -> BQ24295_getFault : FaultHotNormal 0
+00:05:22.137 err: Charger error blinking: Falut Type 0x2
+00:05:22.230 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg 6) : No such file or directory
+00:05:22.330 err: Error reading from I2C device /dev/i2c-0 (dev_addr 55 reg C) : No such file or directory
+00:05:22.331 BAT Voltage: 0 Remain: -1 Full: 0 SOC: 0
+
+00:05:22.331 [pwrt_sm_battey_monitor_thread_entry_pt]  Battery not present setting battery params to 0
+00:05:22.331 err: error: battery reported full capacity as 0 mAh!
+00:05:25.168 polling_timer_handler num : 0,  shortCount : 0, g_charger = 1

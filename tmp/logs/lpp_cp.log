@@ -1,0 +1,17 @@
+00:00:16.415 lpp_cp_main.c         :411  lpp_cp VER:Altair 0.9 (2019-02-19 18:30:46)
+
+00:00:16.416 lpp_cp_fsm_handlers.c :101  LPP FSM Initialization called
+00:00:16.416 lpp_cp_fsm_handlers.c :45   FSM state transition from [LPP_NULL] to [LPP_NULL]
+00:00:16.417 lpp_cp_utils.c        :111  epollCtrlUtil: added an event (fd=5) to the epoll
+00:00:16.418 lpp_cp_utils.c        :111  epollCtrlUtil: added an event (fd=6) to the epoll
+00:00:16.418 lpp_cp_utils.c        :111  epollCtrlUtil: added an event (fd=7) to the epoll
+00:00:16.418 lpp_cp_main.c         :422  Waiting for ELC socket...
+00:00:17.419 lpp_cp_main.c         :422  Waiting for ELC socket...
+00:00:18.419 lpp_cp_main.c         :422  Waiting for ELC socket...
+00:00:19.423 lpp_cp_main.c         :422  Waiting for ELC socket...
+00:00:20.424 lpp_cp_main.c         :426  /tmp/lpp_cp_if socket returned  0
+00:00:20.425 lpp_cp_main.c         :429  /tmp/amahcli handle returned 0x77d21140
+00:00:20.426 Send subscription information to AMA hub for CMD 451
+00:00:20.426 lpp_cp_fsm_handlers.c :2844 FSM processing received event=LPP_IF_READY_IND in state=LPP_NULL
+00:00:20.427 lpp_cp_api_if.c       :41   LPP-C IF: Sending MSG_ID_LPP_READY_IND
+00:00:20.427 lpp_cp_fsm_handlers.c :45   FSM state transition from [LPP_NULL] to [LPP_IDLE]

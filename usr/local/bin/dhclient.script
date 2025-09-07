@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# Must be used on exit.   Invokes the local dhcp client exit hooks, if any.
+exit_with_hooks() {
+  exit_status=$1
+  if [ -f /etc/dhclient-exit-hooks ]; then
+    . /etc/dhclient-exit-hooks
+  fi
+# probably should do something with exit status of the local script
+  exit $exit_status
+}
+
+# Invoke the local dhcp client enter hooks, if they exist.
+if [ -f /etc/dhclient-enter-hooks ]; then
+  exit_status=0
+  . /etc/dhclient-enter-hooks
+  # allow the local script to abort processing of this state
+  # local script must set exit_status variable to nonzero.
+  if [ $exit_status -ne 0 ]; then
+    exit $exit_status
+  fi
+fi
+
+###
+### DHCPv6 Handlers
+###
+
+if [ x$reason = xPREINIT6 ]; then
+  exit_with_hooks 0
+fi
+
+if [ x${old_ip6_prefix} != x ] || [ x${new_ip6_prefix} != x ] ; then
+    echo Prefix ${reason} old=${old_ip6_prefix} new=${new_ip6_prefix}
+
+    exit_with_hooks 0
+fi
+
+if [ x$reason = xBOUND6 ]; then
+  if [ x${new_ip6_address} = x ] || [ x${new_ip6_prefixlen} = x ] ; then
+    exit_with_hooks 2;
+  fi
+
+  exit_with_hooks 0
+fi
+
+if [ x$reason = xRENEW6 ] || [ x$reason = xREBIND6 ]; then
+  if [ x${new_ip6_address} = x ] || [ x${new_ip6_prefixlen} = x ] ; then
+    exit_with_hooks 2;
+  fi
+
+  exit_with_hooks 0
+fi
+
+if [ x$reason = xDEPREF6 ]; then
+  if [ x${new_ip6_address} = x ] ; then
+    exit_with_hooks 2;
+  fi
+
+  exit_with_hooks 0
+fi
+
+if [ x$reason = xEXPIRE6 -o x$reason = xRELEASE6 -o x$reason = xSTOP6 ]; then
+  if [ x${old_ip6_address} = x ] || [ x${old_ip6_prefixlen} = x ] ; then
+    exit_with_hooks 2;
+  fi
+
+  exit_with_hooks 0
+fi
+
+exit_with_hooks 0

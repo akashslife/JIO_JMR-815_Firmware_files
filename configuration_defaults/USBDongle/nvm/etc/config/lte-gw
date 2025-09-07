@@ -1,0 +1,89 @@
+
+config Environment local_param
+    option local_topoloy router
+    option local_ip_addr 10.0.0.1
+    option local_ip_mask 255.255.255.0
+
+config Environment dhcp_srv
+	option dhcp_enable enable
+	option lease_time_min 10080
+	option range_from_ip 10.0.0.10
+	option range_to_ip 10.0.0.10
+	option host_reservation_num 0
+
+config Environment ipv6_config
+	option dhcp6_pd disable
+	option map_t_opt_from_dhcp disable
+
+config Environment lan_ipv6_param
+	option ipv6_ra enable
+	option ipv6_ra_interval 60
+	option ipv6_ra_prefix_preferred_lifetime 60
+	option ipv6_ra_dhcp_stateless enable
+	option dhcp6_pd_server disable
+
+config Environment bridge
+	option multicast disable
+	option pdn_sharing enable
+
+config Environment nat
+	option dmz_enable enable
+	option dmz_host_ip 10.0.0.10
+	option sip_alg_enable disable
+	option port_fwd_num 0
+	
+config Environment port_filter
+    option filter_enable disable
+    option port_filter_num 0
+
+config Environment static_dns
+    option sdns_enable disable
+    option sdns_primary_ip 8.8.8.8
+    option sdns_secondary_ip 8.8.8.8	
+
+config Environment embms
+	option inband_enable enable
+	option ooband_enable disable
+	option ooband_ext_vlan_id 255
+
+config Environment vpn_pass
+	option ipsec disable
+	option l2tp disable
+	option pptp disable
+	
+config Environment usb_param
+    option ip_addr 172.30.100.1
+    option netmask 255.255.255.252
+    option ip_host 172.30.100.2
+
+config Environment debug_param
+    option socket_if usb0
+    option static_host_ip_addr none
+    option sniffer disable
+    option logs_rotation_time 30
+
+config Debug modem_fw_logs
+    option logs_mode internal
+    option tty_if none
+
+config Debug econsole
+    option econsole_enable enable
+    option tty_if none 
+
+config Debug debug_streamer
+    option streamer_enabled disable
+    option tty_if none
+
+config Interface gp_lan_if
+	option start_if disable
+	option vlan_id 100
+	option ip_addr 172.16.0.1
+	option netmask 255.255.255.0
+	option mtu 1496
+	option host_ip_addr 172.16.0.10
+
+config Environment net_param
+    option lte_static_mtu null
+    option dns_redirect disable
+
+

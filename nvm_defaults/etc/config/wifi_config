@@ -1,0 +1,9 @@
+config 'Environment' 'wps'
+	option 'button_gpio' '4'
+
+config 'Environment' 'restore_def'
+	option 'button_gpio' '85'
+	option 'short' '1'
+	option 'long' '5'
+config 'Environment' 'misc'
+    option 'mal' 'enable'

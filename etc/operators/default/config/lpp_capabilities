@@ -1,0 +1,231 @@
+
+
+# A-GNSS-ProvideCapabilities Valid Inputs
+#
+#   agnssProvideCapabilities: 'true' or 'false' or empty
+#
+#   gnssSupportList: Number of Elements
+#       gnssSupportElement: 'true' or 'false' or empty
+#           gnssID: integer choices of 0 (gps), 1 (sbas), 2 (qzss), 3 (galileo), 4 (glonass), 5 (bds)
+#           sbasIDs: bitString
+#           agnssModes: bitString
+#           gnssSignals: bitString
+#           ftaMeasSupport: 'true' or 'false' or empty
+#               cellTime: bitString
+#               mode: bitString
+#           adrSupport: 'true' or 'false'
+#           velocityMeasurementSupport: 'true' or 'false'
+#
+#   assistanceDataSupportList: 'true' or 'false' or empty
+#       gnssCommonAssistanceDataSupport: 'true' or 'false' or empty
+#           gnssReferenceTimeSupport: 'true' or 'false' or empty
+#               gnssSystemTime: bitString
+#               ftaSupport: bitString
+#           gnssReferenceLocationSupport: empty
+#           gnssIonosphericModelSupport: 'true' or 'false' or empty
+#               ionoModel: bitString
+#           gnssEarthOrientationParametersSupport: empty
+#       gnssGenericAssistanceDataSupport: Number of Elements
+#           gnssGenericAssistDataSupportElement: 'true' or 'false' or empty
+#               gnssID: integer choices of 0 (gps), 1 (sbas), 2 (qzss), 3 (galileo), 4 (glonass), 5 (bds)
+#               sbasID: integer choices of 0 (waas), 1 (egnos), 2 (msas), 3 (gagan)
+#               gnssTimeModelsSupport: empty
+#               gnssDifferentialCorrectionsSupport: 'true' or 'false' or empty
+#                   gnssSignalIDs: bitString
+#                   dgnssValidityTimeSup: 'true' or 'false'
+#               gnssNavigationModelSupport: 'true' or 'false' or empty
+#                   clockModel: bitString
+#                   orbitModel: bitString
+#               gnssRealTimeIntegritySupport: empty
+#               gnssDataBitAssistanceSupport: empty
+#               gnssAcquisitionAssistanceSupport: 'true' or 'false' or empty
+#                   confidenceSupportr10: integer choices of 0 (true)
+#                   dopplerUncertaintyExtSupportr10: integer choices of 0 (true)
+#               gnssAlmanacSupport: 'true' or 'false' or empty
+#                   almanacModel: bitString
+#               gnssUTCModelSupport: 'true' or 'false' or empty
+#                   utcModel: bitString
+#               gnssAuxiliaryInformationSupport: empty
+#               bdsDifferentialCorrectionsSupportr12: 'true' or 'false' or empty
+#                   gnssSignalIDs: bitString
+#               bdsGridModelSupportr12: empty
+#
+#   locationCoordinateTypes: 'true' or 'false' or empty
+#       ellipsoidPoint: 'true' or 'false'
+#       ellipsoidPointWithUncertaintyCircle: 'true' or 'false'
+#       ellipsoidPointWithUncertaintyEllipse: 'true' or 'false'
+#       polygon: 'true' or 'false'
+#       ellipsoidPointWithAltitude: 'true' or 'false'
+#       ellipsoidPointWithAltitudeAndUncertaintyEllipsoid: 'true' or 'false'
+#       ellipsoidArc: 'true' or 'false'
+#
+#   velocityTypes: 'true' or 'false' or empty
+#       horizontalVelocity: 'true' or 'false'
+#       horizontalWithVerticalVelocity: 'true' or 'false'
+#       horizontalVelocityWithUncertainty: 'true' or 'false'
+#       horizontalWithVerticalVelocityAndUncertainty: 'true' or 'false'
+
+
+config 'provideCapabilities' 'agnssProvideCapabilities'
+
+    option 'agnssProvideCapabilities' 'false' # OPTIONAL
+
+    option 'gnssSupportList' '1' # OPTIONAL, set to '1' for gps only, set to '2' for gps and glonass
+
+    option 'gnssSupportList__gnssSupportElement_0' 'true'
+    option 'gnssSupportList__gnssSupportElement_0__gnssID' '0' # gps
+    option 'gnssSupportList__gnssSupportElement_0__sbasIDs' '' # OPTIONAL
+    option 'gnssSupportList__gnssSupportElement_0__agnssModes' '111'
+    option 'gnssSupportList__gnssSupportElement_0__gnssSignals' '10000000'
+    option 'gnssSupportList__gnssSupportElement_0__ftaMeasSupport' '' # OPTIONAL
+    option 'gnssSupportList__gnssSupportElement_0__ftaMeasSupport__cellTime' '101'
+    option 'gnssSupportList__gnssSupportElement_0__ftaMeasSupport__mode' '110'
+    option 'gnssSupportList__gnssSupportElement_0__adrSupport' 'false'
+    option 'gnssSupportList__gnssSupportElement_0__velocityMeasurementSupport' 'true'
+
+    option 'gnssSupportList__gnssSupportElement_1' 'true'
+    option 'gnssSupportList__gnssSupportElement_1__gnssID' '4' # glonass
+    option 'gnssSupportList__gnssSupportElement_1__agnssModes' '111'
+    option 'gnssSupportList__gnssSupportElement_1__gnssSignals' '11100000'
+    option 'gnssSupportList__gnssSupportElement_1__adrSupport' 'false'
+    option 'gnssSupportList__gnssSupportElement_1__velocityMeasurementSupport' 'true'
+
+    option 'assistanceDataSupportList' 'true' # OPTIONAL
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport' 'true'
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssReferenceTimeSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssReferenceTimeSupport__gnssSystemTime' '1' # '1' for gps, '10001' for gps and glonass
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssReferenceTimeSupport__ftaSupport' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssReferenceLocationSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssIonosphericModelSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssIonosphericModelSupport__ionoModel' '1'
+    option 'assistanceDataSupportList__gnssCommonAssistanceDataSupport__gnssEarthOrientationParametersSupport' '' # OPTIONAL
+
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport' '1' # set to '1' for gps only, set to '2' for gps and glonass
+
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0' 'true'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssID' '0'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__sbasID' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssTimeModelsSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssDifferentialCorrectionsSupport' 'true' #OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssDifferentialCorrectionsSupport__gnssSignalIDs' '10000000'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssDifferentialCorrectionsSupport__dgnssValidityTimeSup' 'true'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssNavigationModelSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssNavigationModelSupport__clockModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssNavigationModelSupport__orbitModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssRealTimeIntegritySupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssDataBitAssistanceSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAcquisitionAssistanceSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAcquisitionAssistanceSupport__confidenceSupportr10' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAcquisitionAssistanceSupport__dopplerUncertaintyExtSupportr10' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAlmanacSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAlmanacSupport__almanacModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssUTCModelSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssUTCModelSupport__utcModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__gnssAuxiliaryInformationSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__bdsDifferentialCorrectionsSupportr12' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__bdsDifferentialCorrectionsSupportr12__gnssSignalIDs' ''
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_0__bdsGridModelSupportr12' '' # OPTIONAL
+
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1' 'true'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssID' '4' # glonass
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssTimeModelsSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssDifferentialCorrectionsSupport' 'true' #OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssDifferentialCorrectionsSupport__gnssSignalIDs' '11100000'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssDifferentialCorrectionsSupport__dgnssValidityTimeSup' 'true'
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssNavigationModelSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssNavigationModelSupport__clockModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssNavigationModelSupport__orbitModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssRealTimeIntegritySupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssDataBitAssistanceSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssAcquisitionAssistanceSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssAlmanacSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssAlmanacSupport__almanacModel' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssUTCModelSupport' '1' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssUTCModelSupport__utcModel' '' # OPTIONAL
+    option 'assistanceDataSupportList__gnssGenericAssistanceDataSupport__gnssGenericAssistDataSupportElement_1__gnssAuxiliaryInformationSupport' '1' # OPTIONAL
+
+    option 'locationCoordinateTypes' 'true' # OPTIONAL
+    option 'locationCoordinateTypes__ellipsoidPoint' 'false'
+    option 'locationCoordinateTypes__ellipsoidPointWithUncertaintyCircle' 'false'
+    option 'locationCoordinateTypes__ellipsoidPointWithUncertaintyEllipse' 'false'
+    option 'locationCoordinateTypes__polygon' 'false'
+    option 'locationCoordinateTypes__ellipsoidPointWithAltitude' 'false'
+    option 'locationCoordinateTypes__ellipsoidPointWithAltitudeAndUncertaintyEllipsoid' 'true'
+    option 'locationCoordinateTypes__ellipsoidArc' 'false'
+
+    option 'velocityTypes' 'true' # OPTIONAL
+    option 'velocityTypes__horizontalVelocity' 'true'
+    option 'velocityTypes__horizontalWithVerticalVelocity' 'true'
+    option 'velocityTypes__horizontalVelocityWithUncertainty' 'true'
+    option 'velocityTypes__horizontalWithVerticalVelocityAndUncertainty' 'true'
+
+# OTDOA-ProvideCapabilities Valid Inputs
+#
+#   otdoaProvideCapabilities: 'true' or 'false' or empty
+#
+#   otdoaMode: bitString
+#   supportedListEUTRA: Number of Elements
+#       supportedBandEUTRA: integer
+#   supportedBandListEUTRAv9a0: Number of Elements
+#       supportedBandEUTRAv9a0: integer
+#   interFreqRSTDMeasurementr10: integer choices of 0 (supported)
+#   additionalNeighbourCellInforListr10: integer choices of 0 (supported)
+
+config 'provideCapabilities' 'otdoaProvideCapabilities'
+
+    option 'otdoaProvideCapabilities' 'true' # OPTIONAL
+
+    option 'otdoaMode' '1'
+    option 'supportedBandListEUTRA' '2' # OPTIONAL
+    option 'supportedBandListEUTRA__supportedBandEUTRA_0' '4'
+    option 'supportedBandListEUTRA__supportedBandEUTRA_1' '13'
+    option 'supportedBandListEUTRAv9a0' '' # OPTIONAL
+    option 'supportedBandListEUTRAv9a0__supportedBandEUTRAv9a0_0' ''
+    option 'interFreqRSTDMeasurementr10' '' # OPTIONAL
+    option 'additionalNeighbourCellInforListr10' '' # OPTIONAL
+
+# ECID-ProvideCapabilities
+#
+#   ecidProvideCapabilities: 'true' or 'false' or empty
+#
+#   ecid_MeasSupported: bitString
+
+config 'provideCapabilities' 'ecidProvideCapabilities'
+
+    option 'ecidProvideCapabilities' 'true' # OPTIONAL
+
+    option 'ecidMeasSupported' '10101'
+
+
+config 'requestAssistance' 'gnssAssistance'
+
+    option 'a_gnss_RequestAssistanceData' 'true' # OPTIONAL
+
+    option 'gnss_CommonAssistDataReq' '1' # OPTIONAL
+    option 'gnss_CommonAssistDataReq__ReferenceTimeReq' '1' # OPTIONAL
+    option 'gnss_CommonAssistDataReq__ReferenceTimeReq__TimeReqPrefList' '1' # Number of GNSS IDs
+    option 'gnss_CommonAssistDataReq__ReferenceTimeReq__TimeReqPrefList__gnssID_0' '0' # GPS
+    option 'gnss_CommonAssistDataReq__ReferenceTimeReq__gps_TOW_assistReq' '1' # OPTIONAL
+    option 'gnss_CommonAssistDataReq__ReferenceTimeReq__gps_TOW_assistReqVal' 'true' 
+    option 'gnss_CommonAssistDataReq__ReferenceLocationSupport' 'true' # OPTIONAL
+
+    option 'gnss_GenericAssistDataReq' '1' # OPTIONAL Number of GNSS systems. Set to '1' for gps only, set to '2' for gps and glonass
+
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0' 'true' # First Generic Assist Data Req element
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__gnssID' '0' # GPS is used
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__navigationModelReq' '1' # OPTIONAL
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__navigationModelReq__storedNavListInfo' '1' 
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__navigationModelReq__storedNavListInfo__weekOrDay' '0' 
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__navigationModelReq__storedNavListInfo__toe' '0'
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__navigationModelReq__storedNavListInfo__tToeLimit' '0'
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__acquisitionAssistanceReq' '1' # OPTIONAL
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__acquisitionAssistanceReq__signalID' '0' 
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__utcModelReq' '1' # OPTIONAL
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_0__utcModelReq__modelID' '' # OPTIONAL
+
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_1' 'true' # Second Generic Assist Data Req element
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_1__gnssID' '4' # GLONASS is used
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_1__acquisitionAssistanceReq' '1' # OPTIONAL
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_1__acquisitionAssistanceReq__signalID' '0'
+    option 'gnss_GenericAssistDataReq__gnssGenericAssistDataReqElement_1__auxiliaryInformationReq' '1' # OPTIONAL
+

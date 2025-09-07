@@ -1,0 +1,14 @@
+
+config 'usb-gadget' 'config'
+	option 'iSerialNumber' 'usb_serial_num_0'
+	option 'config_time' '30'
+	option 'usb_if' 'osd_algo'
+	option 'cdromFile' '/cdrom.iso'
+	option 'if_mtu' '1500'
+	option 'use_last_os' '1'
+	option 'num_serial_ports' '1'
+	option 'num_ether_ports' '1'
+	option 'at_tty_dev' 'ttyGS0'
+	option 'shell_tty_dev' 'none'
+	option 'last_os' '6'
+

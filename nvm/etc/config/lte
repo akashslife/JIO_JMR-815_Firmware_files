@@ -1,0 +1,14 @@
+
+config 'lte' 'config'
+	option 'verbosity' '0'
+	option 'firmware' 'null'
+	option 'e_iface' '0'
+	option 'non_arp_address' '0.0.0.0'
+	option 'non_arp_netmask' '255.255.255.255'
+	option 'wakeup_src' '31'
+	option 'gpio_wakeup_polarity' 'high'
+	option 'host_addr' '00:12:BD:08:31:B2'
+
+config 'Environment' 'net_param'
+	option 'lte_mtu' '1500'
+

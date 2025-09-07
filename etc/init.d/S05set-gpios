@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# NTLR-210 gpio setting
+echo "Set GPIO" >>/dev/kmsg
+##########################
+#	82	: power key
+#	45	: wps key
+#	85	: factory reset key
+#	35	: usb power detect 
+#       90      : micro usim
+#	28	: charger detect - current limit 
+#	2	: led_drv enable
+#	43	: ps hold
+#       26      : HW revision Check_01
+#       28      : HW revision Check_02
+##########################
+
+GPIOS_OUT="43 2"
+for i in $GPIOS_OUT
+do
+        echo $i > /sys/class/gpio/export
+        echo out > /sys/class/gpio/gpio$i/direction
+        echo 1 > /sys/class/gpio/gpio$i/value
+done
+
+#HW revison
+GPIOS_HWREV="26 28"
+for j in $GPIOS_HWREV
+do
+	echo $j >/sys/class/gpio/export
+done

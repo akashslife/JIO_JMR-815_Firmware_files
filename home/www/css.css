@@ -1,0 +1,168 @@
+#app{
+	visibility: hidden;
+}
+
+#app.visible{
+	visibility: visible;
+}
+
+.subtitle_td { 
+	align:center; background-color:#ffffff; padding-left:0px; padding-right:0px; padding-top:0px; padding-bottom:0px;}
+	
+.subtitle_underbar { 
+	background-color:#000000; }
+	
+.itemdesc_td { 
+	border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 10px; padding-right: 10px; background-color:#FFFFFF; border-color:none; border-style:none none none; border-width:0 0 0 0;}
+
+.itemdesc_td2 { 
+	border-collapse:collapse; height:20px; padding-top: 0px; padding-bottom: 2px; padding-left: 10px; padding-right: 10px; background-color:#B8D8FE; border-color:#EFEBDE; border-style:solid none solid none; border-width:1 1 1 1;}
+	
+.item_td { 
+	height:30px; padding: 0px 10px 0px 10px; background-color:#FFFFFF; border-collapse:collapse; border-style:solid none solid none; border-width:0 0 1 1;  border-color:#EFEBDE;  }
+
+.item_td2 { 
+	height:20px; padding: 0px 10px 0px 10px; background-color:#FFFFFF; border-collapse:collapse; border-style:solid none solid none; border-width:1 1 1 1;  border-color:#EFEBDE;  }
+
+.text_title{font-weight:bold; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_subtitle{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 10px; padding-right: 10px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_subtitle_lan{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 5px; padding-right: 0px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_list{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 10px; padding-right: 10px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#000000;}
+
+.text_list_lan{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 5px; padding-right: 0px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#000000;}
+
+.text_list_word_break{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left:5px; padding-right: 0px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#000000;word-break:break-all;}
+
+.text_box{border-collapse:collapse; height:30px; padding-top: 0px; padding-bottom: 2px; padding-left: 5px; padding-right: 5px; font-weight:none; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#000000;}
+
+.text_normal{height:30px; padding-left: 10px; background-color:#FFFFFF; border-collapse:collapse; border-style:solid none solid none; border-width:0 0 1 1;  border-color:#EFEBDE; font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_normal_noline{height:30px; padding-left: 10px; background-color:#FFFFFF; border-collapse:collapse; border-style:solid none solid none; border-width:0 0 0 0;  border-color:#EFEBDE; font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_input{padding-left: 10px; background-color:#FAFFBD; border-collapse:collapse; border-style:solid none solid none; border-width:0 0 1 1;  border-color:#EFEBDE; font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_input_noline{padding-left: 10px; background-color:#FAFFBD; border-collapse:collapse; border-style:solid none solid none; border-width:0 0 0 0;  border-color:#EFEBDE; font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:14px; color:#000000;}
+
+.text_login{font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#50B6BF;}
+
+.text_login2{font-weight:normal; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; font-size:12px; color:#000000; border:none;}
+
+.file_input label{position:relative; cursor:pointer; display:inline-block; vertical-align:middle; overflow:hidden; width:80px; height:30px; backgroud:#ffffff; color:#fff; text-align:center; line-height:30px;}
+
+.file_input_textbox {float:left; height:30px; border-style:none none solid none; border-color:#EFEBDE;border-width:0 0 1 0;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;}
+
+.file_input_div {position:relative; width:80px; height:36px; overflow:hidden; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;}
+
+.file_input_img_btn {padding:0 0 0 5px; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;}
+
+.file_input_hidden {font-size:29px; position:absolute; right:0px; top:0px; opacity:0; filter: alpha(opacity=0); -ms-filter: alpha(opacity=0); cursor:pointer; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;}
+
+.table_list tbody {
+	display:block; 
+	height: 260px;
+	overflow-x:hidden; 
+	overflow-y:auto;
+}
+select {
+  padding: .6em .6em;
+  font-size:14px;
+  font-family: 'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;
+  background: url(../image/select_icon.gif) no-repeat 95% 50%; 
+  border: 0px ;
+  border-radius: 0px;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+ }
+ 
+select::-ms-expand { 
+  display: none;
+}
+
+/*GRPAH----------------------------------------------------------------------------------------------*/
+
+.graphWidget{
+	width: 440px;
+	height: 280px;
+	margin: 0 auto;
+	margin-top: 45px;
+	border: 1px #a5a5a5 solid;
+}
+
+.graphWidget .graphTitleContainer{
+	width: 100%;
+	background-color: skyblue;
+	font-size: 14px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.graphTitle{
+	display: block;
+	margin-left: 11px;
+	color: black;
+}
+
+#graphContainer{
+	width: 430px;
+	height: 214px;
+}
+
+#graphDataTableContainer{
+	float: right;
+}
+
+#belowGraphData{
+	margin: 0 auto;
+	width: 410px;
+	height: 25px;
+}
+
+#belowGraphTableContainer{
+	float: right;
+}
+
+#belowGraphTableContainer .widgetDetailsLabel_icon{
+	margin-left: 20px;
+}
+
+.belowGraphDownValue{
+	color: #027472;
+	white-space: nowrap;
+}
+
+.belowGraphUpValue{
+	color: #028ac9;
+	white-space: nowrap;
+}
+
+.sectionContent{
+}
+
+.hideTabContent{
+	position: absolute;
+	top: -10000000px;
+	left: -10000px;
+}
+
+.widgetDetailsLabel_icon{
+	margin: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 25px;
+	background-position: left center;
+}
+
+.widget_upArrow_icon{
+	background-image: url(../image/graph/blueUpArrow.png);
+	background-position: left 6px;
+}
+.widget_downArrow_icon{
+	background-image: url(../image/graph/greenDownArrow.png);
+	background-position: left 6px;
+}
+

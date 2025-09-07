@@ -1,0 +1,8 @@
+
+config 'envirnment' 'info'
+	option 'on' '2'
+	option 'timeout' '10'
+	option 'reason' 'unknown'
+	option 'billing_date' '1'
+	option 'refresh' '10'
+	option 'set_pw' 'lemons'

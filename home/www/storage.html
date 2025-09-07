@@ -1,0 +1,50 @@
+<?php
+//------------------------------------------------------------------------------
+umask(002); // Added to make created files/dirs group writable
+//------------------------------------------------------------------------------
+require "./.include/init.php";	// Init
+//------------------------------------------------------------------------------
+switch($GLOBALS["action"]) {		// Execute action
+//------------------------------------------------------------------------------
+// DELETE FILE(S)/DIR(S)
+case "delete":
+	require "./.include/fun_del.php";
+	del_items($GLOBALS["dir"]);
+break;
+//------------------------------------------------------------------------------
+case "rename":
+	require "./.include/fun_copy_move.php";
+	rename_items($GLOBALS["dir"]);
+break;
+//------------------------------------------------------------------------------
+// UPLOAD FILE(S)
+case "upload":
+	require "./.include/fun_up.php";
+	upload_items($GLOBALS["dir"]);
+break;
+//------------------------------------------------------------------------------
+// CREATE DIR/FILE
+case "mkitem":
+	require "./.include/fun_mkitem.php";
+	make_item($GLOBALS["dir"]);
+break;
+//------------------------------------------------------------------------------
+// SD-SYSTEM
+case "do_format":
+case "sd_system":
+	require "./.include/fun_system.php";
+	show_system();
+break;
+//------------------------------------------------------------------------------
+// DEFAULT: LIST FILES & DIRS
+case "list":
+case "search":
+default:
+	require "./.include/fun_list.php";
+	list_dir($GLOBALS["dir"]);
+//------------------------------------------------------------------------------
+}				// end switch-statement
+//------------------------------------------------------------------------------
+show_footer();
+//------------------------------------------------------------------------------
+?>

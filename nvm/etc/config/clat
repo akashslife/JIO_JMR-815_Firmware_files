@@ -1,0 +1,6 @@
+config Environment clat_config
+    option ipv6_host_id '::'
+    option ipv4_local_subnet '192.0.0.4'
+    option ipv4_local_prefixlen '29'
+    option plat_from_dns64 'yes'
+    option plat_from_dns64_hostname 'ipv4only.arpa'

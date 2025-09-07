@@ -1,0 +1,19 @@
+
+config 'Info' 'Device'
+	option 'Manufacturer' 'Altair Semiconductor'
+	option 'DeviceType' '4G LTE Modem'
+	option 'FirmwareVersion' 'null'
+	option 'SoftwareVersion' 'Altair OS 1.0'
+		
+config 'Info' 'Config'
+	option 'Name' 'null'
+	option 'NameMode' '1'   # 0-user-defined 1-imei 2-urn:imei 3-urn:imei:msisdn
+	option 'DlDirectory' '/upload'
+	option 'DataOverHost' 'null'
+	option 'LocalIpv4Port' '56834'
+	option 'LocalIpv6Port' '56836'
+	option 'acceptSmsFromUnknownCnum' '0'
+	option 'InernetPdnServerShortId' 'null'
+	option 'Ipv4PrefferdServerShortId' 'null'
+	option 'Lwm2mOpEv' '0'
+	option 'BindingMode' 'UQS'

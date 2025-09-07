@@ -1,0 +1,1117 @@
+<Root version="1.1"><Vars><LteSelfCalibrationDataBase address="0x00000000" calculated_address="True" size="1428" structWithinArrayOfStructs="True" type="Struct">
+                <v0 address="0x00000000" calculated_address="True" size="1428" type="Struct">
+                    <general address="0x00000000" calculated_address="True" size="8" type="Struct">
+                        <rficID address="0x00000000" calculated_address="True" size="4" type="unsigned int" />
+                        <bandNumber address="0x00000004" calculated_address="True" size="1" type="unsigned char" />
+                        <RESERVED00 address="0x00000005" calculated_address="True" size="1" type="unsigned char" />
+                        <RESERVED01 address="0x00000006" calculated_address="True" size="1" type="unsigned char" />
+                        <RESERVED02 address="0x00000007" calculated_address="True" size="1" type="unsigned char" />
+                    </general>
+                    <selfCalibrationsRx1_andHighFreqTxLo address="0x00000008" calculated_address="True" size="412" type="Struct">
+                        <txLoCalibHighFreq address="0x00000008" calculated_address="True" size="324" type="Struct">
+                            <enableCalResults address="0x00000008" calculated_address="True" size="4" type="unsigned int" />
+                            <agcIndex00 address="0x0000000C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000000C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000000E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex00>
+                            <agcIndex01 address="0x00000010" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000010" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000012" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex01>
+                            <agcIndex02 address="0x00000014" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000014" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000016" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex02>
+                            <agcIndex03 address="0x00000018" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000018" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000001A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex03>
+                            <agcIndex04 address="0x0000001C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000001C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000001E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex04>
+                            <agcIndex05 address="0x00000020" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000020" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000022" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex05>
+                            <agcIndex06 address="0x00000024" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000024" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000026" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex06>
+                            <agcIndex07 address="0x00000028" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000028" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000002A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex07>
+                            <agcIndex08 address="0x0000002C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000002C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000002E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex08>
+                            <agcIndex09 address="0x00000030" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000030" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000032" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex09>
+                            <agcIndex10 address="0x00000034" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000034" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000036" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex10>
+                            <agcIndex11 address="0x00000038" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000038" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000003A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex11>
+                            <agcIndex12 address="0x0000003C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000003C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000003E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex12>
+                            <agcIndex13 address="0x00000040" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000040" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000042" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex13>
+                            <agcIndex14 address="0x00000044" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000044" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000046" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex14>
+                            <agcIndex15 address="0x00000048" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000048" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000004A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex15>
+                            <agcIndex16 address="0x0000004C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000004C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000004E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex16>
+                            <agcIndex17 address="0x00000050" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000050" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000052" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex17>
+                            <agcIndex18 address="0x00000054" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000054" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000056" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex18>
+                            <agcIndex19 address="0x00000058" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000058" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000005A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex19>
+                            <agcIndex20 address="0x0000005C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000005C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000005E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex20>
+                            <agcIndex21 address="0x00000060" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000060" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000062" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex21>
+                            <agcIndex22 address="0x00000064" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000064" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000066" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex22>
+                            <agcIndex23 address="0x00000068" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000068" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000006A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex23>
+                            <agcIndex24 address="0x0000006C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000006C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000006E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex24>
+                            <agcIndex25 address="0x00000070" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000070" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000072" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex25>
+                            <agcIndex26 address="0x00000074" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000074" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000076" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex26>
+                            <agcIndex27 address="0x00000078" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000078" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000007A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex27>
+                            <agcIndex28 address="0x0000007C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000007C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000007E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex28>
+                            <agcIndex29 address="0x00000080" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000080" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000082" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex29>
+                            <agcIndex30 address="0x00000084" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000084" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000086" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex30>
+                            <agcIndex31 address="0x00000088" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000088" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000008A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex31>
+                            <agcIndex32 address="0x0000008C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000008C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000008E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex32>
+                            <agcIndex33 address="0x00000090" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000090" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000092" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex33>
+                            <agcIndex34 address="0x00000094" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000094" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000096" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex34>
+                            <agcIndex35 address="0x00000098" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000098" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000009A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex35>
+                            <agcIndex36 address="0x0000009C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000009C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000009E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex36>
+                            <agcIndex37 address="0x000000A0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000A0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000A2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex37>
+                            <agcIndex38 address="0x000000A4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000A4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000A6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex38>
+                            <agcIndex39 address="0x000000A8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000A8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000AA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex39>
+                            <agcIndex40 address="0x000000AC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000AC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000AE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex40>
+                            <agcIndex41 address="0x000000B0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000B0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000B2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex41>
+                            <agcIndex42 address="0x000000B4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000B4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000B6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex42>
+                            <agcIndex43 address="0x000000B8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000B8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000BA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex43>
+                            <agcIndex44 address="0x000000BC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000BC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000BE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex44>
+                            <agcIndex45 address="0x000000C0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000C0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000C2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex45>
+                            <agcIndex46 address="0x000000C4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000C4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000C6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex46>
+                            <agcIndex47 address="0x000000C8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000C8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000CA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex47>
+                            <agcIndex48 address="0x000000CC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000CC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000CE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex48>
+                            <agcIndex49 address="0x000000D0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000D0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000D2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex49>
+                            <agcIndex50 address="0x000000D4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000D4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000D6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex50>
+                            <agcIndex51 address="0x000000D8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000D8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000DA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex51>
+                            <agcIndex52 address="0x000000DC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000DC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000DE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex52>
+                            <agcIndex53 address="0x000000E0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000E0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000E2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex53>
+                            <agcIndex54 address="0x000000E4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000E4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000E6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex54>
+                            <agcIndex55 address="0x000000E8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000E8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000EA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex55>
+                            <agcIndex56 address="0x000000EC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000EC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000EE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex56>
+                            <agcIndex57 address="0x000000F0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000F0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000F2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex57>
+                            <agcIndex58 address="0x000000F4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000F4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000F6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex58>
+                            <agcIndex59 address="0x000000F8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000F8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000FA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex59>
+                            <agcIndex60 address="0x000000FC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000000FC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000000FE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex60>
+                            <agcIndex61 address="0x00000100" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000100" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000102" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex61>
+                            <agcIndex62 address="0x00000104" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000104" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000106" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex62>
+                            <agcIndex63 address="0x00000108" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000108" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000010A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex63>
+                            <agcIndex64 address="0x0000010C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000010C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000010E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex64>
+                            <agcIndex65 address="0x00000110" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000110" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000112" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex65>
+                            <agcIndex66 address="0x00000114" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000114" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000116" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex66>
+                            <agcIndex67 address="0x00000118" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000118" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000011A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex67>
+                            <agcIndex68 address="0x0000011C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000011C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000011E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex68>
+                            <agcIndex69 address="0x00000120" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000120" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000122" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex69>
+                            <RESERVED0 address="0x00000124" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED1 address="0x00000128" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED2 address="0x0000012C" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED3 address="0x00000130" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED4 address="0x00000134" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED5 address="0x00000138" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED6 address="0x0000013C" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED7 address="0x00000140" calculated_address="True" size="4" type="unsigned int" />
+                            <txFreqToCalibrate address="0x00000144" calculated_address="True" size="4" type="unsigned int" />
+                            <earfcnToCalibrate address="0x00000148" calculated_address="True" size="4" type="unsigned int" />
+                        </txLoCalibHighFreq>
+                        <iqMismatch address="0x0000014C" calculated_address="True" size="12" type="Struct">
+                            <enableCalResults address="0x0000014C" calculated_address="True" size="4" type="unsigned int" />
+                            <iqmGain address="0x00000150" calculated_address="True" size="2" type="unsigned short" />
+                            <iqmPhase address="0x00000152" calculated_address="True" size="2" type="unsigned short" />
+                            <groupDelay_deg2MHz_Q6 address="0x00000154" calculated_address="True" size="4" type="signed int" />
+                        </iqMismatch>
+                        <lpf address="0x00000158" calculated_address="True" size="76" type="Struct">
+                            <enableCalResults address="0x00000158" calculated_address="True" size="4" type="unsigned int" />
+                            <bw0 address="0x0000015C" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x0000015C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000160" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000164" calculated_address="True" size="4" type="unsigned int" />
+                            </bw0>
+                            <bw1 address="0x00000168" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000168" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x0000016C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000170" calculated_address="True" size="4" type="unsigned int" />
+                            </bw1>
+                            <bw2 address="0x00000174" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000174" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000178" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x0000017C" calculated_address="True" size="4" type="unsigned int" />
+                            </bw2>
+                            <bw3 address="0x00000180" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000180" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000184" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000188" calculated_address="True" size="4" type="unsigned int" />
+                            </bw3>
+                            <bw4 address="0x0000018C" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x0000018C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000190" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000194" calculated_address="True" size="4" type="unsigned int" />
+                            </bw4>
+                            <bw5 address="0x00000198" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000198" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x0000019C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x000001A0" calculated_address="True" size="4" type="unsigned int" />
+                            </bw5>
+                        </lpf>
+                    </selfCalibrationsRx1_andHighFreqTxLo>
+                    <selfCalibrationsRx2_andLowFreqTxLo address="0x000001A4" calculated_address="True" size="412" type="Struct">
+                        <txLoCalibLowFreq address="0x000001A4" calculated_address="True" size="324" type="Struct">
+                            <enableCalResults address="0x000001A4" calculated_address="True" size="4" type="unsigned int" />
+                            <agcIndex00 address="0x000001A8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001A8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001AA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex00>
+                            <agcIndex01 address="0x000001AC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001AC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001AE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex01>
+                            <agcIndex02 address="0x000001B0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001B0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001B2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex02>
+                            <agcIndex03 address="0x000001B4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001B4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001B6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex03>
+                            <agcIndex04 address="0x000001B8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001B8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001BA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex04>
+                            <agcIndex05 address="0x000001BC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001BC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001BE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex05>
+                            <agcIndex06 address="0x000001C0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001C0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001C2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex06>
+                            <agcIndex07 address="0x000001C4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001C4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001C6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex07>
+                            <agcIndex08 address="0x000001C8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001C8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001CA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex08>
+                            <agcIndex09 address="0x000001CC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001CC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001CE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex09>
+                            <agcIndex10 address="0x000001D0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001D0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001D2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex10>
+                            <agcIndex11 address="0x000001D4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001D4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001D6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex11>
+                            <agcIndex12 address="0x000001D8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001D8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001DA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex12>
+                            <agcIndex13 address="0x000001DC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001DC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001DE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex13>
+                            <agcIndex14 address="0x000001E0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001E0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001E2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex14>
+                            <agcIndex15 address="0x000001E4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001E4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001E6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex15>
+                            <agcIndex16 address="0x000001E8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001E8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001EA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex16>
+                            <agcIndex17 address="0x000001EC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001EC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001EE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex17>
+                            <agcIndex18 address="0x000001F0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001F0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001F2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex18>
+                            <agcIndex19 address="0x000001F4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001F4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001F6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex19>
+                            <agcIndex20 address="0x000001F8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001F8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001FA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex20>
+                            <agcIndex21 address="0x000001FC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000001FC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000001FE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex21>
+                            <agcIndex22 address="0x00000200" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000200" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000202" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex22>
+                            <agcIndex23 address="0x00000204" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000204" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000206" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex23>
+                            <agcIndex24 address="0x00000208" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000208" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000020A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex24>
+                            <agcIndex25 address="0x0000020C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000020C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000020E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex25>
+                            <agcIndex26 address="0x00000210" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000210" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000212" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex26>
+                            <agcIndex27 address="0x00000214" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000214" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000216" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex27>
+                            <agcIndex28 address="0x00000218" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000218" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000021A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex28>
+                            <agcIndex29 address="0x0000021C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000021C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000021E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex29>
+                            <agcIndex30 address="0x00000220" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000220" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000222" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex30>
+                            <agcIndex31 address="0x00000224" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000224" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000226" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex31>
+                            <agcIndex32 address="0x00000228" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000228" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000022A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex32>
+                            <agcIndex33 address="0x0000022C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000022C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000022E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex33>
+                            <agcIndex34 address="0x00000230" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000230" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000232" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex34>
+                            <agcIndex35 address="0x00000234" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000234" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000236" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex35>
+                            <agcIndex36 address="0x00000238" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000238" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000023A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex36>
+                            <agcIndex37 address="0x0000023C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000023C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000023E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex37>
+                            <agcIndex38 address="0x00000240" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000240" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000242" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex38>
+                            <agcIndex39 address="0x00000244" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000244" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000246" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex39>
+                            <agcIndex40 address="0x00000248" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000248" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000024A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex40>
+                            <agcIndex41 address="0x0000024C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000024C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000024E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex41>
+                            <agcIndex42 address="0x00000250" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000250" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000252" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex42>
+                            <agcIndex43 address="0x00000254" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000254" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000256" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex43>
+                            <agcIndex44 address="0x00000258" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000258" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000025A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex44>
+                            <agcIndex45 address="0x0000025C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000025C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000025E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex45>
+                            <agcIndex46 address="0x00000260" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000260" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000262" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex46>
+                            <agcIndex47 address="0x00000264" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000264" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000266" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex47>
+                            <agcIndex48 address="0x00000268" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000268" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000026A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex48>
+                            <agcIndex49 address="0x0000026C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000026C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000026E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex49>
+                            <agcIndex50 address="0x00000270" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000270" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000272" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex50>
+                            <agcIndex51 address="0x00000274" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000274" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000276" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex51>
+                            <agcIndex52 address="0x00000278" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000278" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000027A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex52>
+                            <agcIndex53 address="0x0000027C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000027C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000027E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex53>
+                            <agcIndex54 address="0x00000280" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000280" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000282" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex54>
+                            <agcIndex55 address="0x00000284" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000284" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000286" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex55>
+                            <agcIndex56 address="0x00000288" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000288" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000028A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex56>
+                            <agcIndex57 address="0x0000028C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000028C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000028E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex57>
+                            <agcIndex58 address="0x00000290" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000290" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000292" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex58>
+                            <agcIndex59 address="0x00000294" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000294" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000296" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex59>
+                            <agcIndex60 address="0x00000298" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x00000298" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000029A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex60>
+                            <agcIndex61 address="0x0000029C" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x0000029C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000029E" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex61>
+                            <agcIndex62 address="0x000002A0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002A0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002A2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex62>
+                            <agcIndex63 address="0x000002A4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002A4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002A6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex63>
+                            <agcIndex64 address="0x000002A8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002A8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002AA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex64>
+                            <agcIndex65 address="0x000002AC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002AC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002AE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex65>
+                            <agcIndex66 address="0x000002B0" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002B0" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002B2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex66>
+                            <agcIndex67 address="0x000002B4" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002B4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002B6" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex67>
+                            <agcIndex68 address="0x000002B8" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002B8" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002BA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex68>
+                            <agcIndex69 address="0x000002BC" calculated_address="True" size="4" type="Struct">
+                                <offsetI address="0x000002BC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000002BE" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex69>
+                            <RESERVED0 address="0x000002C0" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED1 address="0x000002C4" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED2 address="0x000002C8" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED3 address="0x000002CC" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED4 address="0x000002D0" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED5 address="0x000002D4" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED6 address="0x000002D8" calculated_address="True" size="4" type="unsigned int" />
+                            <RESERVED7 address="0x000002DC" calculated_address="True" size="4" type="unsigned int" />
+                            <txFreqToCalibrate address="0x000002E0" calculated_address="True" size="4" type="unsigned int" />
+                            <earfcnToCalibrate address="0x000002E4" calculated_address="True" size="4" type="unsigned int" />
+                        </txLoCalibLowFreq>
+                        <iqMismatch address="0x000002E8" calculated_address="True" size="12" type="Struct">
+                            <enableCalResults address="0x000002E8" calculated_address="True" size="4" type="unsigned int" />
+                            <iqmGain address="0x000002EC" calculated_address="True" size="2" type="unsigned short" />
+                            <iqmPhase address="0x000002EE" calculated_address="True" size="2" type="unsigned short" />
+                            <groupDelay_deg2MHz_Q6 address="0x000002F0" calculated_address="True" size="4" type="signed int" />
+                        </iqMismatch>
+                        <lpf address="0x000002F4" calculated_address="True" size="76" type="Struct">
+                            <enableCalResults address="0x000002F4" calculated_address="True" size="4" type="unsigned int" />
+                            <bw0 address="0x000002F8" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x000002F8" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x000002FC" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000300" calculated_address="True" size="4" type="unsigned int" />
+                            </bw0>
+                            <bw1 address="0x00000304" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000304" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000308" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x0000030C" calculated_address="True" size="4" type="unsigned int" />
+                            </bw1>
+                            <bw2 address="0x00000310" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000310" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000314" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000318" calculated_address="True" size="4" type="unsigned int" />
+                            </bw2>
+                            <bw3 address="0x0000031C" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x0000031C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000320" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000324" calculated_address="True" size="4" type="unsigned int" />
+                            </bw3>
+                            <bw4 address="0x00000328" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000328" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x0000032C" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x00000330" calculated_address="True" size="4" type="unsigned int" />
+                            </bw4>
+                            <bw5 address="0x00000334" calculated_address="True" size="12" type="Struct">
+                                <mfb1 address="0x00000334" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb2 address="0x00000338" calculated_address="True" size="4" type="unsigned int" />
+                                <mfb3 address="0x0000033C" calculated_address="True" size="4" type="unsigned int" />
+                            </bw5>
+                        </lpf>
+                    </selfCalibrationsRx2_andLowFreqTxLo>
+                    <selfCalibrationsTx address="0x00000340" calculated_address="True" size="592" type="Struct">
+                        <loLeakageAndIqm address="0x00000340" calculated_address="True" size="564" type="Struct">
+                            <loLeakageCalType address="0x00000340" calculated_address="True" size="2" type="unsigned short" />
+                            <IqMismatchCalType address="0x00000342" calculated_address="True" size="2" type="unsigned short" />
+                            <agcIndex00 address="0x00000344" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000344" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000346" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000348" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000034A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex00>
+                            <agcIndex01 address="0x0000034C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000034C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000034E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000350" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000352" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex01>
+                            <agcIndex02 address="0x00000354" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000354" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000356" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000358" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000035A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex02>
+                            <agcIndex03 address="0x0000035C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000035C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000035E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000360" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000362" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex03>
+                            <agcIndex04 address="0x00000364" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000364" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000366" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000368" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000036A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex04>
+                            <agcIndex05 address="0x0000036C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000036C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000036E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000370" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000372" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex05>
+                            <agcIndex06 address="0x00000374" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000374" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000376" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000378" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000037A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex06>
+                            <agcIndex07 address="0x0000037C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000037C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000037E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000380" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000382" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex07>
+                            <agcIndex08 address="0x00000384" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000384" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000386" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000388" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000038A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex08>
+                            <agcIndex09 address="0x0000038C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000038C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000038E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000390" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000392" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex09>
+                            <agcIndex10 address="0x00000394" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000394" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000396" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000398" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000039A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex10>
+                            <agcIndex11 address="0x0000039C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000039C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000039E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003A0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003A2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex11>
+                            <agcIndex12 address="0x000003A4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003A4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003A6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003A8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003AA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex12>
+                            <agcIndex13 address="0x000003AC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003AC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003AE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003B0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003B2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex13>
+                            <agcIndex14 address="0x000003B4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003B4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003B6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003B8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003BA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex14>
+                            <agcIndex15 address="0x000003BC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003BC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003BE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003C0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003C2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex15>
+                            <agcIndex16 address="0x000003C4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003C4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003C6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003C8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003CA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex16>
+                            <agcIndex17 address="0x000003CC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003CC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003CE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003D0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003D2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex17>
+                            <agcIndex18 address="0x000003D4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003D4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003D6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003D8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003DA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex18>
+                            <agcIndex19 address="0x000003DC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003DC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003DE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003E0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003E2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex19>
+                            <agcIndex20 address="0x000003E4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003E4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003E6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003E8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003EA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex20>
+                            <agcIndex21 address="0x000003EC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003EC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003EE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003F0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003F2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex21>
+                            <agcIndex22 address="0x000003F4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003F4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003F6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000003F8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000003FA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex22>
+                            <agcIndex23 address="0x000003FC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000003FC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000003FE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000400" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000402" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex23>
+                            <agcIndex24 address="0x00000404" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000404" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000406" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000408" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000040A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex24>
+                            <agcIndex25 address="0x0000040C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000040C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000040E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000410" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000412" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex25>
+                            <agcIndex26 address="0x00000414" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000414" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000416" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000418" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000041A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex26>
+                            <agcIndex27 address="0x0000041C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000041C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000041E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000420" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000422" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex27>
+                            <agcIndex28 address="0x00000424" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000424" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000426" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000428" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000042A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex28>
+                            <agcIndex29 address="0x0000042C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000042C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000042E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000430" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000432" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex29>
+                            <agcIndex30 address="0x00000434" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000434" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000436" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000438" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000043A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex30>
+                            <agcIndex31 address="0x0000043C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000043C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000043E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000440" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000442" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex31>
+                            <agcIndex32 address="0x00000444" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000444" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000446" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000448" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000044A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex32>
+                            <agcIndex33 address="0x0000044C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000044C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000044E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000450" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000452" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex33>
+                            <agcIndex34 address="0x00000454" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000454" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000456" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000458" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000045A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex34>
+                            <agcIndex35 address="0x0000045C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000045C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000045E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000460" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000462" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex35>
+                            <agcIndex36 address="0x00000464" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000464" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000466" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000468" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000046A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex36>
+                            <agcIndex37 address="0x0000046C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000046C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000046E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000470" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000472" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex37>
+                            <agcIndex38 address="0x00000474" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000474" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000476" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000478" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000047A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex38>
+                            <agcIndex39 address="0x0000047C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000047C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000047E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000480" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000482" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex39>
+                            <agcIndex40 address="0x00000484" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000484" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000486" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000488" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000048A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex40>
+                            <agcIndex41 address="0x0000048C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000048C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000048E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000490" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000492" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex41>
+                            <agcIndex42 address="0x00000494" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000494" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000496" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000498" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000049A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex42>
+                            <agcIndex43 address="0x0000049C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000049C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000049E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004A0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004A2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex43>
+                            <agcIndex44 address="0x000004A4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004A4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004A6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004A8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004AA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex44>
+                            <agcIndex45 address="0x000004AC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004AC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004AE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004B0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004B2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex45>
+                            <agcIndex46 address="0x000004B4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004B4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004B6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004B8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004BA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex46>
+                            <agcIndex47 address="0x000004BC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004BC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004BE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004C0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004C2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex47>
+                            <agcIndex48 address="0x000004C4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004C4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004C6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004C8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004CA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex48>
+                            <agcIndex49 address="0x000004CC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004CC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004CE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004D0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004D2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex49>
+                            <agcIndex50 address="0x000004D4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004D4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004D6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004D8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004DA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex50>
+                            <agcIndex51 address="0x000004DC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004DC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004DE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004E0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004E2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex51>
+                            <agcIndex52 address="0x000004E4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004E4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004E6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004E8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004EA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex52>
+                            <agcIndex53 address="0x000004EC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004EC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004EE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004F0" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004F2" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex53>
+                            <agcIndex54 address="0x000004F4" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004F4" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004F6" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x000004F8" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x000004FA" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex54>
+                            <agcIndex55 address="0x000004FC" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x000004FC" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x000004FE" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000500" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000502" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex55>
+                            <agcIndex56 address="0x00000504" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000504" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000506" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000508" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000050A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex56>
+                            <agcIndex57 address="0x0000050C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000050C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000050E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000510" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000512" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex57>
+                            <agcIndex58 address="0x00000514" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000514" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000516" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000518" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000051A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex58>
+                            <agcIndex59 address="0x0000051C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000051C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000051E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000520" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000522" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex59>
+                            <agcIndex60 address="0x00000524" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000524" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000526" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000528" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000052A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex60>
+                            <agcIndex61 address="0x0000052C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000052C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000052E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000530" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000532" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex61>
+                            <agcIndex62 address="0x00000534" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000534" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000536" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000538" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000053A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex62>
+                            <agcIndex63 address="0x0000053C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000053C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000053E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000540" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000542" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex63>
+                            <agcIndex64 address="0x00000544" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000544" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000546" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000548" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000054A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex64>
+                            <agcIndex65 address="0x0000054C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000054C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000054E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000550" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000552" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex65>
+                            <agcIndex66 address="0x00000554" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000554" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000556" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000558" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000055A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex66>
+                            <agcIndex67 address="0x0000055C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000055C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000055E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000560" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000562" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex67>
+                            <agcIndex68 address="0x00000564" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x00000564" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x00000566" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000568" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x0000056A" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex68>
+                            <agcIndex69 address="0x0000056C" calculated_address="True" size="8" type="Struct">
+                                <offsetI address="0x0000056C" calculated_address="True" size="2" type="signed short" />
+                                <offsetQ address="0x0000056E" calculated_address="True" size="2" type="signed short" />
+                                <iqmGain address="0x00000570" calculated_address="True" size="2" type="signed short" />
+                                <iqmPhase address="0x00000572" calculated_address="True" size="2" type="signed short" />
+                            </agcIndex69>
+                        </loLeakageAndIqm>
+                        <lpf address="0x00000574" calculated_address="True" size="28" type="Struct">
+                            <enableCalResults address="0x00000574" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw0 address="0x00000578" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw1 address="0x0000057C" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw2 address="0x00000580" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw3 address="0x00000584" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw4 address="0x00000588" calculated_address="True" size="4" type="unsigned int" />
+                            <baseBandBw5 address="0x0000058C" calculated_address="True" size="4" type="unsigned int" />
+                        </lpf>
+                    </selfCalibrationsTx>
+                    <RESERVED address="0x00000590" calculated_address="True" size="2" type="unsigned short" />
+                    <magicNumber address="0x00000592" calculated_address="True" size="2" type="unsigned short" />
+                </v0>
+            </LteSelfCalibrationDataBase>
+            </Vars></Root>

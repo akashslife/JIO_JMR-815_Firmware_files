@@ -1,0 +1,198 @@
+#!/bin/sh 
+
+#
+# ELC
+#
+ELC_APP_EXEC=elc
+LPP_APP_EXEC=lpp_cp
+XML_SRC=/usr/lib/SUPL/SUPLConfigParams.xml.orig
+XML_DST=/tmp/SUPLConfigParams.xml
+APPRUNSTAT=`uci get service.ELC.Enabled | tr -s '[:upper:]' '[:lower:]'`
+SUPLCLIENT=`uci get elc.supl.supl_client | tr -s '[:upper:]' '[:lower:]'`
+CHIPSELECT=`uci get elc.gnss.chip_select | tr -s '[:upper:]' '[:lower:]'`
+LPP_CP=`uci get ecm.LteMode.EnableLPP | tr -s '[:upper:]' '[:lower:]'`
+I2CDEV=`uci get elc.interface.gnss_dev | tr -s '[:upper:]' '[:lower:]'`
+SUPL_PORT=`uci get elc.supl.supl_listen_port`
+USE_FIXED_SUPL_SRV_ADD=`uci get elc.supl.use_fixed_supl_srv_add`
+FIXED_SUPL_SRV_ADD=`uci get elc.supl.fixed_supl_srv_add`
+SUPL_SRVR_FQDN=`uci get elc.supl.supl_srvr_fqdn`
+TLS_VER=`uci get elc.supl.tls_ver`
+SECURE=`uci get elc.supl.secure`
+AUTHENTICATION=`uci get elc.supl.authentication`
+ELC_UPDATE_XML=`uci get elc.supl.elc_update_xml`
+SUPL_LOG_TO_FILE=`uci get elc.supl.log_to_file`
+SUPL_DEBUGZONE=`uci get elc.supl.debugzone`
+SUPL_DEBUGLEVEL=`uci get elc.supl.debuglevel`
+CAP_AGPS_MSA=`uci get elc.postech_capabilities.agps_msa`
+CAP_AGPS_MSB=`uci get elc.postech_capabilities.agps_msb`
+CAP_ECID=`uci get elc.postech_capabilities.ecid`
+CAP_OTDOA=`uci get elc.postech_capabilities.otdoa`
+PREF_POSTECH=`uci get elc.postech_capabilities.pref_postech`
+CORE_DUMP_EN=`uci get service.COREDUMP.Enabled | tr -s '[:upper:]' '[:lower:]'`
+
+#squashfs
+IMAGE_NAME=lbs
+image_file=/media/squash_images/$IMAGE_NAME.squash.img
+mount_point=/mnt/squash/$IMAGE_NAME
+
+initXml()
+{
+	
+	if [ $ELC_UPDATE_XML = 'enable' ]; then
+    cp $XML_SRC $XML_DST
+
+    echo "Build xml file from ELC config" > /dev/kmsg
+	CMD="xmltool -s -f /tmp/SUPLConfigParams.xml"
+    CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><port>' -v $SUPL_PORT"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><port>' -v $SUPL_PORT"
+    if [ $USE_FIXED_SUPL_SRV_ADD = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><ipaddress>' -v $FIXED_SUPL_SRV_ADD"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><ipaddress>' -v $FIXED_SUPL_SRV_ADD"
+    fi	
+    CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><fqdn>' -v $SUPL_SRVR_FQDN"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><fqdn>' -v $SUPL_SRVR_FQDN"
+    CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><tlsversion>' -v $TLS_VER"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><tlsversion>' -v $TLS_VER"
+    if [ $SECURE = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><secure>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><secure>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><hslp><secure>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><hslp><secure>' -v 0"
+    fi
+    if [ $AUTHENTICATION = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><cert><valid>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><cert><valid>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><cert><valid>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><cert><valid>' -v 0"
+    fi
+
+    if [ $SUPL_LOG_TO_FILE = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><logparam><directtofile>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><logparam><directtofile>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><logparam><directtofile>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><logparam><directtofile>' -v 0"
+    fi
+
+    CMD="$CMD -e '<supl><config_start name=SUPL1><logparam><debugzone>' -v $SUPL_DEBUGZONE"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><logparam><debugzone>' -v $SUPL_DEBUGZONE"
+    CMD="$CMD -e '<supl><config_start name=SUPL1><logparam><debuglevel>' -v $SUPL_DEBUGLEVEL"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><logparam><debuglevel>' -v $SUPL_DEBUGLEVEL"
+    
+    if [ $CAP_AGPS_MSA = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><agps_msa>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><agps_msa>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><agps_msa>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><agps_msa>' -v 0"
+    fi
+    if [ $CAP_AGPS_MSB = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><agps_msb>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><agps_msb>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><agps_msb>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><agps_msb>' -v 0"
+    fi
+    if [ $CAP_ECID = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><ecid>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><ecid>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><ecid>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><ecid>' -v 0"
+    fi
+    if [ $CAP_OTDOA = 'enable' ]; then
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><otdoa>' -v 1"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><otdoa>' -v 1"
+    else
+        CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><postech><otdoa>' -v 0"
+        CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><postech><otdoa>' -v 0"
+    fi
+    CMD="$CMD -e '<supl><config_start name=SUPL1><setcapability><pref_postech>' -v $PREF_POSTECH"
+    CMD="$CMD -e '<supl><config_start name=SUPL2><setcapability><pref_postech>' -v $PREF_POSTECH"
+	eval "$CMD"
+	#echo "$CMD"
+else
+    ln -s $XML_SRC $XML_DST
+fi
+    
+}
+
+case "$1" in
+    start)
+
+        if [ $APPRUNSTAT = 'true' ] && { [ -e "$I2CDEV" ] || [ $CHIPSELECT = 'none' ]; };
+        then
+
+          	# mount only if image exists
+         	 if [ -f $image_file ]; then
+              	mount $image_file $mount_point
+          	    echo "mounting SquashFS Image: $image_file to $mount_point" > /dev/kmsg
+      	    fi
+
+  	        if [ "$CORE_DUMP_EN" = "true" ] ; then 
+              	echo '/tmp/%e.core' > /proc/sys/kernel/core_pattern
+              	ulimit -c unlimited
+              	echo "coredump enabled for elc" > /dev/kmsg
+          	fi
+        
+          	if [ $SUPLCLIENT = 'enable' ] && [ -d "/usr/lib/SUPL" ] 
+            then
+              	echo "SUPL client is enabled" > /dev/kmsg
+
+                initXml
+
+                #######################
+                #temporary patch
+                if [ ! -f /usr/lib/libssl.so.1.0.0 ]; then
+                        echo "create link for /usr/lib/libssl.so.1.0.0" > /dev/kmsg
+                        ln -s /usr/lib/libssl.so.1.0.1 /usr/lib/libssl.so.1.0.0
+                fi
+                if [ ! -f /usr/lib/libcrypto.so.1.0.0 ]; then
+                        echo "create link for /usr/lib/libcrypto.so.1.0.0" > /dev/kmsg
+                        ln -s /usr/lib/libcrypto.so.1.0.1 /usr/lib/libcrypto.so.1.0.0
+                fi
+                #end of temporary patch
+                #######################
+
+              	cd /usr/lib/SUPL ; LD_LIBRARY_PATH=/usr/lib/SUPL:$LD_LIBRARY_PATH ./supl20clientd &
+
+                if [ $SUPL_PORT != "NULL" ];then
+                    iptables -t nat -A PREROUTING -i br0 -s 0/0 -p udp --dport $SUPL_PORT -j REDIRECT
+                fi
+            fi
+
+    	    DBGLVL=`uci get service.ELC.DebugLevel`
+
+    	    cd /usr/lib/SUPL; LD_LIBRARY_PATH=/usr/lib/SUPL:$LD_LIBRARY_PATH $ELC_APP_EXEC -d $DBGLVL &
+            if [ $LPP_CP  = 'true' ] ;then
+                   echo "lpp_cp is enabled"  > /dev/kmsg
+                   $LPP_APP_EXEC -d $DBGLVL &
+            fi 
+        fi
+        ;;
+    stop)
+        killall $ELC_APP_EXEC 2>/dev/null
+        killall $LPP_APP_EXEC 2>/dev/null
+        killall supl20clientd 2>/dev/null
+        #killall netspeed.sh 2>/dev/null # for WiFi traffic only
+        
+        # unmount only if image exists
+        #if [ -f $image_file ]; then
+        #    umount $mount_point
+        #    echo "umounting SquashFS Image: $image_file to $mount_point"
+        #fi
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof $ELC_APP_EXEC | sed "s/$$\$//" | grep -q [0-9] ; then
+        	echo "running" > /dev/kmsg
+        else
+        	echo "stopped" > /dev/kmsg
+        fi
+        ;;
+esac

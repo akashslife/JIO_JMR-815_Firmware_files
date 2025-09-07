@@ -1,0 +1,4 @@
+config 'Environment' 'Config'
+	option 'OutputSocketFile' '/tmp/atsw39'
+	option 'InputSocketFile' '/tmp/atsw_out_cfgmng'
+

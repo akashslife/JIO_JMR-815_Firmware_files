@@ -1,0 +1,18 @@
+  <CPEState>
+	<eventMask>0x0000</eventMask>
+	<acsState>1</acsState>
+	<acsURL>https://macs.oss.jio.com:8443/ftacs-digest/ACS</acsURL>
+	<acsUser>RelianceIN</acsUser>
+	<acsPW>RelianceIN</acsPW>
+	<connReqUser></connReqUser>
+	<connReqPW></connReqPW>
+	<informEnabled>1</informEnabled>
+	<informInterval>86400</informInterval>
+	<STUNEnable>0</STUNEnable>
+	<STUNServerAddress>testacs.friendly-tech.com</STUNServerAddress>
+	<STUNServerPort>3478</STUNServerPort>
+    <STUNUsername></STUNUsername>
+	<STUNPassword></STUNPassword>
+	<STUNMaxKeepAlive>45</STUNMaxKeepAlive>
+	<STUNMinKeepAlive>30</STUNMinKeepAlive>
+</CPEState>

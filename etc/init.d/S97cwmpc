@@ -1,0 +1,18 @@
+#!/bin/sh
+case "$1" in
+	start)
+		# 2014.05.28
+		#Move this code from /usr/local/bin/udhcpc.script
+		/usr/local/bin/data_use_log.sh &
+
+#		/usr/local/bin/run_cwmpc.sh &
+		/usr/bin/cwmpc -D 0x00 &
+		;;
+	stop)
+        	ps | grep run_cwmpc.sh | awk '{print $1}' | xargs kill 2>/dev/null
+		;;
+	restart)
+		    $0 stop
+		    $0 start
+		;;
+esac

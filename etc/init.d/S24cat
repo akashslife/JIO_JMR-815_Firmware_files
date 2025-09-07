@@ -1,0 +1,37 @@
+#!/bin/sh
+
+#
+# Embedded Connection Manager
+#
+APPEXEC=opcat
+APPRUNSTAT=`uci get service.CAT.Enabled | tr -s '[:upper:]' '[:lower:]'`
+LOGSEV=`uci get service.CAT.LogSeverity`
+CORE_DUMP_EN=`uci get service.COREDUMP.Enabled | tr -s '[:upper:]' '[:lower:]'`
+
+case "$1" in
+    start)
+    	if [ $APPRUNSTAT = 'true' ]
+    	then
+    	if [ "$CORE_DUMP_EN" = "true" ] ; then 
+            echo '/tmp/%e.core' > /proc/sys/kernel/core_pattern
+            ulimit -c unlimited
+            echo "coredump enabled for cat" > /dev/kmsg
+        fi
+	    	$APPEXEC -d -i /tmp/atsw8 -l /tmp/logs/cat.log -v $LOGSEV
+		fi
+        ;;
+    stop)
+        killall $APPEXEC 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof $APPEXEC | sed "s/$$\$//" | grep -q [0-9] ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

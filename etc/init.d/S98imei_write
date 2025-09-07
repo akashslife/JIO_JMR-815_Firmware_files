@@ -1,0 +1,65 @@
+#!/bin/sh                                                                                                                                                 
+                                                                                                                                                          
+imei_write_function() {
+                                                                                                                                                          
+factory_files="/nvm/bsp/factory"
+
+############################################################################                                                                              
+#       IMEI WRITE                                                         #                                                                              
+############################################################################                                                                              
+                                                                                                                                                          
+FACTORY_IMEI=`uci get $factory_files.value.imei`                                                                                                          
+FACTORY_IMEI_TEST=`uci get $factory_files.value.imei_test`                                                                                                
+                                                                                                                                                          
+if [ $FACTORY_IMEI == "000000000000000" ];then                                                                                                            
+                                                                                                                                                          
+        echo "No need to set IMEI value" >>/dev/kmsg                                                                                                      
+                                                                                                                                                          
+elif [ $FACTORY_IMEI_TEST == "0" ];then                                                                                                                   
+                                                                                                                                                          
+                if [ -f /nvm/bsp/dop.default ];then                                                                                                       
+                        rm -rf /nvm/bsp/dop.default                                                                                                       
+                fi                                                                                                                                        
+                                                                                                                                                          
+                echo "Writing IMEI value" >>/dev/kmsg                                                                                                     
+
+                /usr/bin/imei_write $FACTORY_IMEI                                                                                                         
+                sync                                                                                                                                      
+
+                IMEI_AT_TEST=`/etc/ue_lte/at.sh at+gsn | grep -v at+gsn | grep -v OK`                                                                  
+                                                                                                                                                          
+                if [ $FACTORY_IMEI == $IMEI_AT_TEST ];then                                                                                                
+                        uci set $factory_files.value.imei_test="1"                                                                                        
+                        uci commit $factory_files                                                                                                         
+                        sync                                                                                                                              
+                else                                                                                                                                      
+                        echo "invalid IMEI value, restore default IMEI values" >>/dev/kmsg                                                                
+                        uci set $factory_files.value.imei="000000000000000"                                                                               
+                        uci commit $factory_files                                                                                                         
+                        sync                                                                                                                              
+                fi                                                                                                                                        
+                                                                                                                                                          
+elif [ $FACTORY_IMEI_TEST == "1" ];then                                                                                                                   
+                                                                                                                                                          
+        if [ ! -f /nvm/bsp/dop.default ];then                                                                                                             
+                cp -rf /nvm/bsp/dop /nvm/bsp/dop.default                                                                                                  
+        fi                                                                                                                                                
+                                                                                                                                                          
+else                                                                                                                                                      
+        echo "Already Tested IMEI value" >>/dev/kmsg                                                                                                      
+                                                                                                                                                          
+fi
+}
+
+case "$1" in
+    start)
+	imei_write_function
+        ;;
+    stop)
+        echo ""
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+esac

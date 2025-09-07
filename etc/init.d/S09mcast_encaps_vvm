@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+
+. /usr/local/bin/lte-gw-global-env.sh
+if [ -e /proc/device-tree/wlan_type ]; then
+        WLAN_TYPE=$(cat /proc/device-tree/wlan_type);
+else
+        WLAN_TYPE="ATH"
+fi
+
+if [ $PROJECT_TYPE != "PWRT" ] && [ $PROJECT_TYPE != "WRT" ]; then
+	echo "not PWRT or WRT skipping script "$0  > /dev/kmsg       
+	exit 0
+fi
+
+#if [ "`uci get -q /etc/config/wifi_config.misc.mal`" == "enable" ]; then
+    LOCAL_IP=`uci get /etc/config/lte-gw.local_param.local_ip_addr`
+    if [ -e /sys/devices/virtual/net/lte0/ue_fw_mcast_encaps_enable ] ; then
+        echo 1 >  /sys/devices/virtual/net/lte0/ue_fw_mcast_encaps_enable
+        echo "Setting multicast to unicast encapsulation ip address to "$LOCAL_IP > /dev/kmsg
+        echo $LOCAL_IP > /sys/devices/virtual/net/lte0/ue_fw_mcast_src_ip_addr
+        echo "Set accept local to 1" > /dev/kmsg 
+        echo 1 > /proc/sys/net/ipv4/conf/all/accept_local
+    else
+        echo "MCAST encapsulation is not enabled" > /dev/kmsg
+    fi
+    echo "staring MAL VVM deamon" > /dev/kmsg  
+    mald-vvm -d
+#else
+#    echo "mal is not enabled in config file" > /dev/kmsg 
+#fi
+

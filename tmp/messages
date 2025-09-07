@@ -1,0 +1,472 @@
+Jan  1 00:00:02 jiofi syslog.info syslogd started: BusyBox v1.21.1
+Jan  1 00:00:02 jiofi kern.notice kernel: klogd started: BusyBox v1.21.1 (2016-07-06 14:41:16 IDT)
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.000000] Linux version 3.4.22 (kmorkah@ubuntu-44) (gcc version 4.5.3 (0.1) ) #1 Wed Jun 19 10:53:21 KST 2019
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] bootconsole [early0] enabled
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] CPU revision is: 30019558 (MIPS 34Kc)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] Determined physical RAM map:
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000]  memory: 06000000 @ 02100000 (usable)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] Initrd not found or empty - disabling initrd
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.000000] Zone PFN ranges:
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.000000]   Normal   0x00002100 -> 0x00008100
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.000000] Movable zone start PFN for each node
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.000000] Early memory PFN ranges
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] initializing altair-pic #0 IRQ domain
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] initializing altair-pic #1 IRQ domain
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] initializing altair-pic #2 IRQ domain
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.000000] alt3800_timer_init: us-timer clock=1000000 (irq = 1)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] Console: colour dummy device 80x25
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.000000] Calibrating delay loop... 264.19 BogoMIPS (lpj=1320960)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.070000] pid_max: default: 32768 minimum: 301
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.070000] Mount-cache hash table entries: 512
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.070000] devtmpfs: initialized
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.070000] NET: Registered protocol family 16
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.100000] bio: create slab <bio-0> at 0
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.100000] Switching to clocksource alt3800_clock
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] NET: Registered protocol family 2
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] TCP: Hash tables configured (established 4096 bind 4096)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] TCP: reno registered
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.130000] NET: Registered protocol family 1
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb4968000 res->end=0xb49687ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c000a000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 1 to 8 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb4968800 res->end=0xb4968fff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c000c800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 9 to 16 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb4969000 res->end=0xb49697ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c000e000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 17 to 24 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb4969800 res->end=0xb4969fff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c0010800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 25 to 32 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb496a000 res->end=0xb496a7ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c0012000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 33 to 40 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb496a800 res->end=0xb496afff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c0014800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 41 to 48 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb496b000 res->end=0xb496b7ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c0016000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 49 to 56 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: res->start=0xb496b800 res->end=0xb496bfff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.150000] alt3x00_gpio_probe: remapped=c0018800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.150000] gpiochip_add: registered GPIOs 57 to 64 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: res->start=0xb496c000 res->end=0xb496c7ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: remapped=c001a000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.160000] gpiochip_add: registered GPIOs 65 to 72 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: res->start=0xb496c800 res->end=0xb496cfff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: remapped=c001c800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.160000] gpiochip_add: registered GPIOs 73 to 80 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: res->start=0xb496d000 res->end=0xb496d7ff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: remapped=c001e000
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.160000] gpiochip_add: registered GPIOs 81 to 88 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: res->start=0xb496d800 res->end=0xb496dfff
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.160000] alt3x00_gpio_probe: remapped=c0020800
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.160000] gpiochip_add: registered GPIOs 89 to 96 on device: alt3x00_gpio
+Jan  1 00:00:02 jiofi kern.err kernel: [    0.170000] /soc/gpio@b4969800: pio-map is not set!
+Jan  1 00:00:02 jiofi kern.err kernel: [    0.170000] /soc/gpio@b496a000: pio-map is not set!
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on sdio_slave_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on debug_fclk_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on debug_pclk_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on fclk_topbist_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on hclk_topbist_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on pclk_topbist_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on voipmips_fclk_dummy device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_clk_ctrl_of_init: disable clock on ethernet device
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_usb_phy_of_config: usb-phy has been successfully initialized!
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] alt3800_pm_probe: scratchpad_int_reg[c0034498]=00000000
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] <alt38xx_is_volte_enabled_in_device_tree>: Can't find property: volte_enabled
+Jan  1 00:00:02 jiofi kern.warn kernel: [    0.180000] <alt3800_pm_init> NON VoLTE device tree - voice sleep allowed
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.180000] /soc/pm@b0220400: alt3800_pm_probe
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] jffs2: version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] msgmni has been set to 179
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] io scheduler noop registered
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] io scheduler deadline registered (default)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] bfc70000.serial: ttyS0 at MMIO 0xbfc70000 (irq = 13) is a ALT3X00 UART
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.210000] console [ttyS0] enabled, bootconsole disabled
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.220000] Sleep manager initialized
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.220000] ttyS0: Sleep manager registration - id: 1
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.240000] brd: module loaded
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.250000] loop: module loaded
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.250000] ALT3X00 sflash driver
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.270000] ONFI param page 0 valid
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.270000] ONFI flash detected
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.270000] Enabling OTP support for Hynix
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.270000] NAND device: Manufacturer ID: 0xad, Chip ID: 0xaa (Hynix H27S2G8F2DKA-BM)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.270000] Scanning device for bad blocks
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.490000] 16 ofpart partitions found on MTD device alt3800_nfc
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.490000] Creating 16 MTD partitions on "alt3800_nfc":
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.490000] 0x000000000000-0x000000080000 : "spl"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.500000] 0x000000080000-0x000000140000 : "uboot1"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.500000] 0x000000140000-0x000000200000 : "uboot2"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.500000] 0x000000200000-0x000000240000 : "env"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.500000] 0x000000240000-0x000000280000 : "backup_env"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.510000] 0x000000280000-0x000000580000 : "nvm"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.510000] 0x000000580000-0x000000980000 : "kernel1"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.510000] 0x000000980000-0x0000009c0000 : "dtb1"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.510000] 0x0000009c0000-0x0000031c0000 : "rootfs1"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.520000] 0x0000031c0000-0x0000035c0000 : "kernel2"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.520000] 0x0000035c0000-0x000003600000 : "dtb2"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.520000] 0x000003600000-0x000005e00000 : "rootfs2"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.530000] 0x000005e00000-0x000006200000 : "modem_fw1"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.530000] 0x000006200000-0x000006600000 : "modem_fw2"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.530000] 0x000006600000-0x000007000000 : "ua"
+Jan  1 00:00:02 jiofi kern.notice kernel: [    0.530000] 0x000007000000-0x000010000000 : "tstorage"
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.540000] Fixed MDIO Bus: probed
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.540000] s3c-hsotg bfc80000.usb: PHY: usb-phy
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.540000] s3c-hsotg bfc80000.usb: regs c0098000, irq 22
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.570000] s3c-hsotg bfc80000.usb: EPs:15
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.570000] s3c-hsotg bfc80000.usb: dedicated fifos
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.570000] i2c /dev entries driver
+Jan  1 00:00:02 jiofi kern.err kernel: [    0.570000] i2c i2c-0: of_i2c: modalias failure on /soc/i2c0@bfc58000/fuel_gauge@55
+Jan  1 00:00:02 jiofi kern.err kernel: [    0.580000] i2c i2c-0: of_i2c: modalias failure on /soc/i2c0@bfc58000/charger@6b
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] alt3x00-i2c-bus bfc58000.i2c0: I2C adapter with bus speed 400000 Hz
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] i2c-master: Sleep manager registration - id: 2
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] sdhci: Secure Digital Host Controller Interface driver
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] sdhci: Copyright(c) Pierre Ossman
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] sdhci-pltfm: SDHCI platform and OF driver helper
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] /soc/sdhci0@bfcf6000 : IRQ was masked!
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] /soc/sdhci0@bfcf6000 : IRQ was masked!
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] OST_REG20_LITTLE_ENDIAN
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.590000] Registered led device: mmc0::
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] mmc0: SDHCI controller on bfcf6000.sdhci0 [bfcf6000.sdhci0] using DMA
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] /soc/sdhci1@bfcf8000 : IRQ was masked!
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] OST_REG20_LITTLE_ENDIAN
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.590000] Registered led device: mmc1::
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.590000] mmc1: SDHCI controller on bfcf8000.sdhci1 [bfcf8000.sdhci1] using DMA
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.600000] Registered led device: Lte_RED
+Jan  1 00:00:02 jiofi kern.debug kernel: [    0.600000] Registered led device: Lte_BLUE
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.600000] nf_conntrack version 0.5.0 (1433 buckets, 5732 max)
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.600000] ip_tables: (C) 2000-2006 Netfilter Core Team
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.600000] TCP: westwood registered
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.600000] Initializing XFRM netlink socket
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.610000] NET: Registered protocol family 10
+Jan  1 00:00:02 jiofi kern.info kernel: [    0.610000] IPv6 over IPv4 tunneling driver
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.610000] NET: Registered protocol family 17
+Jan  1 00:00:03 jiofi kern.notice kernel: [    0.610000] Bridge firewalling registered
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.610000] 8021q: 802.1Q VLAN Support v1.8
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.610000] input: gpio_keys.9 as /devices/soc.0/gpio_keys.9/input/input0
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.650000] mmc0: new high speed SDIO card at address 0001
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.860000] mmc1: new high speed SDHC card at address 0001
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.860000] mmcblk0: mmc1:0001 00000 7.44 GiB 
+Jan  1 00:00:03 jiofi kern.info kernel: [    0.860000]  mmcblk0: p1
+Jan  1 00:00:03 jiofi kern.info kernel: [    1.180000] VFS: Mounted root (jffs2 filesystem) on device 31:11.
+Jan  1 00:00:03 jiofi kern.info kernel: [    1.190000] devtmpfs: mounted
+Jan  1 00:00:03 jiofi kern.info kernel: [    1.190000] Freeing unused kernel memory: 196k freed
+Jan  1 00:00:03 jiofi kern.notice kernel: [    3.080000] jffs2: jffs2_scan_inode_node(): CRC failed on node at 0x000a9fd4: Read 0xffffffff, calculated 0xf7f2dfbb
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.100000] jffs2: Empty flash at 0x000aa3a4 ends at 0x000aa800
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.110000] jffs2: Empty flash at 0x000acb40 ends at 0x000ad000
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.200000] ---- Finished /etc/init.d/S02mount...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.200000] ++++ Launching /etc/init.d/S03BeginStateMachinePower...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.270000] Turn ON power
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.290000] ---- Finished /etc/init.d/S03BeginStateMachinePower...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.290000] ++++ Launching /etc/init.d/S03ChargerInit...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.300000] ---- Finished /etc/init.d/S03ChargerInit...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.310000] ++++ Launching /etc/init.d/S03ConfigUpdate...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.460000] >>> Config folder is updated (JMR815_R09.51), no copy >>>
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.460000] ---- Finished /etc/init.d/S03ConfigUpdate...
+Jan  1 00:00:03 jiofi kern.warn kernel: [    3.460000] ++++ Launching /etc/init.d/S04ValidationConfig...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.310000] ---- Finished /etc/init.d/S04ValidationConfig...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.310000] ++++ Launching /etc/init.d/S04burn_board_info.sh...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.360000] Board info signature detected (bdf45678)
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.360000] ---- Finished /etc/init.d/S04burn_board_info.sh...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.360000] ++++ Launching /etc/init.d/S05set-gpios...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.370000] Set GPIO
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.370000] ---- Finished /etc/init.d/S05set-gpios...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.380000] ++++ Launching /etc/init.d/S06FactoryValue...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.490000] ---- Finished /etc/init.d/S06FactoryValue...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.510000] ++++ Launching /etc/init.d/S07system_init...
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.610000] INIT Process start
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.720000] enabled core dump for atswitch
+Jan  1 00:00:04 jiofi kern.warn kernel: [    4.720000] ++++ Launching lte 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:317 - ue_init(): ue_init entry 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:468 - _init(): recoveryActive=0 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:391 - PrintGeneralInfo(): -----------------------------------------------
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:392 - PrintGeneralInfo(): Date Jun 19 2019 Time 10:58:46
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:393 - PrintGeneralInfo(): -----------------------------------------------
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:394 - PrintGeneralInfo(): Version : ALT3800_06_01_08_00_56_LO
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:395 - PrintGeneralInfo(): verboseLevel = 0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:396 - PrintGeneralInfo(): host_addr  :
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:397 - PrintGeneralInfo(): local_addr : 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:398 - PrintGeneralInfo(): fw filename: null 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.180000] INFO  /main.c:399 - PrintGeneralInfo(): ip_address_exclude_from_arp (addr): 0.0.0.0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /ue_netif.c:2513 - probe_netdev(): NAPI: add (weight: 64) 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /bootstrap.c:615 - ue_bootstrap(): entering ue_bootstrap
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /bootstrap.c:625 - ue_bootstrap(): ******   GENERAL_PURPOSE_GRF_GP_REG_2 address 0xB4966408, value 0xCAFECAFE *******
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /bootstrap.c:628 - ue_bootstrap():  >>>>>>> FW already uploaded, bootstrap exit  <<<<<<<
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:548 - _init(): _init: 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:551 - _init(): --> start file interface init
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /ue_fileif.c:896 - ue_fileif_init(): Initializing file interface with userspace
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /ue_fileif.c:901 - ue_fileif_init(): registering family for non-YETI
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:556 - _init(): --> start LteDriver
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:111 - LteDriver_EntryPt(): Lte Driver Entry point
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:112 - LteDriver_EntryPt(): going to initialize lte ctrl
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] Mac2AppAmaMboxPtr      = 0xa75b0000
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1067 - lteCtrlDriverTaskHandler(): got MAC_INIT_CMPLT
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:120 - LteDriver_EntryPt(): going to initialize lte packet
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /ltePacketDeviceDriver.c:216 - ltePacketDriver_initialize(): recoveryActive=0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] dma_pool_alloc - name dlQ ret a74ce000 dma handle 074ce000
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /ltePacketDeviceDriver.c:219 - ltePacketDriver_initialize(): MEMALLOC: KMALLOC: dlQ : 3200
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1120 - lteCtrlDriverTaskHandler():  got PACKET_DRIVER_INIT_CMPLT
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /ltePacketDeviceDriver.c:260 - ltePacketDriver_initialize(): write ptr: A00D8CA0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /ltePacketDeviceDriver.c:643 - ltePacketDriver_installDriver(): recoveryActive=0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /ltePacketDeviceDriver.c:647 - ltePacketDriver_installDriver(): MEMALLOC: KFIFO: read_pkt_readyQ : 512
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1457 - lteCtrlDriverTaskHandler(): ->log: tty 0 serv 1, need 0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1503 - lteCtrlDriverTaskHandler(): ALLOW_LINUX_TO_SLEEP from MAC
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1440 - lteCtrlDriverTaskHandler(): ->userio: tty 1 serv 1, need 0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:457 - lteDriver_notify_fw_ready(): both ueservice and uetty ready - notify main init function
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1474 - lteCtrlDriverTaskHandler(): ->strm: tty 1 serv 1, need 0
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /main.c:457 - lteDriver_notify_fw_ready(): both ueservice and uetty ready - notify main init function
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /fwRecoveryMgr.c:52 - fwRecoveryMgr_Init(): Init task
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] DBG  /ue_tty.c:718 - uetty_init(): entry
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.220000] INFO  /lteControlDeviceDriver.c:1875 - lteCtrlDriver_open(): driver open : type 2 
+Jan  1 00:00:05 jiofi kern.warn kernel: [    5.620000] ++++ Launching db
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.570000] Init DB List
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.580000] Init DB Success
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.660000] ---- Finished db
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.660000] ++++ Launching atswitch
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.670000] init define etc/atswitch_config/atswitch_ecm_config.csv as the configuration file for atswitch
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.770000] ---- Finished atswitch
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.770000] ++++ Launching alt-ecm
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.920000] ---- Finished alt-ecm
+Jan  1 00:00:06 jiofi kern.warn kernel: [    6.920000] ++++ Launching usb-gadget
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.110000] USB gadget interface type is: osd_algo
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.640000] ----------------------------------- OSD required
+Jan  1 00:00:08 jiofi kern.info kernel: [    8.920000]  gadget: Mass Storage Function, version: 2009/09/11
+Jan  1 00:00:08 jiofi kern.info kernel: [    8.920000]  gadget: Number of LUNs=1
+Jan  1 00:00:08 jiofi kern.info kernel: [    8.920000]  lun0: LUN: removable read only CD-ROM file: /cdrom.iso
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000] usb_ep_autoconfig_ss: ep1in-bulk
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000] usb_ep_autoconfig_ss: ep2out-bulk
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000]  gadget: using random self ethernet address
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000]  gadget: using random host ethernet address
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000] ------------------------- Setting mtu prv 1500
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.920000] ------------------------- Setting mtu new 1500
+Jan  1 00:00:08 jiofi kern.info kernel: [    8.920000] usb0: MAC ce:7c:06:d8:ea:29
+Jan  1 00:00:08 jiofi kern.info kernel: [    8.920000] usb0: HOST MAC 6e:22:37:c3:da:21
+Jan  1 00:00:08 jiofi kern.warn kernel: [    8.970000]  retries :  170 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.010000]  retries :  169 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.030000]  retries :  168 
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.030000] s3c-hsotg bfc80000.usb: USBRst, num #3
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.050000] s3c-hsotg bfc80000.usb: new device is high-speed
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.050000]  retries :  167 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.070000]  retries :  166 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.080000]  retries :  165 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.100000]  retries :  164 
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.100000] s3c-hsotg bfc80000.usb: new address 5
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.110000]  retries :  163 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.120000] composite_setup: returned MSREQ!
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.120000] composite_setup: returned MSREQ!
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.120000]  retries :  162 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.140000]  retries :  161 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.150000]  retries :  160 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.170000]  retries :  159 
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.180000]  retries :  158 
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.190000] g_os_detect gadget: high-speed config #2: CDC Ethernet (MBIM)
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.190000] OS Detection: os_type='OST_WIN_8', first_time=0
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.190000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.200000] composite_setup: returned MSREQ!
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.200000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.200000] composite_setup: returned MSREQ!
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.200000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.210000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.210000] Windows 8 host
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.210000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.290000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.300000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.300000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.320000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.330000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.340000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.350000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.350000] OS Detection: os_type='OST_WIN_8'
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.560000] g_os_detect gadget: MBIM: SET DEVICE OFFLINE
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.590000] s3c-hsotg bfc80000.usb: s3c_hsotg_ep_disable: called for ep0
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.610000] s3c-hsotg bfc80000.usb: unregistered gadget driver 'g_os_detect'
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.790000] ------------------------- Setting mtu prv 1500
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.790000] ------------------------- Setting mtu new 1500
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.810000] usb0: MAC 00:11:22:33:44:55
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.810000] usb0: HOST MAC 00:12:bd:08:31:b2
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.810000] usb_ep_autoconfig_ss: ep1in-bulk
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.810000] usb_ep_autoconfig_ss: ep2out-bulk
+Jan  1 00:00:09 jiofi kern.warn kernel: [    9.810000] usb_ep_autoconfig_ss: ep3in-int
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.810000]  gadget: RNDIS Gadget, version: Apr2013
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.810000]  gadget: g_rndis ready
+Jan  1 00:00:09 jiofi kern.err kernel: [    9.810000] s3c-hsotg bfc80000.usb: s3c_hsotg_udc_start: bad speed
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.810000] s3c-hsotg bfc80000.usb: bound driver g_rndis
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.920000] s3c-hsotg bfc80000.usb: USBRst, num #110
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.930000] s3c-hsotg bfc80000.usb: new device is high-speed
+Jan  1 00:00:09 jiofi kern.info kernel: [    9.980000] s3c-hsotg bfc80000.usb: new address 5
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.000000] composite_setup: returned MSREQ!
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.000000] composite_setup: returned MSREQ!
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.060000] g_rndis gadget: high-speed config #2: RNDIS
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.110000] ---- Finished usb-gadget
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.110000] ++++ Launching dnsmasq
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.450000] Success
+Jan  1 00:00:10 jiofi daemon.info dnsmasq[1055]: started, version 2.78 cachesize 150
+Jan  1 00:00:10 jiofi daemon.info dnsmasq[1055]: compile time options: IPv6 GNU-getopt no-RTC no-DBus no-i18n no-IDN DHCP DHCPv6 no-Lua no-TFTP no-conntrack ipset auth no-DNSSEC loop-detect inotify
+Jan  1 00:00:10 jiofi daemon.warn dnsmasq[1055]: warning: interface br0 does not currently exist
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: DHCP, IP range 192.168.15.2 -- 192.168.15.254, lease time 7d
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: DHCPv6 stateless on br0
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: router advertisement on br0
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: DHCPv6 stateless on br0
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: router advertisement on br0
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.680000] ---- Finished dnsmasq
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.680000] ++++ Launching lan
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.680000] device usb0 entered promiscuous mode
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.680000] ADDRCONF(NETDEV_UP): br0: link is not ready
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.680000] PDN sharing is disable
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.710000] br0: port 1(usb0) entered forwarding state
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.710000] br0: port 1(usb0) entered forwarding state
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.710000] ADDRCONF(NETDEV_CHANGE): br0: link becomes ready
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.710000] Strating ipv6 forwarding on interface br0
+Jan  1 00:00:10 jiofi daemon.info dnsmasq[1055]: read /etc/hosts - 3 addresses
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: read /tmp/dhcp-hosts.conf
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: read /tmp/dnsmasq.dhcp.opt.conf
+Jan  1 00:00:10 jiofi daemon.warn dnsmasq[1055]: failed to access /etc/resolv.dnsmasq.conf: No such file or directory
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.760000] ---- Finished lan
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.760000] ++++ Launching relay
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.760000] start_relay()
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.770000] ---- Finished relay
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.770000] ++++ Launching multicast routing for embms
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: DHCPREQUEST(br0) 192.168.15.69 00:12:bd:08:31:b2 
+Jan  1 00:00:10 jiofi daemon.info dnsmasq-dhcp[1055]: DHCPACK(br0) 192.168.15.69 00:12:bd:08:31:b2 MAA-SARASWATHI
+Jan  1 00:00:10 jiofi kern.info kernel: [   10.800000] ADDRCONF(NETDEV_UP): lte0.255: link is not ready
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.800000] ---- Finished multicast routing for embms
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.800000] INIT Process Finish
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.800000] ---- Finished /etc/init.d/S07system_init...
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.830000] >>> Sending LTE FW logs to /dev/null >>>
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.860000] ++++ Launching /etc/init.d/S08amalib-init...
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.920000] ---- Finished /etc/init.d/S08amalib-init...
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.930000] ++++ Launching /etc/init.d/S09cust-cmd...
+Jan  1 00:00:10 jiofi kern.warn kernel: [   10.980000] ---- Finished /etc/init.d/S09cust-cmd...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   10.990000] ++++ Launching /etc/init.d/S09mcast_encaps...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.010000] >>> DHCP - ADD >>>
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.010000] >>> DHCP - Client MAC: 00:12:bd:08:31:b2, IP given: 192.168.15.69 >>>
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.040000] load_config: No such file or directory
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.160000] DBG  /ue_netif.c:1870 - ue_fw_mcast_encaps_enable_store(): mcast_encap ENABLE
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.160000] Setting multicast to unicast encapsulation ip address to 192.168.15.1
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.160000] DBG  /ue_netif.c:2246 - ue_fw_mcast_src_ip_addr_store(): new mcast src ip: 192.168.15.1 (C0A80F01)
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.160000] Set accept local to 1
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.160000] staring MAL deamon
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.390000] ---- Finished /etc/init.d/S09mcast_encaps...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.390000] ++++ Launching /etc/init.d/S09mcast_encaps_vvm...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.470000] DBG  /ue_netif.c:1870 - ue_fw_mcast_encaps_enable_store(): mcast_encap ENABLE
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.470000] Setting multicast to unicast encapsulation ip address to 192.168.15.1
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.470000] DBG  /ue_netif.c:2246 - ue_fw_mcast_src_ip_addr_store(): new mcast src ip: 192.168.15.1 (C0A80F01)
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.470000] Set accept local to 1
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.470000] staring MAL VVM deamon
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.540000] ---- Finished /etc/init.d/S09mcast_encaps_vvm...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.550000] ++++ Launching /etc/init.d/S10HealthMonitor...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.590000] DBG  /ue_netif.c:1833 - ue_fw_health_mon_enable_store(): health_mon ENABLE
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.590000] INFO  /healthMonitor.c:128 - health_mon_Init(): health_mon_Init: start - free mem: 77164 poll period : 5000 ms
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.590000] ---- Finished /etc/init.d/S10HealthMonitor...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.590000] INFO  /healthMonitor.c:267 - health_mon_thread(): health_mon_thread started
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.600000] ++++ Launching /etc/init.d/S10StateMachine...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.630000] ---- Finished /etc/init.d/S10StateMachine...
+Jan  1 00:00:11 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.660000] ++++ Launching /etc/init.d/S20confmanager...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.690000] ---- Finished /etc/init.d/S20confmanager...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.690000] ++++ Launching /etc/init.d/S24cat...
+Jan  1 00:00:11 jiofi kern.warn kernel: [   11.970000] coredump enabled for cat
+Jan  1 00:00:12 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:12 jiofi kern.warn kernel: [   12.330000] ---- Finished /etc/init.d/S24cat...
+Jan  1 00:00:12 jiofi kern.warn kernel: [   12.370000] ++++ Launching /etc/init.d/S24set-delay...
+Jan  1 00:00:12 jiofi kern.warn kernel: [   12.390000] ---- Finished /etc/init.d/S24set-delay...
+Jan  1 00:00:12 jiofi kern.warn kernel: [   12.390000] ++++ Launching /etc/init.d/S49elc...
+Jan  1 00:00:13 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:13 jiofi kern.warn kernel: [   13.580000] mounting SquashFS Image: /media/squash_images/lbs.squash.img to /mnt/squash/lbs
+Jan  1 00:00:13 jiofi kern.warn kernel: [   13.580000] coredump enabled for elc
+Jan  1 00:00:13 jiofi kern.warn kernel: [   13.580000] SUPL client is enabled
+Jan  1 00:00:13 jiofi kern.warn kernel: [   13.610000] Build xml file from ELC config
+Jan  1 00:00:15 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.210000] lpp_cp is enabled
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.230000] ---- Finished /etc/init.d/S49elc...
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.230000] ++++ Launching /etc/init.d/S52db-probe...
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.370000] ---- Finished /etc/init.d/S52db-probe...
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.370000] ++++ Launching /etc/init.d/S90mount...
+Jan  1 00:00:16 jiofi kern.warn kernel: [   16.470000] S90mount: will mount upload on mtdblock15
+Jan  1 00:00:19 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:19 jiofi kern.warn kernel: [   19.450000] sleep allowed
+Jan  1 00:00:20 jiofi kern.warn kernel: [   20.540000] sleep allowed
+Jan  1 00:00:20 jiofi kern.warn kernel: [   20.810000] ---- Finished /etc/init.d/S90mount...
+Jan  1 00:00:20 jiofi kern.warn kernel: [   20.810000] ++++ Launching /etc/init.d/S93www...
+Jan  1 00:00:22 jiofi kern.warn kernel: [   22.870000] ---- Finished /etc/init.d/S93www...
+Jan  1 00:00:22 jiofi kern.warn kernel: [   22.870000] ++++ Launching /etc/init.d/S97cwmpc...
+Jan  1 00:00:22 jiofi kern.warn kernel: [   22.970000] ---- Finished /etc/init.d/S97cwmpc...
+Jan  1 00:00:23 jiofi kern.warn kernel: [   23.130000] ++++ Launching /etc/init.d/S97telnetd...
+Jan  1 00:00:23 jiofi kern.warn kernel: [   23.200000] ---- Finished /etc/init.d/S97telnetd...
+Jan  1 00:00:23 jiofi kern.warn kernel: [   23.460000] ++++ Launching /etc/init.d/S98ftpd...
+Jan  1 00:00:23 jiofi kern.warn kernel: [   23.490000] ---- Finished /etc/init.d/S98ftpd...
+Jan  1 00:00:23 jiofi kern.warn kernel: [   23.550000] ++++ Launching /etc/init.d/S98imei_write...
+Jan  1 00:00:24 jiofi kern.warn kernel: [   24.190000] ---- Finished /etc/init.d/S98imei_write...
+Jan  1 00:00:24 jiofi kern.warn kernel: [   24.260000] ++++ Launching /etc/init.d/S98set_plmn...
+Jan  1 00:00:24 jiofi kern.warn kernel: [   24.430000] netlink: 12 bytes leftover after parsing attributes.
+Jan  1 00:00:25 jiofi kern.warn kernel: [   25.400000] AT+COPS=3,2 Success!
+Jan  1 00:00:25 jiofi kern.warn kernel: [   25.400000] ---- Finished /etc/init.d/S98set_plmn...
+Jan  1 00:00:25 jiofi kern.warn kernel: [   25.400000] ++++ Launching /etc/init.d/S98wlan...
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.860000] Realtek WLAN driver - version 1.7 (2016-11-01)
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.860000] Adaptivity function - version 9.1
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.860000]  wlan_index:0  1, 10,0x8179024c,0x0,0
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.860000] rtw_drv_init: sdio_func_id is "mmc0:0001:1"
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.860000] =====>>INSIDE rtl8192cd_init_one <<=====
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.880000] =====>>EXIT rtl8192cd_init_one <<=====
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.880000] =====>>INSIDE rtl8192cd_init_one <<=====
+Jan  1 00:00:26 jiofi kern.warn kernel: [   26.930000] =====>>EXIT rtl8192cd_init_one <<=====
+Jan  1 00:00:27 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:00:29 jiofi kern.info kernel: [   29.400000] device wlan0 entered promiscuous mode
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.750000] rtl8192es_get_of_value ENTRY 
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.750000] rtl8192es_get_of_value did not find np
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.760000] rtl8192es_get_of_value ENTRY 
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.760000] rtl8192es_get_of_value: found good GPIO 3
+Jan  1 00:00:29 jiofi kern.info kernel: [   29.770000] wifi-rtl81XX: Sleep manager registration - id: 3
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.770000] set_altair_wakeup_pin ENTRY 
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.790000] set_altair_wakeup_pin ENTRY after GPIO req gpio 3 : rc 0
+Jan  1 00:00:29 jiofi kern.err kernel: [   29.790000] requesting IRQ 36
+Jan  1 00:00:29 jiofi kern.warn kernel: [   29.830000] [PHY_ConfigBBWithParaFile][PHY_REG_PG_88E]
+Jan  1 00:00:30 jiofi kern.warn kernel: [   30.100000] ===> Load_88E_Firmware
+Jan  1 00:00:30 jiofi kern.warn kernel: [   30.260000] <=== Load_88E_Firmware
+Jan  1 00:00:30 jiofi kern.warn kernel: [   30.280000] Switch to channel 7 before doing 88E IQK
+Jan  1 00:00:30 jiofi kern.info kernel: [   30.630000] br0: port 2(wlan0) entered forwarding state
+Jan  1 00:00:30 jiofi kern.info kernel: [   30.630000] br0: port 2(wlan0) entered forwarding state
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.370000] >>> start wifi by wifi control script
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.430000] >>> enable wifi by wifi control script
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.430000] ---- Finished /etc/init.d/S98wlan...
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.430000] ++++ Launching /etc/init.d/S99data_stall_check...
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.460000] ---- Finished /etc/init.d/S99data_stall_check...
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.460000] ++++ Launching /etc/init.d/S99dbg-streamer...
+Jan  1 00:00:32 jiofi kern.warn kernel: [   32.790000] >>> Debug streamer disabled by default >>>
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.810000] AT%DBGSTRM="mode","off" FAIL!
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.810000] ---- Finished /etc/init.d/S99dbg-streamer...
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.810000] ++++ Launching /etc/init.d/S99debug...
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.830000] ---- Finished /etc/init.d/S99debug...
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.830000] ++++ Launching /etc/init.d/S99log-rotate...
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.860000] ---- Finished /etc/init.d/S99log-rotate...
+Jan  1 00:00:33 jiofi kern.warn kernel: [   33.860000] ++++ Launching /etc/init.d/S99set-misc...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.000000] DBG  /ue_netif.c:1833 - ue_fw_health_mon_enable_store(): health_mon DISABLE
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.090000] >>> configuring reset on fatal >>>
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.090000] U-boot Version:
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.110000] ver=U-Boot 2012.10-svn3034 (Sep 29 2017 - 15:40:21)
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.110000] ---- Finished /etc/init.d/S99set-misc...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.120000] ++++ Launching /etc/init.d/S99set_pmic_32Khz_osc...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.130000] ---- Finished /etc/init.d/S99set_pmic_32Khz_osc...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.130000] ++++ Launching /etc/init.d/S99sniffer...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.370000] >>> Sniffer disabled by default >>>
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.370000] ---- Finished /etc/init.d/S99sniffer...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.370000] ++++ Launching /etc/init.d/S99upnp...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.390000] offload total_len=782
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.390000] UPnP disabled
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.390000] ---- Finished /etc/init.d/S99upnp...
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.400000] ++++ Launching /etc/init.d/S99urandom...
+Jan  1 00:00:34 jiofi daemon.info init: starting pid 1897, tty '': '-/bin/sh'
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.400000] Initializing random number generator... done.
+Jan  1 00:00:34 jiofi kern.warn kernel: [   34.440000] ---- Finished /etc/init.d/S99urandom...
+Jan  1 00:00:34 jiofi daemon.info init: starting pid 1898, tty '': '/usr/local/bin/pwrt_sm_check.sh 60'
+Jan  1 00:00:36 jiofi kern.warn kernel: [   36.590000] WRN  /healthMonitor.c:283 - health_mon_thread(): health monitor stopped due to proc setting
+Jan  1 00:00:36 jiofi kern.warn kernel: [   36.590000] WRN  /healthMonitor.c:379 - health_mon_thread(): health_mon_thread EXIT (retval 0) 
+Jan  1 00:00:43 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0
+Jan  1 00:01:15 jiofi daemon.warn dnsmasq-dhcp[1055]: no address range available for DHCPv6 request via br0

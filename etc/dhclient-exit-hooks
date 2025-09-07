@@ -1,0 +1,211 @@
+#!/bin/sh
+#
+#  /etc/dhclient-exit-hooks  --  dhclient hook shell script
+#  this file is called from dhclient.script.
+#
+
+#
+# dhclient-exit-hooks
+#
+
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+
+SCRIPT_NAME=`basename $0`
+
+logfile=/tmp/logs/dhclient.log
+
+echo '------- $SCRIPT_NAME start -------' >> $logfile
+
+DHCPD_CONF_FILE="/tmp/dhcpd.conf"
+DHCPD_PID_FILE="/tmp/dhcpd.pid"
+DHCPD_LEASE_FILE="/tmp/dhcpd.lease"
+DHCPD_LOG_FILE="/tmp/logs/dhcpd.log"
+
+MAP_T_CONF_OPTION_FILE="/tmp/map-t.opt"
+
+DHCPV6_PD_FILE="/tmp/ip6-pd-info"
+#env >> $logfile
+
+
+IPV6_LAN_ADDRESS=""
+IPV6_LAN_ADDRESS_WO_NET=""
+IPV6_LAN_SUBNET=""
+IPV6_DHCP_PD=""
+IPV6_DHCP_PD_WO_NET=""
+IPV6_PREFIX_PREFERRED_LIFE="3600"
+IPV6_PREFIX_MAX_LIFE="7200"
+#Renew and rebind timers
+IPV6_PREFIX_T1="2000"
+IPV6_PREFIX_T2="3000"
+
+
+get_lan_ipv6_addr()
+{
+    IPV6_LAN_ADDRESS=`/sbin/ip addr show $LAN_IF | grep -i global | awk '/inet6/ {print $2}'`
+    echo "$SCRIPT_NAME Looking for Global IPv6 adderss on $LAN_IF" >> $logfile
+
+    if [ -n "$IPV6_LAN_ADDRESS" ]; then
+        #get the ipv6 subnet from the routing table (ignore link local fe80 routes)
+        IPV6_LAN_SUBNET=`/sbin/ip -6 ro show dev $LAN_IF | grep kernel | grep -v "fe80" | awk '{print $1}'`
+        IPV6_LAN_ADDRESS_WO_NET=${IPV6_LAN_ADDRESS%/*}
+        echo "$SCRIPT_NAME Found Global IPv6 adderss $IPV6_LAN_ADDRESS on $LAN_IF subnet is $IPV6_LAN_SUBNET" >> $logfile
+    else
+        echo "$SCRIPT_NAME: IPV6_LAN_ADDRESS is empty" >> $logfile
+        exit 0
+    fi
+
+}
+
+build_dhcpd_conf()
+{
+    echo "$SCRIPT_NAME: Enter build_dhcpd_conf" >> $logfile
+    #Prefix timers max and preferred
+    if [ -n $new_renew -a -n $new_rebind ]
+    then
+        IPV6_PREFIX_T1=$new_renew
+        IPV6_PREFIX_T2=$new_rebind
+        echo "$SCRIPT_NAME: IPV6_PREFIX_T1=$IPV6_PREFIX_T1 IPV6_PREFIX_T2=$IPV6_PREFIX_T2" >> $logfile
+    fi
+
+    if [ -n $new_preferred_life -a -n $new_max_life ]
+    then
+        IPV6_PREFIX_PREFERRED_LIFE=$new_preferred_life
+        IPV6_PREFIX_MAX_LIFE=$new_max_life
+        echo "$SCRIPT_NAME: IPV6_PREFIX_PREFERRED_LIFE=$IPV6_PREFIX_PREFERRED_LIFE IPV6_PREFIX_MAX_LIFE=$IPV6_PREFIX_MAX_LIFE" >> $logfile
+    fi
+
+cat > $DHCPD_CONF_FILE << EOF
+
+option dhcp6.name-servers $IPV6_LAN_ADDRESS_WO_NET;
+option dhcp-renewal-time $IPV6_PREFIX_T1;
+option dhcp-rebinding-time $IPV6_PREFIX_T2;
+
+subnet6 $IPV6_LAN_SUBNET
+{
+    prefix6 $IPV6_DHCP_PD_WO_NET $IPV6_DHCP_PD;
+    default-lease-time $IPV6_PREFIX_MAX_LIFE;
+    preferred-lifetime $IPV6_PREFIX_PREFERRED_LIFE;
+}
+    
+EOF
+    
+}
+
+start_dhcpd()
+{
+    #create / delete lease file
+    echo "$SCRIPT_NAME: start_dhcpd" >> $logfile
+    echo "" > $DHCPD_LEASE_FILE
+    /usr/sbin/dhcpd -6 -f -cf $DHCPD_CONF_FILE -lf $DHCPD_LEASE_FILE -pf $DHCPD_PID_FILE $LAN_IF >> /tmp/logs/dhcpd.log 2>&1 &
+}
+
+stop_dhcpd()
+{
+    echo "$SCRIPT_NAME: stop_dhcpd" >> $logfile
+    DHCPD_PID=`cat $DHCPD_PID_FILE`
+    kill $DHCPD_PID
+}
+
+create_map_t_option_file()
+{
+    echo "$SCRIPT_NAME: Enter create_map_t_option_file" >> $logfile
+
+    echo -n "" > $MAP_T_CONF_OPTION_FILE
+
+    if [ -n $new_dhcp6_S46_RULE ]
+    then
+        echo "MAP-T_S46_RULE=$new_dhcp6_S46_RULE" >> $MAP_T_CONF_OPTION_FILE
+    fi
+
+    if [ -n $new_dhcp6_S46_DMR ]
+    then
+        echo "MAP-T_S46_DMR=$new_dhcp6_S46_DMR" >> $MAP_T_CONF_OPTION_FILE
+    fi
+
+    if [ -n $new_dhcp6_S46_PORTPARAMS ]
+    then
+        echo "MAP-T_S46_PORTPARAMS=$new_dhcp6_S46_PORTPARAMS" >> $MAP_T_CONF_OPTION_FILE
+    fi
+#jkkim
+    if [ -f "/usr/local/bin/cpe-t" ]; then
+      /usr/local/bin/control start
+      /usr/local/bin/cpe-t
+    fi
+}
+
+add_route_to_prefix()
+{
+    echo "$SCRIPT_NAME: Enter add_route_to_prefix" >> $logfile
+
+    if [ -n $IPV6_DHCP_PD ] 
+    then
+        echo "$SCRIPT_NAME: Adding route for $IPV6_DHCP_PD dev $LAN_IF" >> $logfile
+        /sbin/ip -6 route add $IPV6_DHCP_PD dev $LAN_IF
+    fi
+}
+
+
+if [ x$reason = xBOUND6 ]; then
+
+    echo "$SCRIPT_NAME: BOUND6 event" >> $logfile
+    echo $new_ip6_prefix > $DHCPV6_PD_FILE
+
+    PD_MODE=`uci get lte-gw.lan_ipv6_param.dhcp6_pd_server`
+    if [ $PD_MODE = "enable" ]
+    then
+        IPV6_DHCP_PD=$new_ip6_prefix
+        IPV6_DHCP_PD_WO_NET=${IPV6_DHCP_PD%/*}
+        get_lan_ipv6_addr
+        build_dhcpd_conf
+        add_route_to_prefix
+        start_dhcpd
+    fi
+
+    MAP_T_MODE=`uci get lte-gw.ipv6_config.map_t_opt_from_dhcp`
+    if [ $MAP_T_MODE = "enable" ]
+    then
+        create_map_t_option_file
+    fi
+fi
+
+if [ x$reason = xRENEW6 ]; then
+
+    echo "$SCRIPT_NAME: RENEW6 event" >> $logfile
+
+    #check if the parameters have changed 
+    if [ x$new_ip6_prefix != x$old_ip6_prefix ] 
+    then
+        echo "$SCRIPT_NAME: Old $old_ip6_prefix and new $new_ip6_prefix Prefixes don't matches" >> $logfile
+        echo $new_ip6_prefix > /tmp/ip6-pd-info
+
+        PD_MODE=`uci get lte-gw.lan_ipv6_param.dhcp6_pd_server`
+        if [ $PD_MODE = "enable" ]
+        then
+            IPV6_DHCP_PD=$new_ip6_prefix
+            IPV6_DHCP_PD_WO_NET=${IPV6_DHCP_PD%/*}
+            get_lan_ipv6_addr
+            stop_dhcpd
+            build_dhcpd_conf
+            start_dhcpd
+        fi
+
+        MAP_T_MODE=`uci get lte-gw.ipv6_config.map_t_opt_from_dhcp`
+        if [ $MAP_T_MODE = "enable" ]
+        then
+            create_map_t_option_file
+        fi
+    else
+        echo "$SCRIPT_NAME: Old and new Prefix $new_ip6_prefix matches" >> $logfile
+    fi
+fi
+
+
+echo '------- $SCRIPT_NAME end -------' >> $logfile
+
+exit 0
+
+#
+# end of file
+#
+

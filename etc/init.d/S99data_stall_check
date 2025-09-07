@@ -1,0 +1,21 @@
+#!/bin/sh
+
+SERVICE_STATUS=`uci get /etc/config/data_recovery.data_recovery.automactic_clear`
+SERVICE_POLL=`uci get /etc/config/data_recovery.data_recovery.poll_period`
+
+case "$1" in
+    start)
+	if [ $SERVICE_STATUS != "enable" ]
+        then
+            exit 0
+        fi
+	/usr/local/bin/data_stall.sh $SERVICE_POLL &
+        ;;
+    stop)
+        killall data_stall.sh
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+esac

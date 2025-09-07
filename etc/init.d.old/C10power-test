@@ -1,0 +1,75 @@
+#!/bin/sh 
+. /usr/local/bin/lte-gw-global-env.sh
+
+LAST_OS=`uci get /etc/config/usb-gadget.config.last_os`
+FLAG='/etc/ue_lte/wrt_pwr_file'
+WIFI_TX_PWR=30
+LTE_TX_PWR=24
+
+# Change the frequency based on the band 
+LTE_TX_FRQ=19500
+# LTE_TX_FRQ=20750
+
+TEST_TIME=1000
+let SLEEP_TIME=TEST_TIME/1000
+
+WLAN_TYPE=$(cat /proc/device-tree/wlan_type)
+ 
+case "$1" in
+    start)
+	echo "** LAST OS FOUND : $LAST_OS **" > /dev/kmsg 
+	if [ $LAST_OS -eq 5 ]; then 
+		echo "Not connected to USB start Test" > /dev/kmsg
+		if [ -f $FLAG ]; then
+			rm -rf $FLAG
+			echo " *********** ERROR: RESET DUE TO POWER FAILURE *********"
+			#TODO:  add code to notify user about fault power source 
+			#	for example blink lend endlessly
+		else
+			echo 1 > $FLAG
+
+			if ([ $WLAN_TYPE == "RTL8189" ] || [ $WLAN_TYPE == "RTL" ]) ; then
+				ifconfig wlan up
+				echo "start wifi TX power $WIFI_TX_PWR" > /dev/kmsg
+				iwpriv wlan0 set_mib mp_specific=1
+				iwpriv wlan0 mp_start
+				iwpriv wlan0 mp_bandwidth 40M=0,shortGI=0
+				iwpriv wlan0 mp_channel 6
+				iwpriv wlan0 mp_rate 2
+				iwpriv wlan0 mp_ant_tx a
+				iwpriv wlan0 mp_txpower patha=60
+				iwpriv wlan0 mp_ctx pkt,background
+				etc/ue_lte/at.sh at+cfun=0 1
+				/etc/ue_lte/at.sh at%tstrf=3,$LTE_TX_FRQ,$TEST_TIME,0,$LTE_TX_PWR,0 0
+				sleep $SLEEP_TIME
+				/etc/ue_lte/at.sh at%tstrf=0 0
+				ifconfig wlan0 down
+			fi
+
+			if [ $WLAN_TYPE == "ATH" ] ; then
+				wifi-testmode.sh
+				echo "start wifi TX power $WIFI_TX_PWR" > /dev/kmsg
+				athtestcmd  --tx sine --txfreq=2412 --txpwr=$WIFI_TX_PWR
+				etc/ue_lte/at.sh at+cfun=0 1
+				/etc/ue_lte/at.sh at%tstrf=3,$LTE_TX_FRQ,$TEST_TIME,0,$LTE_TX_PWR,0 0
+				sleep $SLEEP_TIME
+				/etc/ue_lte/at.sh at%tstrf=0 0
+				athtestcmd --tx off
+				killall hostapd
+				disable-wifi.sh
+			fi
+
+			echo "*** not rebooted remove flag file $FLAG" > /dev/kmsg
+			rm -rf $FLAG
+		fi
+	else
+		echo "Connected to USB - do not start power up test" > /dev/kmsg
+		rm -rf $FLAG
+
+	fi
+	;;
+    stop)
+    # do nothing
+    ;;
+esac
+

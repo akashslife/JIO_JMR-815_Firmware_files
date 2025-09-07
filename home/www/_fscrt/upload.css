@@ -1,0 +1,24 @@
+
+ul,li{margin:0px;padding:0;}
+li{list-style:none;}    
+
+.file_list_del{
+  background: url('../_img/sd_css1.gif') no-repeat;
+  display: inline-block;
+  *display: inline;
+}
+#upload_progress{ display:inline-block;width:520px;background:#fff; border:1px solid #ccc; padding:20px; -webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;} 
+.input-file {position: relative;left:-180px;margin-left:5px;margin-top:10px;width: 80px;height: 30px;cursor:pointer;background: #ddd;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px; border: 1px solid gray;text-align: center;display: inline-block;*display:inline;zoom:1}
+.up_btn_name {display: inline-block;margin-top: 5px;cursor:pointer;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; color: #000;font-size: 14px;}
+.upload {display: block;position: absolute;top: 0;left: 0;width: 120px;height: 30px;cursor:pointer;font-size:14px;opacity: 0;-moz-opacity: 0;filter: alpha(opacity=0);}
+
+.file_list_name{width:40%;display: inline-block; padding:2px 5px;word-wrap: break-word; word-break: break-all; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;font-size:14px;}
+.file_list_size{width:20%;display: inline-block;padding:2px 5px; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;font-size:14px;}
+.file_list_state{border:1px solid gray;background:#ddd;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;font-size:14px;}
+.file_list_del{background-position: -0px -56px; height: 12px;width:12px;display: inline-block;vertical-align:middle;cursor: pointer; font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;font-size:14px;}
+.button_start{display: inline-block;margin-top: 5px;width:60px;height:25px;cursor:pointer;border: 1px solid gray;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; color: #000;background: #ddd;font-size: 14px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+.button_cancel{display: inline-block;margin-top: 5px;width:60px;height:25px;cursor:pointer;border: 1px solid gray;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif; color: #000;background: #ddd;font-size: 14px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;}
+#close_upload_div{display: inline-block;vertical-align:middle;float:right;margin-right:0px;margin-top:10px;padding:0;cursor:pointer;border: 1px solid gray;font-size:14px;background: #ddd;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;border-radius:5px;background-position:-0px -16px;width:80px;height:30px;font-family:'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',Meiryo,Arial,Tahoma,Sans-serif;}
+
+#upload_form{margin: 0;padding: 0;}
+

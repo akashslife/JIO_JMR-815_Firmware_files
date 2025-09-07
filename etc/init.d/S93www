@@ -1,0 +1,31 @@
+#!/bin/sh
+SERVICE_STATUS=`uci get admin.services.http`
+case "$1" in
+    start)
+	echo `uname -r` > /tmp/version
+        mkdir -p /var/tmp/session
+        mkdir -p /var/tmp/psession
+        mkdir -p /var/tmp/csrftoken
+        mkdir -p /var/tmp/wifidisk
+
+        if [ $SERVICE_STATUS != "enable" ]
+        then
+            echo " HTTP Disabled" > /dev/kmsg
+            /usr/local/bin/reason_check.sh
+	    rm -rf /home/www/*.tar &
+            exit 0
+        fi
+        lighttpd -f /etc/lighttpd.conf
+        /home/www/del_session
+        /usr/local/bin/reason_check.sh
+	rm -rf /home/www/*.tar &
+        ;;
+    stop)
+        ps | grep lighttpd | awk '{print $1}' | xargs kill 2>/dev/null
+        ps | grep del_session | awk '{print $1}' | xargs kill 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+esac

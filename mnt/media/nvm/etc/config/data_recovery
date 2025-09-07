@@ -1,0 +1,3 @@
+config 'environment' 'data_recovery'
+    option 'automactic_clear' 'enable'
+    option 'poll_period' '60'

@@ -1,0 +1,71 @@
+#!/bin/sh
+
+command=$1
+mac=$2
+ip=$3
+
+LOGS_DIRECT_SCRIPT='/etc/ue_lte/relayDbgInterfaces.sh'
+LOGS_MODE=`uci get -q lte-gw.modem_fw_logs.logs_mode`
+HOST_IP=`uci get lte-gw.debug_param.static_host_ip_addr`
+logs_if=`uci get lte-gw.debug_param.socket_if`
+logs_if_mac=/'tmp'/'logs_if_mac'
+USB_IF=`uci get usb-gadget.config.usb_if`
+
+# In the following host_mac variables make sure to keep the suffix usb0 and usb1 - they are used for variable name resolution 
+host_mac_usb0=`uci get -c /etc/static-config/ Identification.Device.Usb0HostMacAdd`
+#NTmore added No use usb1
+#host_mac_usb1=`uci get -q -c /etc/static-config/ Identification.Device.Usb1HostMacAdd`
+
+mbim_add_static_arp()
+{
+    echo "Adding static ARP $IP_ADDR $host_mac_usb0" > /dev/kmsg
+    arp -s $ip $host_mac_usb0 > /dev/kmsg 2>&1
+}
+
+logs_update () {
+        echo ">>> DHCP - Client MAC: $mac, IP given: $ip >>>" > /dev/kmsg
+        
+        if [ "$HOST_IP" == "none" -a $LOGS_MODE == "external" ]
+        then
+            echo ${logs_if}
+            if [[ ${logs_if:0:3} == "usb" ]] #Logs to USB interface
+            then
+                eval host_mac=\$host_mac_$logs_if # set host_mac indirectly by variable name "host_mac_<logs_if>" 
+                if `echo "$host_mac" | grep -i -q "$mac"` || [ $USB_IF == "mbim" -o $USB_IF == "mbim_acm" ]
+                then
+                    ${LOGS_DIRECT_SCRIPT} restart $ip
+                    echo $mac > ${logs_if_mac} 
+                fi
+            elif [ -f ${logs_if_mac} ] #Logs to specific host MAC address 
+            then
+                host_mac=$(cat ${logs_if_mac})
+                if echo $host_mac | grep -i -q $mac
+                then
+                    ${LOGS_DIRECT_SCRIPT} restart $ip
+                fi
+            else #Logs to any connected host
+                ${LOGS_DIRECT_SCRIPT} restart $ip 
+                echo $mac > ${logs_if_mac} 
+            fi
+        fi
+}
+
+case "$command" in                                                                            
+        add|old)                         
+        if [ $USB_IF == "mbim" -o $USB_IF == "mbim_acm" ];then
+            mbim_add_static_arp
+        fi
+        echo ">>> DHCP - ADD >>>" > /dev/kmsg
+        logs_update                       
+        ;;                               
+        del)                             
+        logs_update                        
+	echo ">>> DHCP - Remove Client >>>" > /dev/kmsg
+        ;;                               
+        update)                          
+	echo ">>> DHCP - UPDATE >>>" > /dev/kmsg
+        logs_update            
+        ;;                                                    
+esac                                                                                          
+                                                                                              
+exit 0

@@ -1,0 +1,44 @@
+
+config 'PDN' 'Config'
+        option 'PredefinedPDNMask' '0'
+        option 'InternalImsClass' '0'
+        option 'AdminClass' '1'
+        option 'ext_session_id_1' '0'
+        option 'ext_session_id_2' '0'
+
+config PDN 'Class1'
+        option Class 1
+        option Name 'null'
+        option IP_Type 'IPV4V6'
+        option Enabled 'true'
+        option External 'false'
+        option External_vlan_id '0'
+        option AutoRecoveryDisabled 'false'
+
+config PDN 'Class2'
+        option Class 2
+        option Name 'TestGp.rs'
+        option IP_Type 'IPV4V6'
+        option Enabled 'true'
+        option External 'false'
+        option External_vlan_id '1'
+        option AutoRecoveryDisabled 'true'
+
+config PDN 'Class3'
+        option Class 3
+        option Name 'admin'
+        option IP_Type 'IPV4V6'
+        option Enabled 'true'
+        option External 'false'
+        option External_vlan_id '2'
+        option AutoRecoveryDisabled 'true'
+
+config PDN 'Class4'
+        option Class 4
+        option Name 'Test12.rs'
+        option IP_Type 'IPV4V6'
+        option Enabled 'true'
+        option External 'false'
+        option External_vlan_id '3'
+        option AutoRecoveryDisabled 'true'
+

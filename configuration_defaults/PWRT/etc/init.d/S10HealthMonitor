@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+#
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+
+case "$1" in
+  start)
+        if [ $PROJECT_TYPE == "WRT" ] || [ $PROJECT_TYPE == "PWRT" ]; then
+	   	if [ -e /sys/devices/virtual/net/lte0/ue_fw_health_mon_enable ]; then
+  		      echo 1 > /sys/devices/virtual/net/lte0/ue_fw_health_mon_enable
+		fi
+	fi
+        echo "OK"
+        ;;
+  stop)
+        if [ $PROJECT_TYPE == "WRT" ] || [ $PROJECT_TYPE == "PWRT" ]; then
+	   	if [ -e /sys/devices/virtual/net/lte0/ue_fw_health_mon_enable ]; then
+			echo 0 > /sys/devices/virtual/net/lte0/ue_fw_health_mon_enable
+		fi
+        fi
+        echo "OK"
+        ;;
+  restart|reload)
+	stop
+	start
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

@@ -1,0 +1,45 @@
+
+config 'Environment' 'Config'
+	option 'OutputSocketFile'   '/tmp/atsw3'
+	option 'InputSocketFile'    '/tmp/atsw_out_ecm'
+	option 'InputUnsolicitSocketFile'   '/tmp/atsw47'
+	option 'HookDir'            '/etc/ecm'
+
+config 'Global' 'Mode'
+	option 'OperatorMode'               'null'
+	option 'ImsRegBypassMode'           'false'
+	option 'AutoConnectMode'            'true'
+	option 'CatIgnoreMode'              'false'
+	option 'RecoveryDisableMode'        'false'
+	option 'HandleSimRefresh'           'true'
+	option 'RecoverAfterSimRefresh'     'true'
+	option 'EnableRoamConfig'           'true'
+	option 'ignore_network_mtu'         'false'
+
+config 'Global' 'LteMode'
+	option 'CombinedAttachHome' 'false'
+	option 'CombinedAttachRoam' 'false'
+	option 'EnableVoiceCentric' 'false'
+	option 'EnableLPP'          'true'
+	option 'EnableLCS'          'true'
+
+config 'Global' 'Mtc'
+	option 'PsmCpsmsEn'         'false'
+	option 'PsmPTAU_T3412'      '44'
+	option 'PsmActTime_T3324'   '10'
+	option 'DefaultNSLPI'       'false'
+
+config 'Global' 'Ctrl'
+	option 'EnableData'         'true'
+	option 'EnableDataRoam'     'true'
+	option 'EnableIMS'          'true'
+	option 'EnableIMSRoam'      'true'
+
+config 'Environment' 'Timeout'
+	# timeout in millisecond unit
+	option 'IoResponse'         '60000'
+	option 'ImsRegistration'    '60000'
+	option 'MonitorPollingShort' '100'
+	option 'MonitorPollingLong' '300000'
+	option 'CmdResponsePolling' '10'
+

@@ -1,0 +1,38 @@
+config 'Environment' 'button'
+        option 'long_duration' '2000'
+
+config 'Environment' 'battery'
+        option 'low_threshold' '10'
+        option 'poll_period' '5'
+	option 'low_voltage' 	'3050'
+	option 'low_voltage_clr' 	'3300'
+
+config 'Environment' 'wifi_mon'
+        option 'no_station_timeout' '1800'
+        option 'poll_period' '5000'
+
+config 'Environment' 'sleep'
+        option 'test_mode' 'false'
+
+config 'Environment' 'cli_ev'
+	option 'filename' '/tmp/pwrt_sm_event_file'
+
+config 'Environment' 'user_preferences'
+	option 'automatic_shutdown' 'disable'
+	option 'turn_off_display'   'disable'
+	option 'power_led_blink'    'disable'
+
+config Environment unsol_monitr
+        option atsw_port '/tmp/atsw24'
+	
+config 'Environment' 'cutoff'
+	option 'function_enable' 'enable'
+	option 'count' '6'
+	option 'periodic_time' '30000'
+	option 'cutoff_temperature' '70'
+
+config 'Environment' 'charging_control'
+	option 'function_enable' 'enable'
+	option 'high_temperature' '55'
+	option 'mid_temperature' '52'
+	option 'low_temperature' '20'

@@ -1,0 +1,12 @@
+config 'os-gadget' 'gadget'
+	option windowsxp7 'rndis'
+	option linuxmac 'ether'
+	option windows8 'rndis'
+	option timeout 'none'
+
+config 'os-gadget' 'osdreset'
+	list types PWRT
+
+config 'os-gadget' 'timeout'
+	option windows7 4
+

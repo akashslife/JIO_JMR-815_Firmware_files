@@ -1,0 +1,2 @@
+config Global Config
+	option platform_config GETHGW

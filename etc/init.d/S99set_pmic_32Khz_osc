@@ -1,0 +1,75 @@
+#!/bin/sh
+
+# Check if there is a PMIC on board and set it's default state
+
+# Check if we identify the PMIC device
+
+if [ 1 ];then  #NTmore not use under code
+	echo ""
+else
+
+procfile=$(find /proc/device-tree -name 32Khz_default_state)
+if [ "$procfile" == "" ]; then
+        echo "PMIC device not found"
+else
+	if [ "$1" == "start" ]; then
+		def_state=$(cat $procfile);
+		echo "PMIC device found. def required state is $def_state"
+		case $def_state in
+			"on")
+				echo "Turning on PMIC 32 KHz oscilator"
+				i2cset -y 0 0x2d 0x23 1
+				;;
+			"off")
+				echo "Turning off PMIC 32 KHz oscilator"
+				i2cset -y 0 0x2d 0x23 0
+				;;
+			*)
+				;;
+		esac
+	else
+		echo "Turning on PMIC 32 KHz oscilator which is needed by the MASTER_SOFT_RST register"
+		i2cset -y 0 0x2d 0x23 1
+	fi
+fi
+			
+procfile=$(find /proc/device-tree -name ldo5_default_state)
+if [ "$procfile" == "" ]; then
+        echo "LDO 5 default state not found"
+else
+	def_state=$(cat $procfile);
+	echo "LDO 5 def required state is $def_state"
+	case $def_state in
+		"on")
+			echo "Turning on LDO 5"
+			i2cset -y 0 0x2d 0x1c 1
+			;;
+		"off")
+			echo "Turning off LDO 5"
+			i2cset -y 0 0x2d 0x1c 0
+			;;
+		*)
+			;;
+	esac
+fi
+
+procfile=$(find /proc/device-tree -name ldo9_default_state)
+if [ "$procfile" == "" ]; then
+        echo "LDO 9 default state not found"
+else
+	def_state=$(cat $procfile);
+	echo "LDO 9 def required state is $def_state"
+	case $def_state in
+		"on")
+			echo "Turning on LDO 9"
+			i2cset -y 0 0x2d 0x20 1
+			;;
+		"off")
+			echo "Turning off LDO 9"
+			i2cset -y 0 0x2d 0x20 0
+			;;
+		*)
+			;;
+	esac
+fi
+fi

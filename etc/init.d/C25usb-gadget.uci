@@ -1,0 +1,254 @@
+#!/bin/sh /etc/rc.common
+. /usr/local/bin/lte-gw-global-env.sh
+
+#141006,jclee,init usb os detect (change os bug)
+uci set /etc/config/usb-gadget.config.last_os=5
+uci commit /etc/config/usb-gadget
+
+#170123, ntmore added, init sdcard support
+STORAGE_ENABLED=`uci get /etc/config/storage.services.sdcard`                                                                                                                                                                   
+STORAGE_MODE=`uci get /etc/config/storage.services.sdmode`
+##-----> For WiFi-Disk
+WIFI_DISK_STATUS='/tmp/wifi_disk_status'
+WIFI_DISK_MOUNTED='0'   # WiFi or Internet Disk is enabled
+SD_CARD_NOT_EXIST='1'   # SD card doesn't exist
+SD_CARD_INVALID_FS='2'  # SD card doesn't format with FAT32
+WIFI_DISK_DISABLE='3'   # Mass Storage Mode(USB Disk) is enabled
+STORAGE_DISABLE='4'     # SD card is disabled
+
+. /usr/local/bin/usb_if.sh
+. /usr/local/bin/osd.sh
+. /usr/local/bin/usb_util.sh
+
+GADGETS_LIST="g_eth_acm g_ether g_mass_storage g_mbim g_mbim_acm g_mbim_hid g_mbim_hid_acm g_multi g_ncm g_ncm_acm g_os_detect g_rndis"
+OST_UNKNOWN=0
+OST_WINDOWS=1
+OST_WIN_7_XP=1
+OST_WINXP=2
+OST_WIN_7=3
+OST_LINUX_MAC=4
+OST_POWER_PLUG=5
+OST_WIN_8=6
+
+START=39
+
+
+start_driver() {
+	local section="$1"
+	# save the OS type found to log and get actual OS name
+	case $2 in
+		1|2|3)
+		# Windows host
+		echo "Windows XP/7 USB Host found" > /dev/kmsg
+		osName="windowsxp7"
+		;;
+
+		4)
+		# Linux or Mac (CDC - ECM)
+		echo "Linux/MAC USB Host found" > /dev/kmsg
+		osName="linuxmac"
+		;;
+
+		5)
+		# osd timeout - no USB host
+		echo "No USB Host found" > /dev/kmsg
+		osName="timeout"
+		RET=0
+		;;
+		
+		6)
+		# Windows 8 USB host
+		echo "Windows 8 host" > /dev/kmsg
+		osName="windows8"
+		RET=0
+		;;
+
+		*)
+		echo -- UNKNOWN OS
+		osName=""
+		RET=0
+		;;
+	esac
+	# get gadget name to start (from the config file) depend on OS name
+	gadgetToStart=`uci get -q -c /etc/config/ os-gadget.gadget.$osName`
+
+	# start the gadget
+	case $gadgetToStart in
+		"rndis")
+		start_rndis ${section} $2
+		;;
+
+		"ether")
+		start_ether ${section} $2
+		;;
+
+		"mbim")
+		start_mbim ${section}
+		;;
+
+		"composite")
+		start_composite ${section}
+		;;
+		
+		"mbim_acm")
+		start_mbim_acm ${section}
+		;;
+		
+		"mbim_hid")
+		start_mbim_hid ${section}
+		;;
+		
+		"mbim_hid_acm")
+		start_mbim_hid_acm ${section}
+		;;
+		
+		"ncm")
+		start_ncm ${section}
+		;;
+		
+		"ncm_acm")
+		start_ncm_acm ${section}
+		;;
+		
+		# do nothing for everything else
+		*)
+		;;
+	esac
+}
+
+
+
+usb_gadget_start() {
+	local section="$1"
+	local usbif
+
+	idvendor=`uci get -c /etc/static-config/ Identification.Device.idVendor`
+	device_mac0=`uci get -c /etc/static-config/ Identification.Device.Usb0LocalMacAdd`
+	device_mac1=`uci get -q -c /etc/static-config/ Identification.Device.Usb1LocalMacAdd`
+	host_mac0=`uci get -c /etc/static-config/ Identification.Device.Usb0HostMacAdd`
+	host_mac1=`uci get -q -c /etc/static-config/ Identification.Device.Usb1HostMacAdd`
+	imanufacturer=`uci get -c /etc/static-config/ Identification.Device.iManufacturer`
+	iproduct=`uci get -c /etc/static-config/ Identification.Device.iProduct`
+	
+	config_get usbif "${section}" usb_if
+	echo "USB gadget interface type is: $usbif" > /dev/kmsg
+
+	#Make sure there's no gadget in 
+	
+	if [ $usbif = "osd_algo" ]; then
+		usb_gadget_start_osd_ms_mem ${section} 170
+		# get list of types that require reset of OSD after no OS has detected
+		# restart OSD only if project type is one of them
+		typesList=`uci get -q -c /etc/config/ os-gadget.osdreset.types`
+		for element in $typesList; do
+			if [ $PROJECT_TYPE == $element ]; then
+				# if no OS has been detected
+				if [ $RET == 5 ];then
+					restart_osd &
+				fi
+				break
+			fi
+		done
+	elif [ $usbif = "osd_composite" ]; then
+		usb_gadget_start_osd_composite ${section} 150
+	elif [ $usbif = "rndis" ]; then
+		start_rndis ${section}
+	elif [ $usbif = "mbim" ]; then
+		start_mbim ${section}
+	elif [ $usbif = "mbim_acm" ]; then
+		start_mbim_acm ${section}
+	elif [ $usbif = "mbim_hid" ]; then
+		start_mbim_hid ${section}
+	elif [ $usbif = "mbim_hid_acm" ]; then
+		start_mbim_hid_acm ${section}
+	elif [ $usbif = "ncm" ]; then
+		start_ncm ${section}
+	elif [ $usbif = "ncm_acm" ]; then
+		start_ncm_acm ${section}
+	elif [ $usbif = "composite" ]; then
+		start_composite ${section}
+	elif [ $usbif = "disable" ]; then
+		echo "USB interface disable"
+	else
+		start_composite ${section}
+	fi
+}
+
+start() {
+# Not required for sflash_nfs if booting from NFS
+    if [ -e /proc/device-tree/config_type ]; then
+        if [ $(cat /proc/device-tree/config_type) == "Sflash_nfs" ]; then
+                if [ `devmem 0xb4967048` == "0x00000000" ]; then
+                        exit 0;
+                fi
+        fi
+    fi
+
+#echo $WIFI_DISK_MOUNTED > $WIFI_DISK_STATUS 
+
+#170123, ntmore added, init sdcard support    
+if [ $STORAGE_ENABLED = 'enable' ];then
+    if [ $STORAGE_MODE = '-1' ] ;then
+        `uci set /etc/config/storage.services.sdmode=1`
+        echo 1 > /tmp/mass_one
+        modprobe g_mass_storage file=/dev/mmcblk0
+        ##-----> For WiFi-Disk
+        echo $WIFI_DISK_DISABLE > $WIFI_DISK_STATUS
+        ##<----- For WiFi-Disk
+    elif [ $STORAGE_MODE = '0' ] ;then
+	M_WIFI_MODE=`uci get /etc/config/wifi.wifi.wifi_enabled`
+	if [ $M_WIFI_MODE = 'disable' ] ;then
+	  `uci set /etc/config/storage.services.sdmode=1`
+	  echo 1 > /tmp/mass_one
+	fi
+        #	if [ $STORAGE_MODE = '0' ] ;then
+        modprobe g_mass_storage file=/dev/mmcblk0
+        ##-----> For WiFi-Disk
+        echo $WIFI_DISK_DISABLE > $WIFI_DISK_STATUS
+        ##<----- For WiFi-Disk
+    elif [ $STORAGE_MODE = '1' -o $STORAGE_MODE = '2' ];then
+	
+        ##-----> For WiFi-Disk
+        MOUNT_RESULT=`exec mount /dev/mmcblk0p1 /mnt/media 2>&1`
+
+        # echo $MOUNT_RESULT > /tmp/mount_result        # for Debug
+
+        MOUNT_ALREADY=`echo $MOUNT_RESULT | grep "already" | wc -l`
+        if [ $MOUNT_ALREADY = '0' ]; then
+
+            NOT_EXIST_SD_CARD=`echo $MOUNT_RESULT | grep "does not exist" | wc -l`
+
+            if [ $NOT_EXIST_SD_CARD != '0' ];then
+                echo $SD_CARD_NOT_EXIST > $WIFI_DISK_STATUS
+            else
+                INVALID_FS=`echo -n $MOUNT_RESULT | wc -c`
+
+                if [ $INVALID_FS = '0' ];then
+                    echo $WIFI_DISK_MOUNTED > $WIFI_DISK_STATUS
+                else
+                    echo $SD_CARD_INVALID_FS > $WIFI_DISK_STATUS
+                fi
+            fi
+        fi
+        #start rndis
+	launch_parser #        /usr/local/bin/parser &
+        config_load usb-gadget
+        config_foreach usb_gadget_start usb-gadget
+        ##<----- For WiFi-Disk	
+    fi
+else #start rndis
+    echo $STORAGE_DISABLE > $WIFI_DISK_STATUS 
+    config_load usb-gadget
+    config_foreach usb_gadget_start usb-gadget
+fi
+}
+
+stop() {
+    local usb_if
+    usbif=`uci get usb-gadget.config.usb_if`
+
+	if [ $usbif != "disable" ]; then
+		rm_module_if_gadget_exist
+	fi
+}
+

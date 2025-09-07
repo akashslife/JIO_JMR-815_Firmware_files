@@ -1,0 +1,424 @@
+Normal:
+       +CNEM	 to server LTEFW1   (number 4).
+     +CAVIMS	 to server LTEFW1   (number 4).
+      +CGATT	 to server ECM      (number 0).
+       +CSAS	 to server SMS      (number 2).
+     %STATCM	 to server ECM      (number 0).
+    %PCOINFO	 to server LTEFW1   (number 4).
+      %CMGSC	 to server SMS      (number 2).
+        +GMR	 to server CFG      (number 10).
+     %FLTSMS	 to server SMS      (number 2).
+    %DBGSTRM	 to server LTEFW1   (number 4).
+          H0	 to server MOIP     (number 9).
+     %GPSVER	 to server ELC      (number 1).
+       +CRSM	 to server LTEFW1   (number 4).
+       +CIMI	 to server LTEFW1   (number 4).
+      %DRCMD	 to server LTEFW1   (number 4).
+       +CSCS	 to server SMS      (number 2).
+     %OMACMD	 to server VDMC     (number 3).
+        %CEN	 to server LTEFW1   (number 4).
+       %DREV	 to server LTEFW1   (number 4).
+     %CGINFO	 to server ECM      (number 0).
+       %AUTH	 to server LTEFW1   (number 4).
+       +CMGF	 to server SMS      (number 2).
+    %GETACFG	 to server CFG      (number 10).
+        +CEN	 to server LTEFW1   (number 4).
+      +CMTLR	 to server ELC      (number 1).
+       +CLCC	 to server MOIP     (number 9).
+       %CMGW	 to server SMS      (number 2).
+       +CMUT	 to server MOIP     (number 9).
+       +CMGW	 to server SMS      (number 2).
+     %PDNRDP	 to server ECM      (number 0).
+     %GPSTST	 to server ELC      (number 1).
+       +CMGD	 to server SMS      (number 2).
+  %SCACHECMD	 to server LTEFW1   (number 4).
+     +CUSATA	 to server CAT      (number 11).
+   +CGDSCONT	 to server ECM      (number 0).
+    %SMSINFO	 to server SMS      (number 2).
+    %MOIPAPI	 to server MOIP     (number 9).
+    %GNSSLOC	 to server LTEFW1   (number 4).
+       +CLIR	 to server MOIP     (number 9).
+   %RESETCID	 to server LTEFW1   (number 4).
+       +CSSN	 to server MOIP     (number 9).
+   %CPININFO	 to server LTEFW1   (number 4).
+     %CATAPI	 to server CAT      (number 11).
+  +CGCONTRDP	 to server LTEFW1   (number 4).
+       %MEAS	 to server LTEFW1   (number 4).
+   %OMADMAPI	 to server VDMC     (number 3).
+     %GETLOG	 to server LTEFW1   (number 4).
+     %FOTAEV	 to server VDMC     (number 3).
+    %GPSREAD	 to server ELC      (number 1).
+      +CEREG	 to server LTEFW1   (number 4).
+           E	 to server          (number 99). entered in the early configuration.
+      %PCONI	 to server LTEFW1   (number 4).
+       %CMGS	 to server SMS      (number 2).
+           H	 to server MOIP     (number 9).
+     %SETOTP	 to server CFG      (number 10).
+       +CMGS	 to server SMS      (number 2).
+     %IMSTST	 to server IMS      (number 6).
+     %GPSCMD	 to server ELC      (number 1).
+        +GMI	 to server CFG      (number 10).
+        %CSQ	 to server LTEFW1   (number 4).
+  %TSTUSIMSE	 to server LTEFW1   (number 4).
+           Z	 to server ECM      (number 0).
+        +CSQ	 to server LTEFW1   (number 4).
+       +COLP	 to server MOIP     (number 9).
+       +CGSN	 to server LTEFW1   (number 4).
+        +GSN	 to server LTEFW1   (number 4).
+       +CCHO	 to server LTEFW1   (number 4).
+     +CUSATR	 to server LTEFW1   (number 4).
+    %GPSINFO	 to server ELC      (number 1).
+       +COPS	 to server ECM      (number 0).
+     %SETCFG	 to server CFG      (number 10).
+     +CEMODE	 to server ECM      (number 0).
+       +CNMI	 to server SMS      (number 2).
+    %DEVINFO	 to server CFG      (number 10).
+        %VER	 to server ECM      (number 0).
+    +VZWAPNE	 to server ECM      (number 0).
+       +CSMS	 to server SMS      (number 2).
+        +GMM	 to server CFG      (number 10).
+      %CBARR	 to server XCAP     (number 8).
+       %CSDH	 to server SMS      (number 2).
+       +CEUS	 to server ECM      (number 0).
+       +CPMS	 to server SMS      (number 2).
+     +CGEREP	 to server LTEFW1   (number 4).
+     %EMGNUM	 to server ECM      (number 0).
+     %EMGCBM	 to server ECM      (number 0).
+       +CSIM	 to server LTEFW1   (number 4).
+ %LOGSTOHOST	 to server CFG      (number 10).
+     +CUSATD	 to server LTEFW1   (number 4).
+     +CGCMOD	 to server LTEFW2   (number 5).
+       %CEER	 to server LTEFW1   (number 4).
+       +CMEE	 to server LTEFW1   (number 4).
+        +VTS	 to server MOIP     (number 9).
+%SUPLPDNACTEV	 to server ECM      (number 0).
+       %APNN	 to server ECM      (number 0).
+       +CRES	 to server SMS      (number 2).
+       +CNUM	 to server LTEFW1   (number 4).
+   %SETROUTE	 to server ECM      (number 0).
+     +CMTLRA	 to server ELC      (number 1).
+     %SETPCO	 to server LTEFW1   (number 4).
+    %SETDHCP	 to server LTEFW1   (number 4).
+       +CHLD	 to server MOIP     (number 9).
+       %CCLK	 to server LTEFW1   (number 4).
+    %PPPAUTH	 to server LTEFW1   (number 4).
+     +CUSATE	 to server CAT      (number 11).
+          H1	 to server MOIP     (number 9).
+      %OMAEV	 to server VDMC     (number 3).
+       +CCLK	 to server LTEFW1   (number 4).
+     %UPGCMD	 to server CFG      (number 10).
+     %DBPAPI	 to server DBP      (number 7).
+           I	 to server CFG      (number 10).
+     %PDNSET	 to server ECM      (number 0).
+ %GPSUPGRADE	 to server ELC      (number 1).
+       %SMMA	 to server SMS      (number 2).
+      +CCFCU	 to server XCAP     (number 8).
+       +CSCA	 to server SMS      (number 2).
+      %USMSF	 to server SMS      (number 2).
+       +CNMA	 to server SMS      (number 2).
+     %IMSAPI	 to server IMS      (number 6).
+     %NETSEL	 to server ECM      (number 0).
+  %SRVCHANGE	 to server CFG      (number 10).
+      +CPNER	 to server LTEFW1   (number 4).
+    %SETACFG	 to server CFG      (number 10).
+       +CMSS	 to server SMS      (number 2).
+       +CSDH	 to server SMS      (number 2).
+      %CMGRS	 to server LTEFW1   (number 4).
+       %CCID	 to server LTEFW1   (number 4).
+      %GETID	 to server LTEFW1   (number 4).
+     %TSTLTE	 to server LTEFW1   (number 4).
+       +CCWA	 to server MOIP     (number 9).
+       +CCHC	 to server LTEFW1   (number 4).
+     %OTPCMD	 to server CFG      (number 10).
+       +CGMM	 to server CFG      (number 10).
+     %IMSCMD	 to server ECM      (number 0).
+   %OTDOACMD	 to server LTEFW1   (number 4).
+     %ECMAPI	 to server ECM      (number 0).
+     %LTECMD	 to server LTEFW1   (number 4).
+    %DATACMD	 to server ECM      (number 0).
+      %GPSEV	 to server ELC      (number 1).
+      +CGSMS	 to server SMS      (number 2).
+       +CRLA	 to server LTEFW1   (number 4).
+       +CMGC	 to server SMS      (number 2).
+   %FOTAINFO	 to server VDMC     (number 3).
+       +CLCK	 to server LTEFW1   (number 4).
+       +CFUN	 to server ECM      (number 0).
+     %SETLOG	 to server LTEFW1   (number 4).
+    %CATSTAT	 to server LTEFW1   (number 4).
+  %SETBDELAY	 to server CFG      (number 10).
+     %CSGCMD	 to server LTEFW2   (number 5).
+    %SRVLOCK	 to server CFG      (number 10).
+   %NOTIFYEV	 to server LTEFW1   (number 4).
+       +CVHU	 to server MOIP     (number 9).
+    %TRSHCMD	 to server LTEFW1   (number 4).
+       +CGMI	 to server CFG      (number 10).
+     %VLTCMD	 to server MOIP     (number 9).
+       +CMGR	 to server SMS      (number 2).
+       +CLIP	 to server MOIP     (number 9).
+     %STATUS	 to server LTEFW1   (number 4).
+ %GPSREADBIN	 to server ELC      (number 1).
+           A	 to server MOIP     (number 9).
+       +CREG	 to server LTEFW1   (number 4).
+      %CEREG	 to server LTEFW1   (number 4).
+  %ATUSOLDEL	 to server LTEFW1   (number 4).
+     %VECEER	 to server MOIP     (number 9).
+      %VLTEV	 to server MOIP     (number 9).
+        +VTD	 to server MOIP     (number 9).
+     %GETCFG	 to server LTEFW1   (number 4).
+     %EMGCMD	 to server ECM      (number 0).
+         &F0	 to server ECM      (number 0).
+       +CTFR	 to server MOIP     (number 9).
+      +CIREG	 to server IMS      (number 6).
+      %CATEV	 to server CAT      (number 11).
+      %DMSES	 to server VDMC     (number 3).
+       +CPOL	 to server LTEFW1   (number 4).
+     +CUSATT	 to server CAT      (number 11).
+     +CUSATW	 to server LTEFW1   (number 4).
+        %EXE	 to server CFG      (number 10).
+      %CMGWC	 to server SMS      (number 2).
+     %PDNACT	 to server ECM      (number 0).
+     %NFSMNG	 to server CFG      (number 10).
+  %IMSINITEN	 to server ECM      (number 0).
+       %CNMA	 to server LTEFW1   (number 4).
+    %ROHCCMD	 to server LTEFW1   (number 4).
+       +CPIN	 to server LTEFW1   (number 4).
+ %CATPOLLINT	 to server LTEFW1   (number 4).
+    %SIMSTAT	 to server ECM      (number 0).
+%COLLECTLOGS	 to server CFG      (number 10).
+     %TSTEXT	 to server LTEFW2   (number 5).
+  %CATLOCINF	 to server LTEFW1   (number 4).
+       +CMGL	 to server SMS      (number 2).
+       %CSMP	 to server SMS      (number 2).
+    %CGDCONT	 to server LTEFW1   (number 4).
+          AT	 to server LTEFW1   (number 4).
+      %CMATT	 to server ECM      (number 0).
+    %FOTACMD	 to server VDMC     (number 3).
+       +CSMP	 to server SMS      (number 2).
+        +CDU	 to server MOIP     (number 9).
+    +CGDCONT	 to server ECM      (number 0).
+      %LTERR	 to server LTEFW1   (number 4).
+    %CHKPLMN	 to server LTEFW1   (number 4).
+      +CIREP	 to server LTEFW1   (number 4).
+      +CGACT	 to server ECM      (number 0).
+    %BANDCAP	 to server CFG      (number 10).
+       %NPEV	 to server LTEFW1   (number 4).
+     %SMSAPI	 to server SMS      (number 2).
+      %COUNT	 to server LTEFW1   (number 4).
+   %SETURLIP	 to server ECM      (number 0).
+       +CGMR	 to server CFG      (number 10).
+ %SUPLPDNACT	 to server ECM      (number 0).
+
+Exceptions:
++CGATT 
+    from input ECM      (number 3) to LTEFW2.
++CFUN 
+    from input ECM      (number 3) to LTEFW1.
++CNMI 
+    from input SMS      (number 5) to LTEFW1.
+%CMGW 
+    from input SMS      (number 5) to LTEFW1.
++CGDSCONT 
+    from input ECM      (number 3) to LTEFW1.
++CMGW 
+    from input SMS      (number 5) to LTEFW1.
+%VER 
+    from input ECM      (number 3) to LTEFW1.
++CGDCONT 
+    from input ECM      (number 3) to LTEFW1.
++COPS 
+    from input ECM      (number 3) to LTEFW2.
+%EMGCMD 
+    from input ECM      (number 3) to LTEFW1.
++CMGD 
+    from input SMS      (number 5) to LTEFW1.
++CGACT 
+    from input ECM      (number 3) to LTEFW2.
+%SETCFG 
+    from input CFG      (number 39) to LTEFW1.
+    from input VDMC     (number 25) to LTEFW1.
+    from input ATSCRIPT (number 1) to LTEFW1.
++CMGR 
+    from input SMS      (number 5) to LTEFW1.
++CEMODE 
+    from input ECM      (number 3) to LTEFW1.
++CNMA 
+    from input SMS      (number 5) to LTEFW1.
++CMGL 
+    from input SMS      (number 5) to LTEFW1.
+%CMGS 
+    from input SMS      (number 5) to LTEFW1.
++CMGS 
+    from input SMS      (number 5) to LTEFW1.
+%SETOTP 
+    from input CFG      (number 39) to LTEFW1.
+%PWRSVCMD 
+    from input ATSCRIPT (number 1) to CFG.
+    from input WEBG     (number 7) to CFG.
+    from input HOSTV    (number 9) to CFG.
++CUSATA 
+    from input CAT      (number 8) to LTEFW1.
++CPMS 
+    from input SMS      (number 5) to LTEFW1.
+
+unsolicited:
+%MBMSEV to:
+	MALUNSOL (number 31)
+	HOSTS    (number 0)
+	HOSTV    (number 9)
+NO CARRIER to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
++CPNERU to:
+	HOSTV    (number 9)
+%STATCM to:
+	ASPSU    (number 46)
+	MBIMUN   (number 33)
+	FASTSER  (number 30)
+	HOSTV    (number 9)
+	HOSTS    (number 0)
+%CDS to:
+	SMSUN    (number 4)
+%CATSTAT to:
+	CAT      (number 8)
+%DREV to:
+	ECMUN    (number 47)
++CEN2 to:
+	ECMUN    (number 47)
+%GPSEV to:
+	TRKU     (number 42)
+	FASTSER  (number 30)
+	HOSTS    (number 0)
+	HOSTV    (number 9)
+%NPEVU to:
+	ELCOUT   (number 20)
+	CAT      (number 8)
+	ECMUN    (number 47)
++CDS to:
+	FASTSER  (number 30)
+	HOSTV    (number 9)
+%CEREGU to:
+	ELCOUT   (number 20)
+	CAT      (number 8)
+	ECMUN    (number 47)
+%VLTCMDU to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%FOTAEV to:
+	FOTAMUN  (number 28)
+	HOSTV    (number 9)
+%IMSEV to:
+	ECMUN    (number 47)
+	CAT      (number 8)
+%IMSSTATEV to:
+	ECMUN    (number 47)
+%OTDOAMEAS to:
+	ELCOUT   (number 20)
+%LWM2MOPEV to:
+	HOSTV    (number 9)
+%CEER to:
+	CAT      (number 8)
+	ECMUN    (number 47)
++CIREGU to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%OMAEV to:
+	FOTAMUN  (number 28)
+	HOSTV    (number 9)
++CEREG to:
+	FASTSER  (number 30)
+	HOSTV    (number 9)
+	HOSTS    (number 0)
++CMTLR to:
+	HOSTS    (number 0)
+	HOSTV    (number 9)
++CBM to:
+	HOSTV    (number 9)
++CDSI to:
+	FASTSER  (number 30)
+	HOSTV    (number 9)
+%SUPLNIEV to:
+	ELCOUT   (number 20)
++CNEMS1 to:
+	ECMUN    (number 47)
++CDUU to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
++CSSU to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%CHKPLMN to:
+	CAT      (number 8)
+%NOTIFYEV to:
+	ASPSU    (number 46)
+	MBIMUN   (number 33)
+	HOSTV    (number 9)
+	ECMUN    (number 47)
++CUSATEND to:
+	HOSTV    (number 9)
+%EMGCBM to:
+	HOSTV    (number 9)
++COLP to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%CMT to:
+	SMSUN    (number 4)
++CSSI to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%LWM2MEV to:
+	FOTAMUN  (number 28)
+	HOSTV    (number 9)
++CLIP to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
++CMT to:
+	FASTSER  (number 30)
+	PWRTSMUN (number 24)
+	WEBUN    (number 17)
+	MBIMUN   (number 33)
+	HOSTV    (number 9)
+	HOSTS    (number 0)
++CREG to:
+	VVMUNSOL (number 14)
+	MALUNSOL (number 31)
+	MBIMUN   (number 33)
+%SCANEND to:
+	FASTSER  (number 30)
+	HOSTV    (number 9)
+	HOSTS    (number 0)
+%GPSUNSOL to:
+	HOSTS    (number 0)
+	HOSTV    (number 9)
+%SUPLPDNACTEV to:
+	ELCOUT   (number 20)
+RING to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
+%CATPDNSTAT to:
+	CAT      (number 8)
+%VLTEV to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
++CEN1 to:
+	ECMUN    (number 47)
++CUSATP to:
+	HOSTV    (number 9)
++CCWA to:
+	SMUN     (number 23)
+	HOSTV    (number 9)
++CGEV to:
+	ASPSU    (number 46)
+	ECMUN    (number 47)
++CMTI to:
+	TRKU     (number 42)
+	FASTSER  (number 30)
+	PWRTSMUN (number 24)
+	WEBUN    (number 17)
+	MBIMUN   (number 33)
+	HOSTV    (number 9)
+	HOSTS    (number 0)
+%LTERRU to:
+	ECMUN    (number 47)
+
+Cancelable:
++CGATT

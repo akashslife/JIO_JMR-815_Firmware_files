@@ -1,0 +1,32 @@
+#!/bin/sh
+
+AT_PORT=$1
+EXT_PORT=$2
+SOCAT_OPT=$3
+
+while [ 1 ]
+do
+	if [ "${EXT_PORT/"ttyGS"}" != "$EXT_PORT" ]; then
+
+		USB=`find /sys/devices -name gadget`
+		state=$(cat $USB/net/usb0/carrier)
+		# id usb not connected
+		if [ "$state" != "1" ]; then 
+			logger "USB not detected... - $EXT_PORT not connected"
+			# wait for usb to connect
+			is_usb=`cat /sys/class/udc/bfc80000.usb/is_usb_reconnected`
+			echo 0 > /sys/class/udc/bfc80000.usb/is_usb_reconnected
+			logger "USB change detected...  "
+		fi
+	fi
+
+	logger "Launching socat $AT_PORT <--> $EXT_PORT"
+	socat -ly $SOCAT_OPT $AT_PORT,reuseaddr,nonblock $EXT_PORT
+
+	if [ "${EXT_PORT/"ttyGS"}" != "$EXT_PORT" ]; then
+		echo 0 > /sys/class/udc/bfc80000.usb/is_usb_reconnected
+	fi
+
+	sleep 1
+done
+

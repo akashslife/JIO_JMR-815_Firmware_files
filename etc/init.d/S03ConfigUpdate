@@ -1,0 +1,203 @@
+#!/bin/sh
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+DEV_MODE=0
+NVM_CFG_PATH='/nvm/etc/config'
+NVM_STATIC_CFG_PATH='/nvm/etc/static-config'
+CFG_SHADOW_PATH='/nvm_defaults/etc/config'
+STATIC_CFG_SHADOW_PATH='/nvm_defaults/etc/static-config'
+CONFIGURATION_DEFS_PATH='/configuration_defaults'
+INIT_PATH='/etc/init.d'
+LOGS_SAVE_PATH='/nvm/Logs'
+NVM_LOGS='/nvm/Logs'
+NVM_CRUSH_LOGS='/nvm/CrushDumps'
+#VER_FS=`uci -c $CFG_SHADOW_PATH get version.Config.Ver`
+VER_FS=`uci -c $CFG_SHADOW_PATH get version.Config.NTVer`
+CFG_CP='false'
+
+set_uci_param()
+{
+   uci_name=$1
+   var_value=$2
+   if [ $2 ] ;then
+      uci set $1=$2
+   else
+      echo "$0:  cannot find value for $1" > /dev/kmsg
+   fi
+}
+
+remove_nvm_logs()
+{
+    echo ">>> Cleaning old Logs"
+    rm -rf $NVM_LOGS/*
+    rm -rf $NVM_CRUSH_LOGS/*
+}
+save_persistent_data()
+{
+	#WIFI
+	mkdir -p /tmp/wifi
+    if [ -e $NVM_CFG_PATH/wifi ]; then
+       cp -f $NVM_CFG_PATH/wifi $NVM_CFG_PATH/wifi-accept $NVM_CFG_PATH/wifi-deny /tmp/wifi 
+    fi
+    
+    if [ -e $NVM_CFG_PATH/wifi-second ]; then
+       cp -f $NVM_CFG_PATH/wifi-second $NVM_CFG_PATH/wifi-second-accept $NVM_CFG_PATH/wifi-second-deny /tmp/wifi 
+    fi
+    
+    #ECM
+    APNTABLE=`uci get service.ECM.APNTableFile`
+    if [ -e $NVM_CFG_PATH/$APNTABLE ]; then
+        cp -rf $NVM_CFG_PATH/$APNTABLE /tmp
+        cp -rf $NVM_CFG_PATH/lte_auth /tmp
+	fi
+    
+    #LWM2M
+    if [ -e $NVM_CFG_PATH/lwm2m ]; then
+        cp -rf $NVM_CFG_PATH/lwm2m /tmp
+    fi
+    
+}
+
+recover_persistent_data()
+{
+	#ECM
+	cp -rf /tmp/$APNTABLE $NVM_CFG_PATH
+	cp -rf /tmp/lte_auth $NVM_CFG_PATH
+    #WIFI
+	if [ -e /tmp/wifi/ ]; then
+        cp -rf /tmp/wifi/* $NVM_CFG_PATH
+    fi
+    
+    #LWM2M
+    if [ -e /tmp/lwm2m/ ]; then
+        cp -rf /tmp/lwm2m/* $NVM_CFG_PATH/lwm2m/
+    fi
+
+}
+
+copy_operator_files()
+{
+# copy operator related config files
+
+    if [ -e /etc/operators/$OPERATOR ]; then
+        OPER_PATH='/etc/operators/'$OPERATOR
+    else
+        OPER_PATH='/etc/operators/default'
+        OPERATOR='default'
+    fi
+
+    cp -rf $OPER_PATH/config/* $NVM_CFG_PATH
+    cp -rf $OPER_PATH/scripts/* /usr/local/bin/
+
+    echo ">>> Copy Operator configurations for $OPERATOR >>>" > /dev/kmsg
+}
+
+case "$1" in
+start)
+	# Get configuration mode:
+	if [ -e /proc/device-tree/configuration ]; then
+		PROJECT_CONFIGURATION=$(cat /proc/device-tree/configuration);
+	else
+		PROJECT_CONFIGURATION="USBDongle"
+	fi
+
+	# Get Operator:
+	OPERATOR=`uci get -q service.Mode.Operator`
+	if [ -z "$OPERATOR" ]
+	then
+		OPERATOR='default'
+	fi
+
+	if [ -f $NVM_CFG_PATH/version ]; then
+		#VER_NVM=`uci -c $NVM_CFG_PATH get version.Config.Ver`
+		VER_NVM=`uci -c $NVM_CFG_PATH get version.Config.NTVer`
+		if [ -z $VER_NVM ]
+		then
+		DEV_MODE=1
+			CFG_CP='true'
+		fi
+		if [ "$VER_FS" != "$VER_NVM" ]
+		then
+			CFG_CP='true'
+		fi
+	else
+		mkdir $NVM_CFG_PATH
+		CFG_CP='true'
+	fi
+
+	if [ -f $NVM_CFG_PATH/configuration ]; then
+		PLATFORM_CFG_NVM=`uci -c $NVM_CFG_PATH get configuration.Config.platform_config`
+		if [ "$PLATFORM_CFG_NVM" != "$PROJECT_CONFIGURATION" ]
+		then
+			CFG_CP='true'
+		fi
+	else
+		CFG_CP='true'
+	fi
+
+	#---- Copy if needed ----
+	if [ $CFG_CP = 'true' ]
+	then
+		echo ">>> Copy config folder from nvm_defaults, New: $VER_FS, Old: $VER_NVM >>>" > /dev/kmsg
+
+		save_persistent_data
+		
+		remove_nvm_logs
+		rm -rf $LOGS_SAVE_PATH
+		sync
+		rm -rf $NVM_CFG_PATH/*
+		sync
+		cp -rf $CFG_SHADOW_PATH/* $NVM_CFG_PATH
+		sync
+		echo ">>> Copy platform configurations for $PROJECT_CONFIGURATION configuration >>>" > /dev/kmsg
+		cp -rfL $CONFIGURATION_DEFS_PATH/$PROJECT_CONFIGURATION/* /
+
+		copy_operator_files
+
+		#---- Create the directory for static configuration if needed ---- 
+		if [ ! -d $NVM_STATIC_CFG_PATH ] 
+		then
+			mkdir -p $NVM_STATIC_CFG_PATH
+		fi
+
+		if [ ! -f $NVM_STATIC_CFG_PATH/Identification ]
+		then
+			cp -rf $STATIC_CFG_SHADOW_PATH/Identification $NVM_STATIC_CFG_PATH
+			sync
+		fi
+
+		if [ ! -f $NVM_STATIC_CFG_PATH/HostInfo ]
+		then
+			cp -rf $STATIC_CFG_SHADOW_PATH/HostInfo $NVM_STATIC_CFG_PATH
+			sync
+		fi
+
+		recover_persistent_data
+	
+		#Copy plmnDB file to bsp folder
+		cp -rf /etc/ue_lte/PlmnDB/plmntable /nvm/bsp/
+	
+		#Zero memory allocations for Debug Streamer and Sniffer. Requires reboot to take affect.
+		`fw_setenv phy_dbgstreamer 0`
+		`fw_setenv phy_sniffer 0`
+	
+		#delete WEB GUI AT history file
+		rm -rf /nvm/at_commands_history.log
+	
+		touch /tmp/new_version
+	
+	else
+        if [ ! -d $NVM_STATIC_CFG_PATH ]
+        then
+            echo ">>> WARN: detected missing static-config directory - refill it >>>" > /dev/kmsg
+            mkdir -p $NVM_STATIC_CFG_PATH
+            cp -rf $STATIC_CFG_SHADOW_PATH/* $NVM_STATIC_CFG_PATH
+        fi
+	   echo ">>> Config folder is updated ($VER_NVM), no copy >>>" > /dev/kmsg
+	fi
+
+	echo 1 > /proc/sys/vm/overcommit_memory
+;;
+stop)
+;;
+esac

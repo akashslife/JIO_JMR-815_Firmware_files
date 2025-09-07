@@ -1,0 +1,7 @@
+confmanager: Starting ...
+confmanager: additional_config_dir='/nvm/etc/static-config'
+confmanager: output socket: /tmp/atsw39 input /tmp/atsw_out_cfgmng
+confmanager: AT Server On, thread ID = 2000434432l
+ret_val from unlink = -1
+confmanager: Now waiting to accept a connection on '/tmp/atsw_out_cfgmng' .... 
+confmanager: Accepted connection on fd = 5 

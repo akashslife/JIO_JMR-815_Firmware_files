@@ -1,0 +1,817 @@
+00:00:07.164 [D2] Embedded Connection Manager v0.3.17 (2019-02-19 18:29:45) 
+
+00:00:07.165 [D2] setup_signals: signals successfully registered 
+00:00:07.241 [D2] config_manag_get_APP_environment: MTU is set to null
+00:00:07.242 [D2] config_manag_is_platform_support_volte: /proc/device-tree/volte_enabled file is missing
+00:00:07.388 [D3] i/o  /tmp/atsw3: [DISCONNECTED]----<init>----[CONNECTED]
+00:00:07.389 [D3] i/o  /tmp/atsw47: [DISCONNECTED]----<init>----[CONNECTED]
+00:00:07.393 [D3] -------------------------------------
+00:00:07.393 [ERR] Modem Operator mode: RIL, eCM Operator mode: General!
+00:00:07.393 [D3] -------------------------------------
+00:00:07.415 [D3] dblte_set_field: ('0') => (connected)
+00:00:07.416 [D3] dblte_set_field: ('Device Initializing') => (lte_status)
+00:00:07.417 [D3] dblte_set_field: ('n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a,n/a') => (data_pdn)
+00:00:07.417 [D3] ----------[PDN CONFIGURATION]--------
+00:00:07.418 [D3]   Configuration File   [APNTable]
+00:00:07.418 [D3] -------------------------------------
+00:00:07.418 [D3]   General Configs:
+00:00:07.418 [D3]       Attach PDN           [1]
+00:00:07.418 [D3]       admin_class          [2]
+00:00:07.419 [D3]       ims_class            [0]
+00:00:07.419 [D3]       supl_class           [0]
+00:00:07.419 [D3]       emergency_class      [0]
+00:00:07.419 [D3]       xcap_class           [0]
+00:00:07.420 [D3]       data_class1          [1]
+00:00:07.420 [D3]       data_class2          [3]
+00:00:07.422 [D3]       data_class3          [0]
+00:00:07.422 [D3]       data_class4          [0]
+00:00:07.423 [D3]       data_class5          [0]
+00:00:07.423 [D3] -------------------------------------
+00:00:07.423 [D3]   [1]
+00:00:07.423 [D3]      cid                 [1]
+00:00:07.423 [D3]      IP Type             [IPV4V6]
+00:00:07.424 [D3]      APN                 [jionet]
+00:00:07.424 [D3]      State               [ENABLE]
+00:00:07.424 [D3]   [2]
+00:00:07.424 [D3]      cid                 [2]
+00:00:07.424 [D3]      IP Type             [IPV4V6]
+00:00:07.425 [D3]      APN                 [devicemanagement]
+00:00:07.425 [D3]      State               [DISABLE]
+00:00:07.425 [D3]   [3]
+00:00:07.425 [D3]      cid                 [3]
+00:00:07.426 [D3]      IP Type             [IPV4V6]
+00:00:07.426 [D3]      APN                 [ALTAPP]
+00:00:07.426 [D3]      State               [DISABLE]
+00:00:07.426 [D3]   [4]
+00:00:07.426 [D3]      cid                 [14]
+00:00:07.427 [D3]      IP Type             [IPV4V6]
+00:00:07.427 [D3]      APN                 [null]
+00:00:07.427 [D3]      State               [DISABLE]
+00:00:07.427 [D3] -------------------------------------
+00:00:07.430 [D3] flight mode configured...
+00:00:07.431 [D2] ---------------- eCM state transition ---------------
+00:00:07.431 [D2] ECM-STATE: [IDLE]----->>----[IDLE]
+00:00:07.431 [D2] -----------------------------------------------------
+00:00:07.432 [D3] dblte_set_field: ('off') => (lte_connect)
+00:00:07.432 [D3] dblte_set_field: ('Flight Mode') => (lte_status)
+00:00:07.433 [D3] util_epoll_ctrl: added an event (fd=9) to the epoll
+00:00:07.433 [D3] util_epoll_ctrl: added an event (fd=10) to the epoll
+00:00:07.436 [D2] atserver_input_thread: Starting (id=0x77A79500)
+00:00:07.437 [D2] atserver_input_thread: Now waiting to accept a connection ...
+00:00:07.453 [D2] atserver_input_thread: Accepted a connection on socket (fd=13) ...
+00:00:07.483 [D2] engine_config_modem: LPP is enabled, send LTECMD to enable in FW 
+00:00:07.494 [D2] engine_config_modem: LCS is enabled, send LTECMD to enable in FW 
+00:00:07.515 [ERR] atio_recv_from_modem: Got Error response for AT command: 
+AT+CNUM
+ERROR
+
+00:00:07.516 [ERR] atio_send_query_to_modem: atio_recv_from_modem() failed (error=-2001)
+00:00:07.516 [D2] atio_send_query_to_modem [input-buffer]
+00:00:07.516 [D2]   LENGTH=9
+00:00:07.516 [D2]   0000:  A  T  +  C  N  U  M 0D 0A 
+00:00:07.527 [ERR] atio_recv_from_modem: Got Error response for AT command: 
+AT+CIMI
+ERROR
+
+00:00:07.527 [ERR] atio_send_query_to_modem: atio_recv_from_modem() failed (error=-2001)
+00:00:07.528 [D2] atio_send_query_to_modem [input-buffer]
+00:00:07.528 [D2]   LENGTH=9
+00:00:07.528 [D2]   0000:  A  T  +  C  I  M  I 0D 0A 
+00:00:07.539 [ERR] atio_recv_from_modem: Got Error response for AT command: 
+AT%CCID
+ERROR
+
+00:00:07.539 [ERR] atio_send_query_to_modem: atio_recv_from_modem() failed (error=-2001)
+00:00:07.539 [D2] atio_send_query_to_modem [input-buffer]
+00:00:07.540 [D2]   LENGTH=9
+00:00:07.540 [D2]   0000:  A  T  %  C  C  I  D 0D 0A 
+00:00:07.541 [D3] *** MONITOR POLLING TIMEOUT=100ms
+00:00:07.941 [D3] *** MONITOR POLLING TIMEOUT=300000ms
+00:00:16.853 [D2] atserver-input-buffer
+00:00:16.854 [D2]   LENGTH=15
+00:00:16.854 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:16.854 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:16.865 [D2] atserver-output-buffer
+00:00:16.866 [D2]   LENGTH=24
+00:00:16.866 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:16.866 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:17.475 [D2] atserver-input-buffer
+00:00:17.476 [D2]   LENGTH=13
+00:00:17.476 [D2]   0000:  A  T  +  C  F  U  N  =  4 0D 0A 00 00 
+00:00:17.476 [D3] atcmd_handler_process_current_request:
+  cmdid  = +CFUN
+  params = '=4'
+00:00:17.477 [D3] atcmd_CFUN_handler: Start to execute a '+CFUN=4' command.
+00:00:17.706 [D3] flight mode configured...
+00:00:17.706 [D2] ---------------- eCM state transition ---------------
+00:00:17.707 [D2] ECM-STATE: [IDLE]----->>----[IDLE]
+00:00:17.707 [D2] -----------------------------------------------------
+00:00:17.707 [D3] dblte_set_field: ('off') => (lte_connect)
+00:00:17.708 [D3] dblte_set_field: ('Flight Mode') => (lte_status)
+00:00:17.709 [D2] atserver-output-buffer
+00:00:17.709 [D2]   LENGTH=17
+00:00:17.709 [D2]   0000:  A  T  +  C  F  U  N  =  4 0D 0A 0D 0A  O  K 0D 
+00:00:17.710 [D2]   0016: 0A 
+00:00:18.085 [D2] atserver-input-buffer
+00:00:18.085 [D2]   LENGTH=10
+00:00:18.086 [D2]   0000:  A  T  %  V  E  R 0D 0A 00 00 
+00:00:18.086 [D3] atcmd_handler_process_current_request:
+  cmdid  = %VER
+  params = 'no params'
+00:00:18.135 [D2] atserver-output-buffer
+00:00:18.135 [D2]   LENGTH=568
+00:00:18.136 [D2]   0000:  A  T  %  V  E  R 0D 0A 0D 0A 0A  N  P 20  P  a 
+00:00:18.136 [D2]   0016:  c  k  a  g  e  : 20  H  N  _  0  2  _  0  1  _ 
+00:00:18.136 [D2]   0032:  0  8  _  0  0  _  5  8 0A  U  s  i  n  g 20  A 
+00:00:18.137 [D2]   0048:  P  P 20  p  r  o  c  e  s  s  o  r 20  - 20  n 
+00:00:18.137 [D2]   0064:  o 20  S  B 20  o  r 20  3  B 20  v  e  r  s  i 
+00:00:18.137 [D2]   0080:  o  n  s 0D 0A  M  A  C 20  R  e  v  i  s  i  o 
+00:00:18.138 [D2]   0096:  n  : 20  R  E  L  _  0  6  _  0  1  _  0  8  _ 
+00:00:18.138 [D2]   0112:  R  E  V  _  2  0  6  2  8  8 0D 0A  M  A  C 20 
+00:00:18.139 [D2]   0128:  P  a  c  k  a  g  e 20  V  e  r  s  i  o  n  : 
+00:00:18.139 [D2]   0144: 20  A  L  T  3  8  0  0  _  0  6  _  0  1  _  0 
+00:00:18.139 [D2]   0160:  8  _  0  0  _  5  6  _  F  W 0D 0A  M  A  C 20 
+00:00:18.140 [D2]   0176:  B  u  i  l  d 20  T  i  m  e  : 20  F  e  b  _ 
+00:00:18.140 [D2]   0192:  1  9  _  2  0  1  9  _  1  7  _  2  5  _  3  9 
+00:00:18.142 [D2]   0208: 0D 0A  P  H  Y 20  R  e  v  i  s  i  o  n  : 20 
+00:00:18.143 [D2]   0224:  6  .  1  6  .  2  0  0  0  1  1 0D 0A  P  H  Y 
+00:00:18.143 [D2]   0240: 20  B  u  i  l  d 20  T  i  m  e  : 20  N  o  v 
+00:00:18.143 [D2]   0256:  _  2  5  _  2  0  1  8  _  1  6  _  4  7  _  0 
+00:00:18.144 [D2]   0272:  0 0D 0A  P  H  Y 20  B  u  i  l  d 20  I  n  f 
+00:00:18.144 [D2]   0288:  o  : 20  r  e  l  e  a  s  e 0D 0A  P  M  P 20 
+00:00:18.144 [D2]   0304:  R  e  v  i  s  i  o  n  : 20  0 0D 0A  P  M  P 
+00:00:18.145 [D2]   0320: 20  V  e  r  s  i  o  n  : 20 0D 0A  P  M  P 20 
+00:00:18.145 [D2]   0336:  b  u  i  l  d 20  t  i  m  e  : 20 0D 0A  D  S 
+00:00:18.145 [D2]   0352:  P 20  R  e  v  i  s  i  o  n  : 20  3  3  5  8 
+00:00:18.146 [D2]   0368:  2 0D 0A  B  B 20  P  r  o  d  u  c  t  : 20  3 
+00:00:18.146 [D2]   0384:  8  0  0 0D 0A  B  B 20  H  W 20  R  e  v  i  s 
+00:00:18.146 [D2]   0400:  i  o  n  : 20  1  0 0D 0A  R  F  I  C  _  v  e 
+00:00:18.147 [D2]   0416:  r  s  i  o  n  : 20  u  n  k  n  o  w  n  , 20 
+00:00:18.147 [D2]   0432:  r  e  -  r  e  a  d 20  a  f  t  e  r 20  e  x 
+00:00:18.147 [D2]   0448:  i  t  i  n  g 20  s  i  l  e  n  t 20  m  o  d 
+00:00:18.148 [D2]   0464:  e 0D 0A 0A  H  L  R  D 20  R  e  v  i  s  i  o 
+00:00:18.148 [D2]   0480:  n  : 20  H  N  _  0  2  _  0  1  _  0  8  _  0 
+00:00:18.149 [D2]   0496:  0  _  5  8  _  L  O 0A  N  P 20  B  u  i  l  d 
+00:00:18.149 [D2]   0512: 20  T  i  m  e  : 20  2  0  1  9  .  0  6  .  1 
+00:00:18.149 [D2]   0528:  9  _  1  0  :  5  1  :  4  9 0A  D  T  B  : 20 
+00:00:18.150 [D2]   0544:  P  W  R  T  _  N  T  L  R  3  1  0  .  d  t  b 
+00:00:18.150 [D2]   0560: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:19.030 [D2] atserver-input-buffer
+00:00:19.030 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:19.033 [D2]   LENGTH=15
+00:00:19.033 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:19.044 [D2] atserver-output-buffer
+00:00:19.044 [D2]   LENGTH=24
+00:00:19.044 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:19.045 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:20.442 [D2] atserver-input-buffer
+00:00:20.442 [D2]   LENGTH=21
+00:00:20.442 [D2]   0000:  A  T  %  S  U  P  L  P  D  N  A  C  T  E  V  = 
+00:00:20.443 [D2]   0016:  1 0D 0A 00 00 
+00:00:20.443 [D3] atcmd_handler_process_current_request:
+  cmdid  = %SUPLPDNACTEV
+  params = '=1'
+00:00:20.444 [D2] atserver-output-buffer
+00:00:20.444 [D2]   LENGTH=25
+00:00:20.444 [D2]   0000:  A  T  %  S  U  P  L  P  D  N  A  C  T  E  V  = 
+00:00:20.445 [D2]   0016:  1 0D 0A 0D 0A  O  K 0D 0A 
+00:00:23.628 [D2] atserver-input-buffer
+00:00:23.628 [D2]   LENGTH=15
+00:00:23.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:23.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:23.640 [D2] atserver-output-buffer
+00:00:23.641 [D2]   LENGTH=24
+00:00:23.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:23.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:24.401 [D2] atserver-input-buffer
+00:00:24.401 [D2]   LENGTH=15
+00:00:24.402 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:24.402 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:24.413 [D2] atserver-output-buffer
+00:00:24.414 [D2]   LENGTH=24
+00:00:24.414 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:24.414 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:28.628 [D2] atserver-input-buffer
+00:00:28.628 [D2]   LENGTH=15
+00:00:28.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:28.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:28.640 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:00:28.641 [D2] atserver-output-buffer
+00:00:28.642 [D2]   LENGTH=24
+00:00:28.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:28.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:33.628 [D2] atserver-input-buffer
+00:00:33.628 [D2]   LENGTH=15
+00:00:33.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:33.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:33.640 [D2] atserver-output-buffer
+00:00:33.641 [D2]   LENGTH=24
+00:00:33.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:33.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:38.627 [D2] atserver-input-buffer
+00:00:38.628 [D2]   LENGTH=15
+00:00:38.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:38.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:38.639 [D2] atserver-output-buffer
+00:00:38.639 [D2]   LENGTH=24
+00:00:38.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:38.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:43.627 [D2] atserver-input-buffer
+00:00:43.628 [D2]   LENGTH=15
+00:00:43.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:43.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:43.639 [D2] atserver-output-buffer
+00:00:43.640 [D2]   LENGTH=24
+00:00:43.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:43.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:48.728 [D2] atserver-input-buffer
+00:00:48.728 [D2]   LENGTH=15
+00:00:48.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:48.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:48.739 [D2] atserver-output-buffer
+00:00:48.740 [D2]   LENGTH=24
+00:00:48.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:48.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:53.627 [D2] atserver-input-buffer
+00:00:53.628 [D2]   LENGTH=15
+00:00:53.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:53.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:53.639 [D2] atserver-output-buffer
+00:00:53.640 [D2]   LENGTH=24
+00:00:53.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:53.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:00:58.627 [D2] atserver-input-buffer
+00:00:58.628 [D2]   LENGTH=15
+00:00:58.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:00:58.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:00:58.639 [D2] atserver-output-buffer
+00:00:58.640 [D2]   LENGTH=24
+00:00:58.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:00:58.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:03.627 [D2] atserver-input-buffer
+00:01:03.628 [D2]   LENGTH=15
+00:01:03.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:03.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:03.639 [D2] atserver-output-buffer
+00:01:03.639 [D2]   LENGTH=24
+00:01:03.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:03.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:08.627 [D2] atserver-input-buffer
+00:01:08.628 [D2]   LENGTH=15
+00:01:08.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:08.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:08.639 [D2] atserver-output-buffer
+00:01:08.640 [D2]   LENGTH=24
+00:01:08.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:08.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:13.627 [D2] atserver-input-buffer
+00:01:13.628 [D2]   LENGTH=15
+00:01:13.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:13.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:13.639 [D2] atserver-output-buffer
+00:01:13.640 [D2]   LENGTH=24
+00:01:13.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:13.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:18.728 [D2] atserver-input-buffer
+00:01:18.728 [D2]   LENGTH=15
+00:01:18.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:18.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:18.740 [D2] atserver-output-buffer
+00:01:18.741 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:01:18.741 [D2]   LENGTH=24
+00:01:18.742 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:18.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:23.628 [D2] atserver-input-buffer
+00:01:23.628 [D2]   LENGTH=15
+00:01:23.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:23.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:23.640 [D2] atserver-output-buffer
+00:01:23.641 [D2]   LENGTH=24
+00:01:23.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:23.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:28.628 [D2] atserver-input-buffer
+00:01:28.628 [D2]   LENGTH=15
+00:01:28.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:28.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:28.640 [D2] atserver-output-buffer
+00:01:28.641 [D2]   LENGTH=24
+00:01:28.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:28.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:33.628 [D2] atserver-input-buffer
+00:01:33.628 [D2]   LENGTH=15
+00:01:33.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:33.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:33.640 [D2] atserver-output-buffer
+00:01:33.641 [D2]   LENGTH=24
+00:01:33.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:33.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:38.627 [D2] atserver-input-buffer
+00:01:38.628 [D2]   LENGTH=15
+00:01:38.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:38.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:38.639 [D2] atserver-output-buffer
+00:01:38.640 [D2]   LENGTH=24
+00:01:38.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:38.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:43.629 [D2] atserver-input-buffer
+00:01:43.629 [D2]   LENGTH=15
+00:01:43.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:43.630 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:43.634 [D2] atserver-output-buffer
+00:01:43.634 [D2]   LENGTH=24
+00:01:43.635 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:43.635 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:48.728 [D2] atserver-input-buffer
+00:01:48.728 [D2]   LENGTH=15
+00:01:48.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:48.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:48.741 [D2] atserver-output-buffer
+00:01:48.742 [D2]   LENGTH=24
+00:01:48.742 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:48.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:53.628 [D2] atserver-input-buffer
+00:01:53.628 [D2]   LENGTH=15
+00:01:53.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:53.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:53.640 [D2] atserver-output-buffer
+00:01:53.641 [D2]   LENGTH=24
+00:01:53.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:53.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:01:58.628 [D2] atserver-input-buffer
+00:01:58.629 [D2]   LENGTH=15
+00:01:58.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:01:58.630 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:01:58.634 [D2] atserver-output-buffer
+00:01:58.634 [D2]   LENGTH=24
+00:01:58.634 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:01:58.635 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:03.627 [D2] atserver-input-buffer
+00:02:03.628 [D2]   LENGTH=15
+00:02:03.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:03.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:03.639 [D2] atserver-output-buffer
+00:02:03.639 [D2]   LENGTH=24
+00:02:03.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:03.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:08.628 [D2] atserver-input-buffer
+00:02:08.628 [D2]   LENGTH=15
+00:02:08.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:08.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:08.640 [D2] atserver-output-buffer
+00:02:08.641 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:02:08.642 [D2]   LENGTH=24
+00:02:08.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:08.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:13.628 [D2] atserver-input-buffer
+00:02:13.629 [D2]   LENGTH=15
+00:02:13.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:13.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:13.640 [D2] atserver-output-buffer
+00:02:13.641 [D2]   LENGTH=24
+00:02:13.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:13.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:18.727 [D2] atserver-input-buffer
+00:02:18.728 [D2]   LENGTH=15
+00:02:18.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:18.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:18.739 [D2] atserver-output-buffer
+00:02:18.740 [D2]   LENGTH=24
+00:02:18.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:18.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:23.627 [D2] atserver-input-buffer
+00:02:23.628 [D2]   LENGTH=15
+00:02:23.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:23.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:23.639 [D2] atserver-output-buffer
+00:02:23.640 [D2]   LENGTH=24
+00:02:23.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:23.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:28.627 [D2] atserver-input-buffer
+00:02:28.628 [D2]   LENGTH=15
+00:02:28.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:28.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:28.639 [D2] atserver-output-buffer
+00:02:28.639 [D2]   LENGTH=24
+00:02:28.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:28.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:33.627 [D2] atserver-input-buffer
+00:02:33.628 [D2]   LENGTH=15
+00:02:33.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:33.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:33.639 [D2] atserver-output-buffer
+00:02:33.640 [D2]   LENGTH=24
+00:02:33.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:33.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:38.627 [D2] atserver-input-buffer
+00:02:38.628 [D2]   LENGTH=15
+00:02:38.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:38.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:38.639 [D2] atserver-output-buffer
+00:02:38.640 [D2]   LENGTH=24
+00:02:38.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:38.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:43.627 [D2] atserver-input-buffer
+00:02:43.628 [D2]   LENGTH=15
+00:02:43.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:43.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:43.639 [D2] atserver-output-buffer
+00:02:43.640 [D2]   LENGTH=24
+00:02:43.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:43.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:48.728 [D2] atserver-input-buffer
+00:02:48.729 [D2]   LENGTH=15
+00:02:48.729 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:48.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:48.740 [D2] atserver-output-buffer
+00:02:48.741 [D2]   LENGTH=24
+00:02:48.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:48.741 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:53.627 [D2] atserver-input-buffer
+00:02:53.628 [D2]   LENGTH=15
+00:02:53.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:53.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:53.639 [D2] atserver-output-buffer
+00:02:53.640 [D2]   LENGTH=24
+00:02:53.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:53.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:02:58.627 [D2] atserver-input-buffer
+00:02:58.628 [D2]   LENGTH=15
+00:02:58.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:02:58.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:02:58.639 [D2] atserver-output-buffer
+00:02:58.640 [D2]   LENGTH=24
+00:02:58.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:02:58.641 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:02:58.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:03.627 [D2] atserver-input-buffer
+00:03:03.628 [D2]   LENGTH=15
+00:03:03.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:03.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:03.639 [D2] atserver-output-buffer
+00:03:03.640 [D2]   LENGTH=24
+00:03:03.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:03.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:08.627 [D2] atserver-input-buffer
+00:03:08.628 [D2]   LENGTH=15
+00:03:08.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:08.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:08.639 [D2] atserver-output-buffer
+00:03:08.640 [D2]   LENGTH=24
+00:03:08.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:08.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:13.627 [D2] atserver-input-buffer
+00:03:13.628 [D2]   LENGTH=15
+00:03:13.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:13.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:13.639 [D2] atserver-output-buffer
+00:03:13.640 [D2]   LENGTH=24
+00:03:13.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:13.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:18.728 [D2] atserver-input-buffer
+00:03:18.728 [D2]   LENGTH=15
+00:03:18.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:18.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:18.740 [D2] atserver-output-buffer
+00:03:18.740 [D2]   LENGTH=24
+00:03:18.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:18.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:23.627 [D2] atserver-input-buffer
+00:03:23.628 [D2]   LENGTH=15
+00:03:23.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:23.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:23.639 [D2] atserver-output-buffer
+00:03:23.640 [D2]   LENGTH=24
+00:03:23.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:23.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:28.627 [D2] atserver-input-buffer
+00:03:28.628 [D2]   LENGTH=15
+00:03:28.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:28.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:28.639 [D2] atserver-output-buffer
+00:03:28.640 [D2]   LENGTH=24
+00:03:28.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:28.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:33.627 [D2] atserver-input-buffer
+00:03:33.628 [D2]   LENGTH=15
+00:03:33.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:33.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:33.639 [D2] atserver-output-buffer
+00:03:33.640 [D2]   LENGTH=24
+00:03:33.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:33.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:36.396 [D2] atserver-input-buffer
+00:03:36.396 [D2]   LENGTH=15
+00:03:36.396 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:36.397 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:36.408 [D2] atserver-output-buffer
+00:03:36.408 [D2]   LENGTH=24
+00:03:36.408 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:36.409 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:38.627 [D2] atserver-input-buffer
+00:03:38.628 [D2]   LENGTH=15
+00:03:38.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:38.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:38.639 [D2] atserver-output-buffer
+00:03:38.640 [D2]   LENGTH=24
+00:03:38.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:38.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:43.628 [D2] atserver-input-buffer
+00:03:43.629 [D2]   LENGTH=15
+00:03:43.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:43.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:43.640 [D2] atserver-output-buffer
+00:03:43.641 [D2]   LENGTH=24
+00:03:43.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:43.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:48.639 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:03:48.728 [D2] atserver-input-buffer
+00:03:48.728 [D2]   LENGTH=15
+00:03:48.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:48.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:48.740 [D2] atserver-output-buffer
+00:03:48.740 [D2]   LENGTH=24
+00:03:48.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:48.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:53.627 [D2] atserver-input-buffer
+00:03:53.628 [D2]   LENGTH=15
+00:03:53.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:53.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:53.639 [D2] atserver-output-buffer
+00:03:53.640 [D2]   LENGTH=24
+00:03:53.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:53.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:03:58.627 [D2] atserver-input-buffer
+00:03:58.628 [D2]   LENGTH=15
+00:03:58.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:03:58.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:03:58.639 [D2] atserver-output-buffer
+00:03:58.640 [D2]   LENGTH=24
+00:03:58.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:03:58.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:03.627 [D2] atserver-input-buffer
+00:04:03.628 [D2]   LENGTH=15
+00:04:03.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:03.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:03.639 [D2] atserver-output-buffer
+00:04:03.640 [D2]   LENGTH=24
+00:04:03.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:03.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:08.627 [D2] atserver-input-buffer
+00:04:08.628 [D2]   LENGTH=15
+00:04:08.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:08.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:08.639 [D2] atserver-output-buffer
+00:04:08.640 [D2]   LENGTH=24
+00:04:08.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:08.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:13.627 [D2] atserver-input-buffer
+00:04:13.628 [D2]   LENGTH=15
+00:04:13.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:13.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:13.639 [D2] atserver-output-buffer
+00:04:13.640 [D2]   LENGTH=24
+00:04:13.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:13.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:18.728 [D2] atserver-input-buffer
+00:04:18.729 [D2]   LENGTH=15
+00:04:18.729 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:18.730 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:18.740 [D2] atserver-output-buffer
+00:04:18.741 [D2]   LENGTH=24
+00:04:18.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:18.741 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:23.627 [D2] atserver-input-buffer
+00:04:23.628 [D2]   LENGTH=15
+00:04:23.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:23.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:23.639 [D2] atserver-output-buffer
+00:04:23.640 [D2]   LENGTH=24
+00:04:23.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:23.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:28.627 [D2] atserver-input-buffer
+00:04:28.628 [D2]   LENGTH=15
+00:04:28.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:28.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:28.639 [D2] atserver-output-buffer
+00:04:28.640 [D2]   LENGTH=24
+00:04:28.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:28.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:33.627 [D2] atserver-input-buffer
+00:04:33.628 [D2]   LENGTH=15
+00:04:33.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:33.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:33.639 [D2] atserver-output-buffer
+00:04:33.640 [D2]   LENGTH=24
+00:04:33.642 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:33.643 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:38.538 [D2] ECM-ENV: state=IDLE, enabled_pdn=0x01
+00:04:38.627 [D2] atserver-input-buffer
+00:04:38.628 [D2]   LENGTH=15
+00:04:38.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:38.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:38.639 [D2] atserver-output-buffer
+00:04:38.640 [D2]   LENGTH=24
+00:04:38.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:38.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:43.629 [D2] atserver-input-buffer
+00:04:43.629 [D2]   LENGTH=15
+00:04:43.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:43.630 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:43.634 [D2] atserver-output-buffer
+00:04:43.634 [D2]   LENGTH=24
+00:04:43.634 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:43.635 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:48.727 [D2] atserver-input-buffer
+00:04:48.728 [D2]   LENGTH=15
+00:04:48.728 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:48.728 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:48.739 [D2] atserver-output-buffer
+00:04:48.740 [D2]   LENGTH=24
+00:04:48.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:48.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:53.627 [D2] atserver-input-buffer
+00:04:53.628 [D2]   LENGTH=15
+00:04:53.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:53.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:53.639 [D2] atserver-output-buffer
+00:04:53.640 [D2]   LENGTH=24
+00:04:53.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:53.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:04:58.627 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:04:58.630 [D2] atserver-input-buffer
+00:04:58.630 [D2]   LENGTH=15
+00:04:58.631 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:04:58.639 [D2] atserver-output-buffer
+00:04:58.639 [D2]   LENGTH=24
+00:04:58.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:04:58.640 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:05:03.627 [D2] atserver-input-buffer
+00:05:03.628 [D2]   LENGTH=15
+00:05:03.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:05:03.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:05:03.639 [D2] atserver-output-buffer
+00:05:03.640 [D2]   LENGTH=24
+00:05:03.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:05:03.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:05:08.627 [D2] atserver-input-buffer
+00:05:08.628 [D2]   LENGTH=15
+00:05:08.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:05:08.628 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:05:08.639 [D2] atserver-output-buffer
+00:05:08.640 [D2]   LENGTH=24
+00:05:08.640 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:05:08.641 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:05:13.627 [D2] atserver-input-buffer
+00:05:13.628 [D2]   LENGTH=15
+00:05:13.628 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:05:13.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:05:13.640 [D2] atserver-output-buffer
+00:05:13.641 [D2]   LENGTH=24
+00:05:13.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:05:13.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:05:18.728 [D2] atserver-input-buffer
+00:05:18.728 [D2]   LENGTH=15
+00:05:18.729 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:05:18.729 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:05:18.740 [D2] atserver-output-buffer
+00:05:18.741 [D2]   LENGTH=24
+00:05:18.741 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:05:18.742 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 
+00:05:23.628 [D2] atserver-input-buffer
+00:05:23.629 [D2]   LENGTH=15
+00:05:23.629 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 00 00 
+00:05:23.629 [D3] atcmd_handler_process_current_request:
+  cmdid  = +COPS
+  params = '=3,2'
+00:05:23.640 [D2] atserver-output-buffer
+00:05:23.641 [D2]   LENGTH=24
+00:05:23.641 [D2]   0000:  A  T  +  C  O  P  S  =  3  ,  2 0D 0A 0D 0A 0A 
+00:05:23.642 [D2]   0016: 0D 0A 0D 0A  O  K 0D 0A 

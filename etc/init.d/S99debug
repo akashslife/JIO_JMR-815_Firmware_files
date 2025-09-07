@@ -1,0 +1,20 @@
+#!/bin/sh
+
+global_imsi_check()
+{
+
+/usr/local/bin/imsi_check.sh &
+
+}
+
+case "$1" in
+  start)
+	#global_imsi_check
+        ;;
+  stop)
+        ;;
+  *)
+        ;;
+esac
+
+exit $?

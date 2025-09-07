@@ -1,0 +1,11 @@
+config Global Config
+	option Ver HN_02_01_08_00_58_LO
+	option NTVer JMR815_R09.51
+	option ReleaseDate 2019.06.19-10:51:49-r3692
+	option BuildTime 2019.06.19_10:51:49
+
+config 'Environment' ACS_credentials
+	option 'secret' 7446786f5452346348774d6f766c5a62
+
+config BuildHash Config
+	config sha1sum none

@@ -1,0 +1,32 @@
+#!/bin/sh
+
+LOG_ROTATE_TIME_SEC=60
+FW_LOGS_MODE=`uci get lte-gw.modem_fw_logs.logs_mode`
+ELC_LOG_SEV=`uci get service.ELC.DebugLevel`
+#SUPL_LOG=`uci get elc.supl.log_to_file`
+
+#if [ $FW_LOGS_MODE == 'internal' ] || [ $ELC_LOG_SEV -gt 2 ] || [ $SUPL_LOG == 'enable' ]; then
+if [ $FW_LOGS_MODE == 'internal' ] || [ $ELC_LOG_SEV -gt 2 ]; then
+    LOG_ROTATE_TIME_SEC=`uci get lte-gw.debug_param.logs_rotation_time`
+fi
+
+
+case "$1" in
+    start)
+	log-mng.sh $LOG_ROTATE_TIME_SEC &
+        ;;
+    stop)
+        killall log-mng.sh 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof  log-mng.sh | sed "s/$$\$//" ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

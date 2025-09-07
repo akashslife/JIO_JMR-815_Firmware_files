@@ -1,0 +1,23 @@
+
+config group Tool
+	option CalToolProvider 'XXXXX'
+	option CalToolName 'XXXXX'
+	option CalToolVersion '00000'
+
+config group Station
+	option StationID '0000000000'
+	option StationDescription 'XXXXXX'
+	option TestEquipmentModel1 '0000000000'
+	option TestEquipmentSerialNumber1 '0000000000'
+	option TestEquipmentModel2 '0000000000'
+	option TestEquipmentSerialNumber2 '0000000000'
+	option StationOperator 'XXXXXX'
+	
+config group Batch
+	option BatchNumber '0000000000'
+
+config group Status
+	option CalStatus 'XXXXX'
+
+
+

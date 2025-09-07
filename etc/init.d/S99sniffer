@@ -1,0 +1,148 @@
+#!/bin/sh
+# Help: use S99sniffer 0 logs_MB
+#       - The script will self reboot if required to enable sniffer and memory allocation for the logs
+#	- trying to enable only the feature without pre-allocating space and rebooting will not work.
+#
+#	Examples:
+#	- S99sniffer 0 2  - allocate 2MB for sniffer. Will force reboot. The following reboot will not automatically enable the sniffer.
+#	- S99sniffer 0 0  - zero allocated logs space. Will force reboot.
+#	- S99sniffer -1 0 - disable sniffer logs without changing allocation and without reboot. 
+#			    The following reboot will not enable the sniffer but will still allocate the memory space.
+#	- S99sniffer 1 0  - enable sniffer logs without changing allocation and without reboot.
+
+readonly ENABLE=1
+readonly DISABLE=-1
+readonly ALLOCATE=0
+
+let do_reboot=0
+
+# activate sniffer:
+#Changing memory size and addresses in griffin:
+#At%trshcmd="phy_sniffer","address(hex)",size(bytes)
+#Example:  
+#> At%trshcmd="phy_sniffer","A7E00000",1024
+#OK
+
+atcmd_send() {
+ CMD=$1
+ TIMEOUT=$2	
+
+# echo "$1" > /dev/kmsg
+ /etc/ue_lte/at.sh $CMD $TIMEOUT | grep -q OK
+
+ if [ $? -ne 0 ]; then
+  echo $CMD FAIL!  > /dev/kmsg
+ fi
+}
+
+
+start() {
+	echo -n "Starting sniffer: "
+	SNIFFER_EN_DIS=${1:-0} #check if enabling sniffer only without changing memory allocation
+
+	SNIFFER_SIZE_MB=${2:--2}; #get value from command line or default to zero if command line was not used by external user
+	#echo ">>> Command line Sniffer size $SNIFFER_SIZE_MB MB >>>" > /dev/kmsg
+
+	UCI_SNIFFER_ENABLED=`uci get -q lte-gw.debug_param.sniffer`
+
+	# if called by user and not during boot ($SNIFFER_SIZE_MB -ne -2)
+	if [ $SNIFFER_SIZE_MB -ne -2 ]; then
+		if [ $SNIFFER_EN_DIS -eq $ENABLE ] && [ "$UCI_SNIFFER_ENABLED" == "disable" ]; then
+			echo ">>> setting UCI value to Enable >>>" > /dev/kmsg
+			UCI_SNIFFER_ENABLED="enable"
+			`uci set lte-gw.debug_param.sniffer="enable"`
+			`uci commit lte-gw`
+		fi
+
+		# if called by user as a script and NOT during boot (SNIFFER_SIZE_MB=-2) 
+		if [ $SNIFFER_EN_DIS -eq $DISABLE ] && [ "$UCI_SNIFFER_ENABLED" == "enable" ]; then
+			echo ">>> setting UCI value to Disable >>>" > /dev/kmsg
+			UCI_SNIFFER_ENABLED="disable"
+			`uci set lte-gw.debug_param.sniffer="disable"`
+			`uci commit lte-gw`
+		fi
+
+		#update u-boot env vars
+		if [ $SNIFFER_EN_DIS -eq $ALLOCATE ]; then
+			let snifferSize=$SNIFFER_SIZE_MB*1024*1024;
+			echo ">>> update u-boot env var values snifferSize $snifferSize Bytes and rebooting >>>" > /dev/kmsg
+			`fw_setenv phy_sniffer $snifferSize`
+			let do_reboot=1;	
+		fi
+	fi 
+
+	# If either the script was called during boot OR only Enable/Disable command was sent
+	# then read device tree values
+	if [ $SNIFFER_SIZE_MB -eq -2 ] || [ $SNIFFER_EN_DIS -ne $ALLOCATE ]; then
+		snifferAddr=$(find /proc/device-tree -name sniffer_addr)
+		snifferSize=$(find /proc/device-tree -name sniffer_size)
+
+		if [ "$snifferAddr" == "" ]; then
+			let snifferAddr=0xffffffff;
+		else
+			snifferAddr=$(cat $snifferAddr | hexdump -e '"%x"')
+			snifferAddr='A'$snifferAddr
+		fi
+		if [ "$snifferSize" == "" ]; then
+			echo "Sniffer config not found" > /dev/kmsg
+			let snifferSize=0;
+		else
+			let snifferSize=$(cat $snifferSize | hexdump -e '"%d"')
+		#	echo "Sniffer size $SNIFFER_SIZE_MB $snifferSize" > /dev/kmsg
+		fi
+		let SNIFFER_SIZE_MB=$snifferSize/1024/1024;
+	fi
+
+	if [ $do_reboot -ne 1 ]; then
+		let snifferSize=$SNIFFER_SIZE_MB*1024*1024;
+		if [ "$UCI_SNIFFER_ENABLED" == "enable" ] || [ $SNIFFER_EN_DIS -eq $ENABLE ]; then
+			echo ">>> Sniffer activated $SNIFFER_SIZE_MB MB at 0x$snifferAddr ! >>>" > /dev/kmsg
+			if [ $SNIFFER_SIZE_MB -gt 0 ]; then
+				atcmd_send "AT%trshcmd=\"phy_sniffer\",\"address\",\"$snifferAddr\",$snifferSize" 1
+			else
+				echo "********* BUT memory space not allocated! *******" > /dev/kmsg
+			fi
+		else
+			echo ">>> Sniffer disabled by default >>>" > /dev/kmsg
+	#		atcmd_send 'AT%DBGSTRM="mode","off"' 1
+			if [ $snifferSize -ne 0 ]; then 
+				echo ">>> Sniffer allocated at $snifferAddr size $SNIFFER_SIZE_MB MB >>>" > /dev/kmsg
+			fi
+		fi
+	else
+		echo ">>> rebooting >>>" > /dev/kmsg
+		`reboot`
+		exit
+	fi
+	echo "done"
+}
+
+
+stop() {
+        echo -n "Stopping sniffer: "
+	echo "done"
+}
+
+restart() {
+	stop
+	start
+}
+
+# See how we were called.
+case "$1" in
+  start)
+	start 0 $2
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	start $1 $2
+	;;
+esac
+
+exit $?
+

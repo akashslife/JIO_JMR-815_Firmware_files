@@ -1,0 +1,6 @@
+
+config 'Global' 'Mode'
+    option 'UserRejectAll' 'false'
+    option 'proprietaryMccMncEnvelopeEn' 'true'
+    option 'passProactiveCmdHostPolicy' '0'
+

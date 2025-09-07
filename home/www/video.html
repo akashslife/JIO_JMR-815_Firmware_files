@@ -1,0 +1,52 @@
+<?php
+
+//------------------------------------------------------------------------------
+umask(002); // Added to make created files/dirs group writable
+//------------------------------------------------------------------------------
+require "./.include/init.php";	// Init
+//------------------------------------------------------------------------------
+$GLOBALS['__SESSION']["filename"]	= $GLOBALS['__GET']['path'];
+$needle = strrpos($GLOBALS['__SESSION']["filename"], ".") + 1;
+$ext = substr($GLOBALS['__SESSION']["filename"], $needle);
+if(@preg_match('/^mp3|wav$/',$ext)) {
+	$video_tag="audio";
+	$type="audio/mpeg";
+}else if(@preg_match('/^mp4$/',$ext)) {
+	$video_tag="video";
+	$type="video/mp4";
+}else {
+	$video_tag="video";
+	$type="video/mp4";
+}
+//------------------------------------------------------------------------------	
+echo "<!doctype html>";
+echo "<html>";
+echo "<meta charset=\"utf-8\">";
+echo "<head>";
+echo " <link rel=stylesheet type='text/css' href='_fscrt/video.css'> \n";
+echo "<script src='_fscrt/jquery-1.8.3.min.js'></script>";
+echo "<script type=\"text/javascript\">";
+echo "</script>";
+echo "</head>";
+echo "<body>";	
+if($video_tag=="video") {
+	echo "<div id='video-container'>";
+	echo "	<video id='a_video' autoplay='autoplay' controls='controls' preload=\"auto\" oncontextmenu=\"return false;\"> >";
+	echo "		<source id=\"movie_src\" type='".$type."' src='/sd/".urlencode($GLOBALS['__SESSION']["filename"])."' />";
+	echo "      <p>Your browser does not support the video tag.</p>";
+	echo "	</video>";
+	echo "</div>";
+	echo "</body>";
+}
+else if($video_tag=="audio")
+{
+	echo "	<audio id='a_audio' autoplay='autoplay' controls='controls' preload=\"auto\" oncontextmenu=\"return false;\" style=\"width:700px;\"> >";
+	echo "		<source id=\"movie_src\" type='".$type."' src='/sd/".urlencode($GLOBALS['__SESSION']["filename"])."' />";
+	echo "      <p>Your browser does not support the audio tag.</p>";
+	echo "	</audio>";
+	echo "</body>";
+}
+echo "</html>";
+
+//------------------------------------------------------------------------------
+?>

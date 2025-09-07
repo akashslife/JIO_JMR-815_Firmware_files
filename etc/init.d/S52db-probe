@@ -1,0 +1,32 @@
+#!/bin/sh
+
+#
+# Database Probe 
+#
+APPEXEC=db_probe
+HTTP_SERV=`uci get admin.services.http`
+
+case "$1" in
+    start)
+    	if [ $HTTP_SERV = 'enable' ]
+    	then    		
+    		$APPEXEC &
+            #/usr/local/bin/netspeed.sh & # for WiFi traffic only
+       	fi
+        ;;
+    stop)
+        killall $APPEXEC 2>/dev/null
+        #killall netspeed.sh 2>/dev/null # for WiFi traffic only
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof $APPEXEC | sed "s/$$\$//" | grep -q [0-9] ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

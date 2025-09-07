@@ -1,0 +1,27 @@
+#!/bin/sh
+
+OP_TMP_PATH=/tmp
+AMAHUB_CONFIG_PATH=/etc/config/amahub
+
+# init confmanager
+
+case "$1" in
+    start)
+        DBGLVL=`uci get service.AMAHUB.DebugLevel`
+       	amahub -p /dev/ttyLTE2 -l /tmp/logs/amahub.log -v $DBGLVL &
+        ;;
+    stop)
+        killall amahub 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof amahub | sed "s/$$\$//" | grep -q [0-9] ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

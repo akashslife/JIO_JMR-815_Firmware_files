@@ -1,0 +1,23 @@
+
+config 'environment' 'config'
+	option 'output_socket_file' '/tmp/atsw6'
+	option 'input_socket_file' '/tmp/dbp'
+	option 'probe_count' '5'
+	
+config 'environment' 'timeout'
+	# timeout in millisecond unit
+	option 'io_response' '60000'
+	option 'cmd_response_polling' '100'
+
+config 'environment' 'timer'
+	# timer period in second unit
+	option 'low' '30'
+	option 'medium' '5'
+	option 'high' '1'
+	
+config 'probe' 'control'
+	option 'probe0' 'enable'  # LTE
+	option 'probe1' 'disable'  # WIFI
+	option 'probe2' 'enable'  # DEVDETAILS
+	option 'probe3' 'disable'  # USERS
+	option 'probe4' 'disable'  # BATTERY

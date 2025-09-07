@@ -1,0 +1,7 @@
+config 'global' 'leasedata'
+	    option 'ip' '0'
+	    option 'subnet' '0'
+	    option 'router' '0'
+	    option 'broadcast' '0'
+	    option 'domain' '0'
+	    option 'dns' '0'

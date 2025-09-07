@@ -1,0 +1,14 @@
+output,LTEFW2,/dev/ttyLTE1,
+,,
+Normal,,
+%TSTEXT,
++CGCMOD,
+%CSGCMD,
+,,
+Exceptions,,
++CGATT,3
++CGACT,3
++COPS,3
+,,
+Cancelable,,
++CGATT,,

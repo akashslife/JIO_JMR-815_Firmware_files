@@ -1,0 +1,17 @@
+
+config Environment services
+	option telnet disable
+	option ftp disable
+	option tftp enable
+	option ssh disable
+	option http enable
+	option portmap enable
+	option static_config enable
+	option at_ch_comport enable
+	option at_ch_tcp disable
+	option at_cmd_bdelay enable
+	option at_cmd_exec enable
+	option at_cmd_setcfg enable
+	option at_cmd_setacfg enable
+	option at_cmd_otpcmd enable
+

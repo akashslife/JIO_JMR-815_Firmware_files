@@ -1,0 +1,6 @@
+
+config Environment services
+	option sdcard  'enable'
+	option sdmode '1'
+
+

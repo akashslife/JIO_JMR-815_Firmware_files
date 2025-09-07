@@ -1,0 +1,349 @@
+hotplug.sh: param drivers
+hotplug.sh: param tty
+hotplug.sh: param module
+hotplug.sh: param tty
+hotplug.sh: param chardrv
+hotplug.sh: param tty
+hotplug.sh: param uestreamer
+hotplug.sh: param class
+hotplug.sh: param net
+hotplug.sh: param queues
+hotplug.sh: param class
+hotplug.sh: param ueservice
+hotplug.sh: param class
+ACTION=add
+HOME=/
+SEQNUM=482
+DEVPATH=/bus/platform/drivers/alt3800_lte
+SUBSYSTEM=drivers
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+DEVNAME=ttyLTE0
+ACTION=add
+HOME=/
+SEQNUM=485
+MAJOR=254
+DEVPATH=/devices/virtual/tty/ttyLTE0
+SUBSYSTEM=tty
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=0
+PWD=/
+DEVNAME=ue_userio
+ACTION=add
+HOME=/
+SEQNUM=493
+MAJOR=251
+DEVPATH=/devices/virtual/chardrv/ue_userio
+SUBSYSTEM=chardrv
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=0
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=492
+DEVPATH=/class/chardrv
+SUBSYSTEM=class
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=490
+DEVPATH=/class/uestreamer
+SUBSYSTEM=class
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=488
+DEVPATH=/class/ueservice
+SUBSYSTEM=class
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+DEVNAME=uestreamer0
+ACTION=add
+HOME=/
+SEQNUM=491
+MAJOR=252
+DEVPATH=/devices/virtual/uestreamer/uestreamer0
+SUBSYSTEM=uestreamer
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=0
+PWD=/
+DEVNAME=ttyLTE2
+ACTION=add
+HOME=/
+SEQNUM=487
+MAJOR=254
+DEVPATH=/devices/virtual/tty/ttyLTE2
+SUBSYSTEM=tty
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=2
+PWD=/
+DEVNAME=ttyLTE1
+ACTION=add
+HOME=/
+SEQNUM=486
+MAJOR=254
+DEVPATH=/devices/virtual/tty/ttyLTE1
+SUBSYSTEM=tty
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=1
+PWD=/
+DEVNAME=ueservice0
+ACTION=add
+HOME=/
+SEQNUM=489
+MAJOR=253
+DEVPATH=/devices/virtual/ueservice/ueservice0
+SUBSYSTEM=ueservice
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=0
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=484
+DEVPATH=/devices/virtual/net/lte0/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=483
+IFINDEX=3
+DEVPATH=/devices/virtual/net/lte0
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=lte0
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=481
+DEVPATH=/module/ue_lte
+SUBSYSTEM=module
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param module
+ACTION=add
+HOME=/
+SEQNUM=494
+DEVPATH=/module/g_os_detect
+SUBSYSTEM=module
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param queues
+ACTION=add
+HOME=/
+SEQNUM=496
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param udc
+hotplug.sh: param net
+ACTION=add
+HOME=/
+SEQNUM=495
+IFINDEX=4
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=usb0
+PWD=/
+DEVTYPE=gadget
+ACTION=change
+HOME=/
+SEQNUM=498
+USB_UDC_DRIVER=g_os_detect
+DEVPATH=/devices/soc.0/bfc80000.usb/udc/bfc80000.usb
+SUBSYSTEM=udc
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DRIVER=g_os_detect
+USB_UDC_NAME=bfc80000.usb
+PWD=/
+hotplug.sh: param misc
+DEVNAME=mbim
+ACTION=add
+HOME=/
+SEQNUM=497
+MAJOR=10
+DEVPATH=/devices/virtual/misc/mbim
+SUBSYSTEM=misc
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=60
+PWD=/
+hotplug.sh: param udc
+ACTION=change
+HOME=/
+SEQNUM=499
+USB_UDC_DRIVER=g_os_detect
+DEVPATH=/devices/soc.0/bfc80000.usb/udc/bfc80000.usb
+SUBSYSTEM=udc
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DRIVER=g_os_detect
+USB_UDC_NAME=bfc80000.usb
+PWD=/
+hotplug.sh: param misc
+hotplug.sh: param queues
+ACTION=remove
+HOME=/
+SEQNUM=501
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+DEVNAME=mbim
+ACTION=remove
+HOME=/
+SEQNUM=500
+MAJOR=10
+DEVPATH=/devices/virtual/misc/mbim
+SUBSYSTEM=misc
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=60
+PWD=/
+hotplug.sh: param net
+ACTION=remove
+HOME=/
+SEQNUM=502
+IFINDEX=4
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=usb0
+PWD=/
+DEVTYPE=gadget
+hotplug.sh: param module
+ACTION=remove
+HOME=/
+SEQNUM=503
+DEVPATH=/module/g_os_detect
+SUBSYSTEM=module
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param module
+ACTION=add
+HOME=/
+SEQNUM=504
+DEVPATH=/module/g_rndis
+SUBSYSTEM=module
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param udc
+hotplug.sh: param queues
+ACTION=change
+HOME=/
+SEQNUM=507
+USB_UDC_DRIVER=g_rndis
+DEVPATH=/devices/soc.0/bfc80000.usb/udc/bfc80000.usb
+SUBSYSTEM=udc
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DRIVER=g_rndis
+USB_UDC_NAME=bfc80000.usb
+PWD=/
+ACTION=add
+HOME=/
+SEQNUM=506
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param net
+ACTION=add
+HOME=/
+SEQNUM=505
+IFINDEX=5
+DEVPATH=/devices/soc.0/bfc80000.usb/gadget/net/usb0
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=usb0
+PWD=/
+DEVTYPE=gadget
+hotplug.sh: param net
+ACTION=add
+HOME=/
+SEQNUM=508
+IFINDEX=6
+DEVPATH=/devices/virtual/net/br0
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=br0
+PWD=/
+DEVTYPE=bridge
+hotplug.sh: param queues
+ACTION=add
+HOME=/
+SEQNUM=509
+DEVPATH=/devices/virtual/net/br0/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param net
+ACTION=add
+HOME=/
+SEQNUM=510
+IFINDEX=7
+DEVPATH=/devices/virtual/net/lte0.255
+SUBSYSTEM=net
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+INTERFACE=lte0.255
+PWD=/
+hotplug.sh: param queues
+ACTION=add
+HOME=/
+SEQNUM=511
+DEVPATH=/devices/virtual/net/lte0.255/queues/tx-0
+SUBSYSTEM=queues
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param block
+DEVNAME=loop0
+ACTION=change
+HOME=/
+SEQNUM=512
+MAJOR=7
+DEVPATH=/devices/virtual/block/loop0
+SUBSYSTEM=block
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MINOR=0
+PWD=/
+DEVTYPE=disk
+hotplug.sh: param module
+ACTION=add
+HOME=/
+SEQNUM=513
+DEVPATH=/module/ipt_REDIRECT
+SUBSYSTEM=module
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param gpio
+ACTION=add
+HOME=/
+SEQNUM=514
+DEVPATH=/devices/virtual/gpio/gpio45
+SUBSYSTEM=gpio
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param gpio
+ACTION=add
+HOME=/
+SEQNUM=515
+DEVPATH=/devices/virtual/gpio/gpio35
+SUBSYSTEM=gpio
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param gpio
+ACTION=add
+HOME=/
+SEQNUM=516
+DEVPATH=/devices/virtual/gpio/gpio85
+SUBSYSTEM=gpio
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/
+hotplug.sh: param gpio
+ACTION=add
+HOME=/
+SEQNUM=517
+DEVPATH=/devices/virtual/gpio/gpio82
+SUBSYSTEM=gpio
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+PWD=/

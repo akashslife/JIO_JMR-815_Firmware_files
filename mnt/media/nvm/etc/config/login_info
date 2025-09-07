@@ -1,0 +1,5 @@
+
+config 'envirnment' 'passwd'
+	option 'admin_id' 'administrator'
+	option 'admin_pw' 'administrator'
+

@@ -1,0 +1,14 @@
+
+Device.
+  RootDataModelVersion = 2\2.4\d+
+
+Device.DeviceInfo.
+  HardwareVersion = Rev 1.3
+  SoftwareVersion = JMR815_R09.51
+  ProvisioningCode = 
+
+Device.ManagementServer.
+  ParameterKey = 
+  ConnectionRequestURL = 
+  AliasBasedAddressing = false
+

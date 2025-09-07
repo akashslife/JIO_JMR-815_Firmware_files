@@ -1,0 +1,5 @@
+
+config 'Config' 'Auth1'
+	option 'AuthType' 'null'
+	option 'AuthName' 'null'
+	option 'AuthPwd' 'null'

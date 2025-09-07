@@ -1,0 +1,36 @@
+<?php
+
+//------------------------------------------------------------------------------
+umask(002); // Added to make created files/dirs group writable
+//------------------------------------------------------------------------------
+require "./.include/init.php";	// Init
+
+//------------------------------------------------------------------------------
+
+$GLOBALS['__SESSION']["filename"]	= $GLOBALS['__GET']['path'];
+
+echo "<!DOCTYPE html>";
+echo "<html>";
+echo "<head>";
+echo "  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />";
+echo "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=8;\">";
+echo "  <title>Video Player</title>";
+echo "  <script src=\"_fscrt/video.js\"></script>";
+echo " <link rel=stylesheet type='text/css' href='_fscrt/flash.css'> \n";
+echo "  <script>";
+echo "    videojs.options.flash.swf =\"_img/video-js.swf\";";
+echo "    window.onload=function(){";
+echo "    var file_src='/sd/".urlencode($GLOBALS['__SESSION']["filename"])."';"; 
+echo "    document.getElementById('video_obj').innerHTML='<video id=\"video\" class=\"video-js vjs-default-skin\" controls preload=\"none\" width=\"640\" height=\"360\" data-setup=\"{}\"><source src=\"'+ file_src +'\" type=\"video/mp4\" /></video>';";
+echo "  }";
+
+echo "  </script>";
+echo "</head>";
+echo "<body>";
+echo "<div id=\"video_obj\">";
+
+echo "</div>";
+echo "</body>";
+echo "</html>";
+//------------------------------------------------------------------------------
+?>

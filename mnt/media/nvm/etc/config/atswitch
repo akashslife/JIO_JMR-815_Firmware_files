@@ -1,0 +1,7 @@
+config 'Environment' 'ConnectionPollingTimer'
+    # polling interval in millisecond unit
+    # Polling count - 0 means no polling and -1 means polling forever
+    option '1stStagePollingCount' '150'
+    option '1stStagePollingInterval' '100'
+    option '2ndStagePollingCount' '-1'
+    option '2ndStagePollingInterval' '30000'

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+DELAY=`uci get init.Config.delay`
+
+if [ $DELAY != "0" ]
+then
+    echo " Init sequence delay of $DELAY seconds!" > /dev/kmsg
+    sleep $DELAY
+fi
+

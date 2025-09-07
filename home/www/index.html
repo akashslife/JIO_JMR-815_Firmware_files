@@ -1,0 +1,55 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title></title>
+<script type='text/javascript' src='./script/dhtmlxcommon.js'></script>
+<script type='text/javascript' src='./script/index.js'  ></script>
+<script type="text/JavaScript">   
+ 
+window.oncontextmenu = function() {
+  alert('Right Click Disabled');
+  return false;
+}
+function autoResize(i)
+{
+    var iframeHeight=
+    (i).contentWindow.document.body.scrollHeight;
+    (i).height=iframeHeight;
+}
+window.onload=function() {
+    init();
+}
+</script>
+<style>
+
+</style>
+
+</head>
+<body id=bodyid onpageshow="if (event.persisted) noBack();" style="display: none" bgcolor=white text=black link=blue vlink=purple alink=red ondragstart="return false" onselectstart=" return false">
+
+<input type=hidden name=token id=out_token value="" > 
+<table width="100%" align=left>
+    <tr style="background: url(../image/mainTop/top_background.jpg);">
+        <td colspan=2>
+        <div>
+            <table width=790 height=62 border=0 cellpadding=0 cellspacing=0 background="../image/mainTop/top_background.jpg">  
+                <tr>
+                    <td width=98>&nbsp;</td> 
+                    <td width=500 align=center valign=middle></td>
+                    <td width=98 align=center valign=middle><input type=image id=login_status name=login_status onclick="login_set();return false;"></td></tr>
+            </table>
+        </div>
+        </td>
+    </tr>
+    <tr style="background: url(../image/common_bg.jpg)">    
+        <td width=230px border=0 cellpadding=0 cellspacing=0 > 
+                <div id="layer1" style=" position:absolute; left:10px; top:75px; z-index:1;"></div> 
+                <p>&nbsp;</p>
+        </td> 
+        <td border=0 cellpadding=0 cellspacing=0> 
+                <iframe id="webbody" name="webbody" onload="autoResize(this)" marginwidth=0 marginheight=0 frameborder=0 scrolling="no" width="100%" height="800px" style="border: 1px solid #C9C9C9;" src=""></iframe>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    beforeload();//hidden body content
+</script>
+</body>
+</html>

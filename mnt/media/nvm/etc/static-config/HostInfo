@@ -1,0 +1,9 @@
+
+config DevDetailExt HostDeviceSubtree
+	option 'Manufacturer' 'null'
+	option 'Model' 'null'
+	option 'SwV' 'null'
+	option 'FwV' 'null'
+	option 'HwV' 'null'
+	option 'DateStamp' 'null'
+	option 'DeviceID' 'null'

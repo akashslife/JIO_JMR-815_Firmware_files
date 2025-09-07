@@ -1,0 +1,48 @@
+00:00:11.562 main entry
+00:00:11.562 STARTING MAL Daemon compile time Jun 19 2019:10:58:09
+00:00:11.564 MAL main finished tarting threads
+00:00:11.564 run_at_q_thread entry
+00:00:11.565 AT_CMD_SOCKET_NAME: /tmp/mal-vvm_at_cmd_srv
+00:00:11.565 adding at_prs (fd:9 ) to epoll
+00:00:11.565 adding at_cmd (fd:3 ) to epoll
+00:00:11.566 adding at_unsol (fd:5 ) to epoll
+00:00:11.566 run_listener_thread entry
+00:00:11.567 findSocketName: search str= %d,VVMUNSOL,
+00:00:11.568 looking for VVMUNSOL  in 14,VVMUNSOL,
+
+00:00:11.568 findSocketName found at sw config entry: /tmp/atsw14
+00:00:11.568 malUnsol_ThreadMain: entry will work with:
+  atsw_unsol: /tmp/atsw14
+00:00:11.569 mal_OpenSocketToAtSwitch entry
+00:00:11.569 Trying to connect to AT switch for UNSOL 
+00:00:11.570 connected to atswitch on /tmp/atsw14 for UNSOL (FD 12)
+00:00:11.571 start reading UNSOL fd 12
+00:00:11.571 AtThreadMain entry
+00:00:11.572 mal_StartServer entry
+00:00:11.572 Create and wait for AT command thread listener start
+00:00:11.573 findSocketName: search str= %d,CUSTOM2,
+00:00:11.574 looking for CUSTOM2  in 11,CUSTOM2,
+
+00:00:11.574 findSocketName found at sw config entry: /tmp/atsw11
+00:00:11.575 malSrv_ThreadMain entry will work with:
+ prs: /tmp/mal-vvm_at_prs_srv
+ atsw /tmp/atsw11
+00:00:11.575 create the socket
+00:00:11.575 bind the socket
+00:00:11.576 listen the socket
+00:00:11.576 Waiting to accept connection on /tmp/mal-vvm_at_prs_srv .... 
+00:00:11.577 connected
+00:00:11.577 MAL AT Ssrver - Accepted connection on /tmp/mal-vvm_at_prs_srv with fd = 14 
+00:00:11.578 mal_OpenSocketToAtSwitch entry
+00:00:11.579 Trying to connect to AT switch for AT_CMD_RSP 
+00:00:11.580 connected to atswitch on /tmp/atsw11 for AT_CMD_RSP (FD 13)
+00:00:11.581 malSrv thread ID = 1958298880l, waits on AT commands on socket:/tmp/mal-vvm_at_prs_srv
+00:00:12.564 initial_LTE_reg_thread:start LTE Reg status
+00:00:12.568 ### ATSW RSP:  75392B0C 
+AT+CEREG?
++CEREG: 2,0
+OK
+ strlen(rsp)=28 
+00:00:12.568 mal_checkRspOkOrError: msglen 28 retval 1
+00:00:12.568 at switch rsp ended (OK)
+00:00:12.569 initial_LTE_reg_thread:Registration stat is 0

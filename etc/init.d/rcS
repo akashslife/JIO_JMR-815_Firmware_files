@@ -1,0 +1,72 @@
+#!/bin/sh
+
+
+
+# Start all init scripts in /etc/init.d
+# executing them in numerical order.
+#
+
+# Test for safeboot command
+if grep -q "safeboot" /proc/cmdline ; then
+	echo "Device is running in Safe Boot Mode"
+	exit 0
+fi
+
+#Do not run uci scripts when having mounted over nfs
+local run_uci
+#grep "\/dev\/root" /proc/mounts | grep -q nfs && run_uci=0 || run_uci=1
+run_uci=1
+
+PATH=$PATH:/usr/local/bin/
+
+
+for i in /etc/init.d/S??* ;do
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+     echo ++++ Launching $i... > /dev/kmsg
+     case "$i" in
+	*.sh)
+	    # Source shell script for speed.
+	    (
+		trap - INT QUIT TSTP
+		set start
+		. $i
+	    )
+	    ;;
+	*.uci)
+	    #Definitely spawn uci scripts to speedup
+	    test ${run_uci} -eq 1 && $i start
+	    ;;
+	*)
+	    # No sh extension, so fork subprocess.
+	    $i start
+	    ;;
+    esac
+    echo ---- Finished $i... > /dev/kmsg
+done
+
+for i in /etc/init.d/ES??* ;do
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+     echo Launching $i...
+     case "$i" in
+	*.sh)
+	    # Source shell script for speed.
+	    (
+		trap - INT QUIT TSTP
+		set start
+		. $i
+	    )
+	    ;;
+	*.uci)
+	    #Definitely spawn uci scripts to speedup
+	    test ${run_uci} -eq 1 && $i start
+	    ;;
+	*)
+	    # No sh extension, so fork subprocess.
+	    $i start
+	    ;;
+    esac
+done
+
+echo "Initialization Done!"

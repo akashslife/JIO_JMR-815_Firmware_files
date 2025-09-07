@@ -1,0 +1,7 @@
+
+config 'Environment' 'battery'
+	option 'voltage' '4300'
+
+config 'Environment' 'info'
+	option 'WlanVer' 'WiFi: unknown version'
+

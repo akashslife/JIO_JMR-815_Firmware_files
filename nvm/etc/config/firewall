@@ -1,0 +1,8 @@
+
+config 'Environment' 'config'
+	option 'firewall' 'enable'
+	option 'ping' 'disable'
+	option 'http' 'disable'
+	option 'http_port' '8080'
+	option 'icmp' 'disable'
+

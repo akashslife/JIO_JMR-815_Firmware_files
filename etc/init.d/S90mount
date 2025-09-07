@@ -1,0 +1,94 @@
+#!/bin/sh
+
+get_opt() {
+        echo "$@" | cut -d "=" -f 2
+}
+
+TSTORAGE=$(cat /proc/mtd | grep tstorage | cut -d: -f1 | sed -e 's/mtd/mtdblock/')
+ERASE_UPLOAD="false";
+VER_CONF_PATH="/etc"
+VER_CONF_FILE="version_config"
+VER_CONF_PARAM="on_first_execution.clear_upload"
+MOD_FS_MSDOS="/lib/modules/3.4.22/kernel/fs/fat/msdos.ko"
+MOD_FS_FAT="/lib/modules/3.4.22/kernel/fs/fat/fat.ko"
+
+do_fw=1
+if [ -e /proc/device-tree/config_type ]; then
+	if [ $(cat /proc/device-tree/config_type) == "Sflash_nfs" ]; then
+		if [ `devmem 0xb4967048` == "0x00000000" ]; then
+			echo "$0: script cannot run in Sflash mode - bailing out" > /dev/kmsg
+            exit 0;
+		fi
+	fi
+fi
+
+if [ -e /proc/device-tree/sdcard_fs ]; then
+        if [ $(cat /proc/device-tree/sdcard_fs) == "FAT32" ]; then
+                insmod $MOD_FS_FAT
+                insmod $MOD_FS_MSDOS
+
+        fi
+fi
+
+#	Test if running on older version with tstorage partition. If not, running on new version, so set TSTORAGE properly
+	if [ ! $TSTORAGE ]; then
+		
+	    #if uboot request production mode , than dont mount upload and dont erase it.
+	    # in production mode there are 2 different versions loaded in the 2 rootfs partitions and there is no upload directory ( and no fota...). For manufacturing.
+	    PRODUCTION_MODE=$(fw_printenv |grep PRODUCTION_MODE=true|wc -l)
+	    if [ $PRODUCTION_MODE == '1' ]; then
+	        echo " S90mount: running in production mode "
+	        exit 0
+	    fi
+	    #if this is first execution of a SW than erase upload directory
+	    ERASE_UPLOAD=$(uci -c $VER_CONF_PATH get $VER_CONF_FILE.$VER_CONF_PARAM)
+		
+		UBOOT_BN_ENV_VAR=`fw_printenv boot_number`
+		if [ ! -e $UBOOT_BN_ENV_VAR ]; then
+	    	BOOT_NUMBER=$(get_opt $UBOOT_BN_ENV_VAR)
+	    	echo "S90mount: Current boot_number #$BOOT_NUMBER"
+		
+	    	if [ $BOOT_NUMBER == '1' ]; then
+	        	TSTORAGE=$(cat /proc/mtd | grep rootfs2 | cut -d: -f1 | sed -e 's/mtd/mtdblock/')
+	    	else
+	        	TSTORAGE=$(cat /proc/mtd | grep rootfs1 | cut -d: -f1 | sed -e 's/mtd/mtdblock/')
+	    	fi
+		else
+	    	echo " S90mount: ERROR: Failed to detect the boot_number! Will not mount /upload ..."
+		fi
+	fi
+
+if [ ! $TSTORAGE ]; then
+    exit 0
+fi
+
+echo "S90mount: will mount upload on "$TSTORAGE > /dev/kmsg
+
+case "$1" in
+    start)
+        if [ $ERASE_UPLOAD == "true" ];then
+            # start a child thread that will mount and erase
+            {
+                mount -t jffs2 /dev/$TSTORAGE /upload &
+                sync
+                rm -fr /upload/*
+                uci -c $VER_CONF_PATH set $VER_CONF_FILE.$VER_CONF_PARAM="false"
+                uci -c $VER_CONF_PATH commit $VER_CONF_FILE
+                echo "S90mount: first time , /upload at "$TSTORAGE" was erased"
+            }
+        else
+            mount -t jffs2 /dev/$TSTORAGE /upload
+            #NTmore added, 2017.02.06
+            rm -fr /upload/*
+            #NTmore added, 2017.02.06
+        fi
+        ;;
+    stop)
+        umount /upload
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+esac
+

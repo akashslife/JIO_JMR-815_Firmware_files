@@ -1,0 +1,15 @@
+auto lo lan wan
+iface lo inet loopback
+
+iface lan inet manual
+	up /lib/network/ifupdown.sh $IFACE up 
+	down /lib/network/ifupdown.sh $IFACE down
+#	pre-up /etc/dnsmasq.script update
+#	post-down /etc/dnsmasq.script del
+
+iface wan inet manual
+	up /lib/network/ifupdown.sh $IFACE up && /lib/network/ipv4_firewall.sh start
+	down /lib/network/ifupdown.sh $IFACE down
+##post-up is not called with ifup/ifdown
+#	post-up /lib/network/ipv4_firewall.sh start
+	pre-down /lib/network/ipv4_firewall.sh stop

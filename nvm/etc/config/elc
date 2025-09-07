@@ -1,0 +1,72 @@
+
+config 'environment' 'interface'
+    option 'at_cmd_port' '/tmp/atsw_out_elc'
+    option 'at_output_port' '/tmp/atsw19'
+    option 'at_unsolicit_port' '/tmp/atsw20'	
+    option 'tty_if' '/dev/ttyGS2'
+    option 'hid_if' '/dev/hidg0'
+    option 'client_bitmap' '1'
+    option 'gnss_dev' '/dev/cxd5600-i2c'
+
+config 'environment' 'config'
+    option 'mode' 'full_if'
+    option 'ni_response_mode' 'auto'
+    option 'expected_gps_version' '12608_AGPS'
+    option 'tcxo_offset' '-200'
+    option 'tcxo_offset_mode' 'auto'
+    option 'ephemeris_request_timing' 'anytime'
+    option 'randomization_interval' '900'
+    option 'response_time_limit' '3'
+    option 'sfn0_unsolicited_ind' '0'
+    option 'remote_delaid' 'enable'
+    option 'acquisition_measurement_mask' 'disable'
+    option 'tcxo_offset_permissible_range' '20'
+    option 'backup_interval_time' '3600'
+    option 'inject_system_time' 'disable'
+
+config 'environment' 'gnss'
+    option 'gps_sat' 'enable'
+    option 'glonass_sat' 'disable'
+    option 'gnss_sleep' 'enable'
+    option 'chip_select' 'none'
+	
+config 'environment' 'gnss_upgrade'
+    option 'upg_config' 'null'                                      # Default config: "/etc/GNSS_firmware/Config_08_ALT_01.scbin", "null" keeps the same burned config
+    option 'upg_updater' '/etc/GNSS_firmware/cxd5600_updater.sbin'
+        #for CXD5600:
+        #/etc/GNSS_firmware/cxd5600_fw_rxxxxxAGPS.sbin
+        #for CXD5603:
+        #/etc/GNSS_firmware/cxd5603/cxd5603_xxxxx_xxxxxxx.ebin
+        option 'upg_image' '/etc/GNSS_firmware/cxd5600_fw_r12608AGPS.sbin' 
+	
+config 'environment' 'timeout'
+    # timeout in millisecond unit
+    option 'io_response' '60000'
+    option 'cmd_response_polling' '10'
+
+config 'environment' 'supl'
+    option 'supl_client' 'enable'
+    option 'setid_imsi' 'enable'
+    option 'setid_ip_addr' 'disable'
+    option 'elc_update_xml' 'enable'
+    option 'supl_for_every_gnss_start' 'disable'
+    option 'supl_listen_port' '7275'
+    option 'use_fixed_supl_srv_add' 'disable'
+    option 'fixed_supl_srv_add' '0.0.0.0'
+    option 'supl_srvr_fqdn'	'supl.google.com'
+    option 'tls_ver' '1.1'
+    option 'secure' 'enable'
+    option 'authentication' 'disable'
+    option 'log_to_file'  'disable'
+    option 'debugzone'  'FFFFFF7F'
+    option 'debuglevel' 'FFFFFFFF'
+
+config 'environment' 'postech_capabilities'
+    option 'agps_msa' 'disable'
+    option 'agps_msb' 'disable'
+    option 'ecid' 'enable'
+    option 'otdoa' 'enable'
+    option 'pref_postech' 'otdoa'
+	
+	
+

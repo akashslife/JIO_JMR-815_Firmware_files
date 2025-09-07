@@ -1,0 +1,1180 @@
+00:03:34.241 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:34.241 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:34.242 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:34.243 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:34.244 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:34.245 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:34.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:34.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:34.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:35.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:35.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:35.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:36.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:36.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:36.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:36.392 [D3] i/o  /tmp/atsw7: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:03:36.393 [D3] atswitch input  input /tmp/atsw7, cmdid +CIMI
+00:03:36.393 [D3] atswitch router [WEBG]-->[+CIMI]-->[LTEFW1]
+00:03:36.394 [D3] atswitch router [WEBG]<--[+CIMI]<--[LTEFW1]
+00:03:36.395 [D3] atswitch input  input /tmp/atsw7, cmdid +COPS
+00:03:36.395 [D3] atswitch router [WEBG]-->[+COPS=]-->[ECM]
+00:03:36.397 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:36.398 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:36.399 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:36.409 [D3] atswitch router [WEBG]<--[+COPS=]<--[ECM]
+00:03:36.410 [D3] i/o  /tmp/atsw7: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:03:37.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:37.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:37.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:37.866 [D3] i/o  /tmp/atsw7: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:03:37.867 [D3] atswitch input  input /tmp/atsw7, cmdid +CPIN
+00:03:37.868 [D3] atswitch router [WEBG]-->[+CPIN?]-->[LTEFW1]
+00:03:37.868 [D3] atswitch router [WEBG]<--[+CPIN?]<--[LTEFW1]
+00:03:37.870 [D3] i/o  /tmp/atsw7: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:03:38.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:03:38.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:03:38.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:03:38.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:38.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:38.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:38.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:38.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:03:38.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:38.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:03:38.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:03:38.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:03:38.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:38.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:03:38.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:38.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:38.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:38.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:03:38.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:38.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:38.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:38.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:38.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:38.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:38.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:38.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:38.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:39.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:39.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:39.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:39.067 [D3] i/o  /tmp/atsw15: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:03:39.071 [D3] atswitch input  input /tmp/atsw15, cmdid %count
+00:03:39.072 [D3] atswitch router [CUSTOM6]-->[%count=]-->[LTEFW1]
+00:03:39.074 [D3] atswitch router [CUSTOM6]<--[%count=]<--[LTEFW1]
+00:03:39.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:03:39.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:03:39.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:03:39.231 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:39.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:39.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:39.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:39.234 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:39.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:39.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:39.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:39.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:40.083 [D3] i/o  /tmp/atsw15: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:03:40.106 [D3] i/o  /tmp/atsw15: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:03:40.111 [D3] atswitch input  input /tmp/atsw15, cmdid %count
+00:03:40.112 [D3] atswitch router [CUSTOM6]-->[%count=]-->[LTEFW1]
+00:03:40.114 [D3] atswitch router [CUSTOM6]<--[%count=]<--[LTEFW1]
+00:03:40.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:40.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:40.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:41.131 [D3] i/o  /tmp/atsw15: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:03:41.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:41.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:41.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:42.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:42.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:42.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:43.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:03:43.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:03:43.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:03:43.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:43.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:43.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:43.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:43.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:03:43.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:43.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:03:43.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:03:43.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:03:43.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:43.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:03:43.630 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:43.631 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:43.631 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:43.642 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:03:43.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:43.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:43.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:43.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:43.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:43.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:43.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:43.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:43.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:44.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:44.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:44.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:44.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:03:44.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:03:44.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:03:44.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:44.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:44.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:44.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:44.233 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:44.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:44.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:44.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:44.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:45.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:45.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:45.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:46.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:46.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:46.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:47.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:47.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:47.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:48.324 [D3] atswitch input  input /tmp/atsw6, cmdid +CPIN
+00:03:48.325 [D3] atswitch router [DBP]-->[+CPIN?]-->[LTEFW1]
+00:03:48.326 [D3] atswitch router [DBP]<--[+CPIN?]<--[LTEFW1]
+00:03:48.425 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:03:48.425 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:03:48.426 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:03:48.526 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:48.526 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:48.527 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:48.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:48.627 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:03:48.628 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:48.628 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:03:48.629 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:03:48.638 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:03:48.727 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:48.727 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:03:48.729 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:48.730 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:48.731 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:48.740 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:03:48.827 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:48.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:48.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:48.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:48.928 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:48.929 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:49.029 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:49.029 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:49.030 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:49.129 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:49.130 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:49.131 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:49.230 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:03:49.231 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:03:49.231 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:03:49.331 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:49.331 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:49.332 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:49.333 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:49.334 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:49.335 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:50.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:50.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:50.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:51.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:51.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:51.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:52.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:52.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:52.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:53.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:03:53.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:03:53.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:03:53.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:53.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:53.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:53.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:53.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:03:53.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:53.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:03:53.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:03:53.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:03:53.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:53.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:03:53.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:53.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:53.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:53.641 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:03:53.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:53.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:53.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:53.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:53.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:53.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:53.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:53.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:53.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:54.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:54.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:54.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:54.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:03:54.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:03:54.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:03:54.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:54.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:54.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:54.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:54.233 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:54.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:54.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:54.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:54.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:55.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:55.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:55.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:56.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:56.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:56.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:56.769 [D3] i/o  /tmp/atsw7: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:03:56.770 [D3] atswitch input  input /tmp/atsw7, cmdid +CPIN
+00:03:56.770 [D3] atswitch router [WEBG]-->[+CPIN?]-->[LTEFW1]
+00:03:56.771 [D3] atswitch router [WEBG]<--[+CPIN?]<--[LTEFW1]
+00:03:56.772 [D3] i/o  /tmp/atsw7: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:03:57.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:57.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:57.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:58.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:03:58.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:03:58.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:03:58.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:58.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:58.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:58.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:58.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:03:58.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:58.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:03:58.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:03:58.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:03:58.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:03:58.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:03:58.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:03:58.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:03:58.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:03:58.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:03:58.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:58.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:58.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:58.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:58.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:58.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:58.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:03:58.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:03:58.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:03:59.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:59.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:59.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:59.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:03:59.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:03:59.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:03:59.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:03:59.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:03:59.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:03:59.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:59.233 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:59.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:03:59.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:03:59.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:03:59.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:00.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:00.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:00.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:01.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:01.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:01.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:02.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:02.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:02.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:03.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:03.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:03.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:03.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:03.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:03.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:03.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:03.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:03.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:03.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:03.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:03.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:03.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:03.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:03.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:03.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:03.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:03.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:03.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:03.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:03.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:03.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:03.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:03.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:03.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:03.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:03.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:04.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:04.030 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:04.031 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:04.051 [D3] i/o  /tmp/atsw7: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:04:04.052 [D3] atswitch input  input /tmp/atsw7, cmdid +CPIN
+00:04:04.052 [D3] atswitch router [WEBG]-->[+CPIN?]-->[LTEFW1]
+00:04:04.053 [D3] atswitch router [WEBG]<--[+CPIN?]<--[LTEFW1]
+00:04:04.054 [D3] i/o  /tmp/atsw7: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:04:04.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:04.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:04.133 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:04.231 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:04.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:04.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:04.236 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:04.236 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:04.238 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:04.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:04.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:04.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:05.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:05.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:05.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:06.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:06.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:06.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:07.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:07.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:07.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:08.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:08.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:08.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:08.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:08.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:08.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:08.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:08.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:08.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:08.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:08.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:08.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:08.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:08.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:08.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:08.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:08.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:08.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:08.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:08.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:08.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:08.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:08.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:08.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:08.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:08.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:08.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:09.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:09.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:09.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:09.131 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:09.132 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:09.132 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:09.232 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:09.232 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:09.233 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:09.333 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:09.333 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:09.334 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:10.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:10.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:10.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:11.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:11.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:11.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:12.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:12.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:12.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:13.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:13.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:13.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:13.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:13.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:13.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:13.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:13.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:13.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:13.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:13.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:13.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:13.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:13.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:13.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:13.630 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:13.631 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:13.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:13.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:13.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:13.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:13.829 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:13.829 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:13.831 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:13.930 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:13.930 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:13.931 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:14.030 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:14.031 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:14.032 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:14.033 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:14.033 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:14.034 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:14.036 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:14.036 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:14.037 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:14.038 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:14.039 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:14.040 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:14.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:14.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:14.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:15.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:15.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:15.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:16.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:16.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:16.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:17.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:17.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:17.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:18.325 [D3] atswitch input  input /tmp/atsw6, cmdid +CPIN
+00:04:18.325 [D3] atswitch router [DBP]-->[+CPIN?]-->[LTEFW1]
+00:04:18.326 [D3] atswitch router [DBP]<--[+CPIN?]<--[LTEFW1]
+00:04:18.425 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:18.425 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:18.426 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:18.526 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:18.526 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:18.527 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:18.627 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:18.628 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:18.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:18.629 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:18.630 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:18.639 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:18.727 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:18.728 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:18.730 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:18.731 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:18.732 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:18.742 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:18.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:18.829 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:18.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:18.929 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:18.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:18.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:19.029 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:19.030 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:19.031 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:19.130 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:19.131 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:19.132 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:19.231 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:19.231 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:19.232 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:19.233 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:19.234 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:19.235 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:19.236 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:19.236 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:19.238 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:19.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:19.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:19.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:20.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:20.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:20.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:21.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:21.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:21.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:22.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:22.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:22.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:23.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:23.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:23.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:23.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:23.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:23.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:23.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:23.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:23.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:23.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:23.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:23.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:23.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:23.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:23.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:23.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:23.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:23.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:23.729 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:23.730 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:23.731 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:23.830 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:23.830 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:23.831 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:23.931 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:23.931 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:23.932 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:23.933 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:23.934 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:23.934 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:23.936 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:23.936 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:23.937 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:23.938 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:23.939 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:23.940 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:23.941 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:23.941 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:23.943 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:24.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:24.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:24.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:25.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:25.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:25.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:26.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:26.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:26.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:27.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:27.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:27.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:28.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:28.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:28.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:28.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:28.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:28.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:28.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:28.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:28.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:28.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:28.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:28.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:28.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:28.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:28.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:28.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:28.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:28.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:28.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:28.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:28.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:28.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:28.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:28.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:28.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:28.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:28.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:29.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:29.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:29.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:29.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:29.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:29.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:29.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:29.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:29.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:29.332 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:29.333 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:29.334 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:30.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:30.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:30.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:31.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:31.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:31.327 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:32.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:32.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:32.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:33.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:33.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:33.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:33.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:33.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:33.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:33.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:33.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:33.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:33.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:33.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:33.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:33.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:33.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:33.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:33.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:33.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:33.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:33.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:33.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:33.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:33.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:33.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:33.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:33.929 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:33.930 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:33.933 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:34.031 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:34.032 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:34.033 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:34.138 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:34.138 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:34.139 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:34.149 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:34.150 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:34.151 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:34.156 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:34.157 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:34.158 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:34.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:34.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:34.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:35.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:35.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:35.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:36.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:36.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:36.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:37.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:37.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:37.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:38.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:38.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:38.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:38.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:38.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:38.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:38.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:38.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:38.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:38.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:38.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:38.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:38.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:38.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:38.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:38.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:38.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:38.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:38.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:38.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:38.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:38.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:38.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:38.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:38.929 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:38.930 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:38.931 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:39.030 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:39.031 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:39.032 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:39.131 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:39.131 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:39.132 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:39.133 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:39.134 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:39.135 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:39.136 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:39.136 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:39.137 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:39.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:39.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:39.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:40.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:40.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:40.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:41.218 [D3] i/o  /tmp/atsw15: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:04:41.219 [D3] atswitch input  input /tmp/atsw15, cmdid %count
+00:04:41.220 [D3] atswitch router [CUSTOM6]-->[%count=]-->[LTEFW1]
+00:04:41.222 [D3] atswitch router [CUSTOM6]<--[%count=]<--[LTEFW1]
+00:04:41.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:41.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:41.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:42.207 [D3] i/o  /tmp/atsw15: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:04:42.277 [D3] i/o  /tmp/atsw15: [WAITING_FOR_CNX]----<sock_event>----[CONNECTED]
+00:04:42.280 [D3] atswitch input  input /tmp/atsw15, cmdid %count
+00:04:42.280 [D3] atswitch router [CUSTOM6]-->[%count=]-->[LTEFW1]
+00:04:42.283 [D3] atswitch router [CUSTOM6]<--[%count=]<--[LTEFW1]
+00:04:42.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:42.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:42.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:43.252 [D3] i/o  /tmp/atsw15: [CONNECTED]----<sock_event>----[WAITING_FOR_CNX]
+00:04:43.325 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:43.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:43.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:43.426 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:43.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:43.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:43.527 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:43.528 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:43.529 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:43.529 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:43.530 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:43.539 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:43.628 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:43.628 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:43.630 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:43.631 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:43.633 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:43.635 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:43.728 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:43.729 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:43.730 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:43.829 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:43.829 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:43.830 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:43.930 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:43.931 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:43.932 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:44.032 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:44.032 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:44.033 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:44.037 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:44.037 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:44.038 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:44.044 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:44.045 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:44.046 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:44.050 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:44.050 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:44.052 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:44.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:44.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:44.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:45.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:45.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:45.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:46.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:46.326 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:46.327 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:47.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:47.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:47.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:48.324 [D3] atswitch input  input /tmp/atsw6, cmdid +CPIN
+00:04:48.325 [D3] atswitch router [DBP]-->[+CPIN?]-->[LTEFW1]
+00:04:48.326 [D3] atswitch router [DBP]<--[+CPIN?]<--[LTEFW1]
+00:04:48.425 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:48.425 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:48.426 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:48.526 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:48.526 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:48.527 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:48.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:48.627 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:48.628 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:48.628 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:48.629 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:48.638 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:48.726 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:48.727 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:48.729 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:48.730 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:48.731 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:48.740 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:48.827 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:48.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:48.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:48.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:48.928 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:48.929 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:49.028 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:49.029 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:49.030 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:49.129 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:49.130 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:49.131 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:49.230 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:49.230 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:49.231 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:49.331 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:49.331 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:49.332 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:49.333 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:49.334 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:49.335 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:50.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:50.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:50.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:51.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:51.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:51.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:52.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:52.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:52.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:53.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:53.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:53.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:53.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:53.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:53.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:53.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:53.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:53.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:53.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:53.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:53.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:53.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:53.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:53.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:53.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:53.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:53.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:53.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:53.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:53.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:53.829 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:53.830 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:53.831 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:53.931 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:53.932 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:53.933 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:53.943 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:53.943 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:53.945 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:53.946 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:53.947 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:53.948 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:53.949 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:53.949 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:53.952 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:53.953 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:53.953 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:53.956 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:54.326 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:54.326 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:54.328 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:55.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:55.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:55.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:56.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:56.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:56.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:57.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:57.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:57.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:58.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:04:58.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:04:58.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:04:58.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:58.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:58.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:58.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:58.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:04:58.546 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:58.546 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:04:58.547 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:04:58.556 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:04:58.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:04:58.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:04:58.628 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:04:58.628 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:04:58.629 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:04:58.638 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:04:58.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:58.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:58.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:58.827 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:58.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:58.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:58.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:04:58.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:04:58.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:04:59.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:59.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:59.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:59.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:04:59.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:04:59.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:04:59.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:04:59.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:04:59.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:04:59.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:59.233 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:59.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:04:59.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:04:59.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:04:59.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:00.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:00.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:00.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:01.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:01.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:01.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:02.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:02.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:02.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:03.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:05:03.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:05:03.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:05:03.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:03.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:03.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:03.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:03.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:05:03.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:03.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:05:03.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:05:03.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:05:03.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:03.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:05:03.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:03.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:05:03.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:05:03.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:05:03.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:03.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:03.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:03.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:03.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:03.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:03.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:03.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:03.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:04.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:04.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:04.030 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:04.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:05:04.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:05:04.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:05:04.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:04.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:04.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:04.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:04.233 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:04.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:04.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:04.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:04.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:05.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:05.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:05.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:06.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:06.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:06.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:07.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:07.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:07.328 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:08.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:05:08.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:05:08.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:05:08.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:08.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:08.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:08.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:08.526 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:05:08.527 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:08.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:05:08.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:05:08.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:05:08.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:08.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:05:08.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:08.629 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:05:08.630 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:05:08.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:05:08.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:08.727 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:08.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:08.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:08.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:08.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:08.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:08.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:08.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:09.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:09.029 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:09.031 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:09.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:05:09.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:05:09.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:05:09.231 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:09.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:09.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:09.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:09.234 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:09.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:09.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:09.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:09.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:10.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:10.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:10.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:11.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:11.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:11.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:12.325 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:12.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:12.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:13.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:05:13.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:05:13.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:05:13.425 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:13.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:13.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:13.526 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:13.527 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:05:13.528 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:13.528 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:05:13.529 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:05:13.538 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:05:13.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:13.627 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:05:13.629 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:13.630 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:05:13.632 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:05:13.640 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:05:13.727 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:13.728 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:13.728 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:13.828 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:13.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:13.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:13.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:13.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:13.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:14.029 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:14.030 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:14.031 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:14.130 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:05:14.130 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:05:14.131 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:05:14.230 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:14.231 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:14.232 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:14.233 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:14.234 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:14.235 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:14.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:14.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:14.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:15.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:15.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:15.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:16.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:16.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:16.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:17.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:17.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:17.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:18.324 [D3] atswitch input  input /tmp/atsw6, cmdid +CPIN
+00:05:18.325 [D3] atswitch router [DBP]-->[+CPIN?]-->[LTEFW1]
+00:05:18.326 [D3] atswitch router [DBP]<--[+CPIN?]<--[LTEFW1]
+00:05:18.425 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:05:18.425 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:05:18.426 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:05:18.526 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:18.526 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:18.527 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:18.626 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:18.627 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:05:18.628 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:18.628 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:05:18.629 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:05:18.639 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:05:18.727 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:18.727 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:05:18.730 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:18.730 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:05:18.731 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:05:18.740 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:05:18.827 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:18.828 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:18.829 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:18.928 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:18.929 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:18.930 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:19.029 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:19.029 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:19.030 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:19.130 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:19.130 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:19.131 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:19.230 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:05:19.231 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:05:19.233 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:05:19.335 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:19.336 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:19.337 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:19.436 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:19.436 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:19.438 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:20.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:20.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:20.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:21.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:21.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:21.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:22.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:22.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:22.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:23.324 [D3] atswitch input  input /tmp/atsw6, cmdid %PCONI
+00:05:23.325 [D3] atswitch router [DBP]-->[%PCONI]-->[LTEFW1]
+00:05:23.326 [D3] atswitch router [DBP]<--[%PCONI]<--[LTEFW1]
+00:05:23.426 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:23.426 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:23.427 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:23.527 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:23.527 [D3] atswitch router [DBP]-->[+COPS?]-->[ECM]
+00:05:23.528 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:23.529 [D3] atswitch router [ECM]-->[+COPS?]-->[LTEFW2]
+00:05:23.530 [D3] atswitch router [ECM]<--[+COPS?]<--[LTEFW2]
+00:05:23.539 [D3] atswitch router [DBP]<--[+COPS?]<--[ECM]
+00:05:23.627 [D3] atswitch input  input /tmp/atsw6, cmdid +COPS
+00:05:23.628 [D3] atswitch router [DBP]-->[+COPS=]-->[ECM]
+00:05:23.630 [D3] atswitch input  input /tmp/atsw3, cmdid +COPS
+00:05:23.631 [D3] atswitch router [ECM]-->[+COPS=]-->[LTEFW2]
+00:05:23.632 [D3] atswitch router [ECM]<--[+COPS=]<--[LTEFW2]
+00:05:23.642 [D3] atswitch router [DBP]<--[+COPS=]<--[ECM]
+00:05:23.728 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:23.728 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:23.729 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:23.829 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:23.829 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:23.830 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:23.929 [D3] atswitch input  input /tmp/atsw6, cmdid %MEAS
+00:05:23.930 [D3] atswitch router [DBP]-->[%MEAS=]-->[LTEFW1]
+00:05:23.931 [D3] atswitch router [DBP]<--[%MEAS=]<--[LTEFW1]
+00:05:24.030 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:24.031 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:24.032 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:24.131 [D3] atswitch input  input /tmp/atsw6, cmdid +CEREG
+00:05:24.132 [D3] atswitch router [DBP]-->[+CEREG?]-->[LTEFW1]
+00:05:24.133 [D3] atswitch router [DBP]<--[+CEREG?]<--[LTEFW1]
+00:05:24.232 [D3] atswitch input  input /tmp/atsw6, cmdid %STATUS
+00:05:24.233 [D3] atswitch router [DBP]-->[%STATUS=]-->[LTEFW1]
+00:05:24.234 [D3] atswitch router [DBP]<--[%STATUS=]<--[LTEFW1]
+00:05:24.333 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:24.333 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:24.335 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:25.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:25.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:25.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:26.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:26.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:26.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]
+00:05:27.324 [D3] atswitch input  input /tmp/atsw6, cmdid %COUNT
+00:05:27.325 [D3] atswitch router [DBP]-->[%COUNT=]-->[LTEFW1]
+00:05:27.326 [D3] atswitch router [DBP]<--[%COUNT=]<--[LTEFW1]

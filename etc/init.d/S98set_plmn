@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+#ntmore, SET NUMERIC PLMN 
+/etc/ue_lte/at.sh 'AT+COPS=3,2' 1 | grep -q OK
+
+if [ $? -ne 0 ]; then
+  echo 'AT+COPS=3,2' FAIL! > /dev/kmsg
+else
+  echo 'AT+COPS=3,2' Success! > /dev/kmsg
+fi  

@@ -1,0 +1,243 @@
+#!/bin/sh
+
+NVM_CFG_PATH="/nvm/etc/config"
+NVM_DEFAULT_PATH="/nvm_defaults/etc/config"
+LOGS_SAVE_PATH="/nvm/etc/Log"
+IMEI_VALUE=`uci get /nvm/bsp/factory.value.imei_test`
+
+if [ -e /proc/device-tree/configuration ]; then
+        PROJECT_TYPE=$(cat /proc/device-tree/configuration);
+else
+        PROJECT_TYPE="USBModule"
+fi
+
+CONFIG_DEFAULT_PATH="/configuration_defaults/${PROJECT_TYPE}/nvm/etc/config"
+
+#jclee,140814, check zerobyte files
+check_zerobyte_junk_files()
+{
+
+cd $NVM_CFG_PATH
+
+LIST=`find . -size 0 -type f | grep -v wifi- | grep -v cpestate.xml | grep -v utab`
+
+for FILE in $LIST
+do
+	echo  "[NVM] Warning!! currupt file found in $FILE. changing default config value">>$LOGS_SAVE_PATH
+
+	cp -rf $NVM_DEFAULT_PATH/$FILE $NVM_CFG_PATH
+        cp -rf $CONFIG_DEFAULT_PATH/$FILE $NVM_CFG_PATH
+	sync
+done
+	
+}
+
+#check broken config syntex error
+check_for_important_config()
+{
+# input /nvm_defaults config
+NVM_DEF_CONFIGS_FILES="wifi"
+
+for i in $NVM_DEF_CONFIGS_FILES
+do
+
+	if [ `uci show $NVM_CFG_PATH/$i|wc -l` != `uci show $NVM_DEFAULT_PATH/$i|wc -l` ];then
+
+		echo "[NVM] $NVM_CFG_PATH/$i config syntex is wrong, changing default config value">>$LOGS_SAVE_PATH
+		cp -rf $NVM_DEFAULT_PATH/$i $NVM_CFG_PATH
+		sync
+	fi
+	
+done
+
+#input /configuration_defaults
+CONFIG_DEF_FILES="usb-gadget lte-gw"
+
+for j in $CONFIG_DEF_FILES
+do
+	if [ `uci show $NVM_CFG_PATH/$j|wc -l` != `uci show $CONFIG_DEFAULT_PATH/$j|wc -l` ];then
+
+		echo "[NVM] $NVM_CFG_PATH/$j config syntex is wrong, changing default config value">>$LOGS_SAVE_PATH
+		cp -rf $CONFIG_DEFAULT_PATH/$j $NVM_CFG_PATH
+		sync
+	fi
+
+done
+
+}
+
+check_removed_files()
+{
+NVM_CFG_PATH_COUNT=`find $NVM_CFG_PATH -name "*" -type f| grep -v wifi- |grep -v redirect_list| grep -v config.save| grep -v cpestateForcedInform.save| wc -l`
+NVM_DEFAULT_PATH_COUNT=`find $NVM_DEFAULT_PATH -name "*" -type f | grep -v wifi- |grep -v redirect_list| grep -v config.save| grep -v cpestateForcedInform.save| wc -l`
+CONFIG_DEFAULT_PATH_COUNT=`find $CONFIG_DEFAULT_PATH -name "*" -type f | grep -v wifi- |grep -v redirect_list| grep -v config.save| grep -v cpestateForcedInform.save| wc -l`
+NVM_TOTAL=`expr $NVM_DEFAULT_PATH_COUNT + $CONFIG_DEFAULT_PATH_COUNT`
+
+#echo "NVM_CFG_PATH_COUNT : $NVM_CFG_PATH_COUNT" 
+#echo "NVM_DEFAULT_PATH_COUNT : $NVM_DEFAULT_PATH_COUNT"
+#echo "CONFIG_DEFAULT_PATH_COUNT: $CONFIG_DEFAULT_PATH_COUNT" 
+#echo "NVM_TOTAL: $NVM_TOTAL"
+
+if [ $NVM_CFG_PATH_COUNT -ne $NVM_TOTAL ];then
+
+#	echo "[NVM] Warning!! there is missed file exist" >>$LOGS_SAVE_PATH
+
+	cd $NVM_DEFAULT_PATH
+
+	NVM_DEFAULT_LIST=`find . -name "*"`
+
+		for FILE in $NVM_DEFAULT_LIST 
+		do
+
+			if [ ! -f $NVM_CFG_PATH/$FILE ];then
+
+				if [ ! -d $NVM_CFG_PATH/$FILE ];then
+					echo "[NVM] Warning!! there is missed $FILE exist" >>$LOGS_SAVE_PATH
+		
+					cp -rf $NVM_DEFAULT_PATH/$FILE $NVM_CFG_PATH
+				        sync
+
+
+
+				fi
+
+			fi
+
+		done
+	
+	cd $CONFIG_DEFAULT_PATH
+
+	CFG_DEFAULT_LIST=`find . -name "*"`
+	
+		for FILE2 in $CFG_DEFAULT_LIST 
+		do
+
+			if [ ! -f $NVM_CFG_PATH/$FILE2 ];then
+
+				if [ ! -d $NVM_CFG_PATH/$FILE2 ];then
+					echo "[NVM] Warning!! there is missed $FILE2 exist" >>$LOGS_SAVE_PATH
+		
+					cp -rf $CONFIG_DEFAULT_PATH/$FILE2 $NVM_CFG_PATH
+				        sync
+				fi
+
+			fi
+
+		done	
+
+fi
+
+}
+
+check_junk_bsp_files()
+{
+
+NVM_BSP_PATH="/nvm/bsp"
+
+BSP_LIST=`find $NVM_BSP_PATH -size 0 -type f`
+
+PSN_VALUE=`uci get /nvm/bsp/factory.value.psn`
+
+for FILE in $BSP_LIST
+do
+
+	TAR_LIST_FILE=`echo $FILE |cut -f 4 -d "/"`
+
+	rm -rf $FILE
+
+	if [  -f /nvm/nvm_${PSN_VALUE}.tar ];then
+
+        echo  "[NVM] Warning!! currupt bsp file found in $FILE. rollback backup bsp files">>$LOGS_SAVE_PATH
+
+	cd /
+
+	tar xvf /nvm/nvm_${PSN_VALUE}.tar nvm/bsp/$TAR_LIST_FILE
+
+        sync
+
+	else 
+
+	echo  "[NVM] Warning!! currupt bsp file found in $FILE, but no backup bsp files, set to default bsp files">>$LOGS_SAVE_PATH
+
+	cp -rf /nvm_defaults/bsp/$TAR_LIST_FILE /nvm/bsp/$TAR_LIST_FILE
+
+	fi
+
+	if [ $TAR_LIST_FILE == "dop" ];then
+		uci set /nvm/bsp/factory.value.imei_test="0"
+		uci commit /nvm/bsp/factory
+		rm /nvm/bsp/dop.default
+		sync
+	fi
+
+
+done
+
+
+}
+
+
+nvm_backup()
+{
+IMEI_VALUE=`uci get /nvm/bsp/factory.value.imei_test`
+PSN_VALUE=`uci get /nvm/bsp/factory.value.psn`
+
+if [ $IMEI_VALUE -eq "1" ];then
+
+	if [ ! -f /nvm/nvm_${PSN_VALUE}.tar ];then
+		rm -rf /nvm/*.tar
+		tar cvf /nvm/nvm_${PSN_VALUE}.tar /nvm
+		sync
+	fi
+
+fi
+}
+
+check_static_config()
+{
+NVM_STATIC_ID_COUNT=`cat /etc/static-config/Identification |grep -v "^$" |wc -l`
+NVM_DEFAULT_ID_COUNT=`cat /nvm_defaults/etc/static-config/Identification | grep -v "^$" |wc -l`
+
+if [ $NVM_STATIC_ID_COUNT -ne $NVM_DEFAULT_ID_COUNT ];then
+	echo "error in Identification Value">>$LOGS_SAVE_PATH
+	cp -rf /nvm_defaults/etc/static-config/Identification /etc/static-config/Identification
+	sync
+fi
+}
+
+	
+check_bootdelay()
+{
+BOOTDELAY=`fw_printenv bootdelay | cut -d = -f2`
+
+if [ $BOOTDELAY -ne $1 ];then
+	fw_setenv bootdelay $1
+	sync
+fi
+}
+
+case "$1" in                                                                
+    start)                 
+
+		check_for_important_config
+		check_zerobyte_junk_files
+		check_removed_files
+                                                                                                           
+		if [ $PROJECT_TYPE == "USBModule" ];then
+			check_bootdelay 1
+		elif [ $PROJECT_TYPE == "PWRT" ] && [ $IMEI_VALUE == "1" ];then
+			check_bootdelay 0
+		fi
+		check_junk_bsp_files
+		nvm_backup
+		check_static_config
+
+        ;;                                                
+    stop)      
+        echo ""                               
+        ;;  
+    restart)                                        
+    $0 stop 
+    $0 start                           
+    ;;
+esac

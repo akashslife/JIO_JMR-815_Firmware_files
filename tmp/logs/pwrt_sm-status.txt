@@ -1,0 +1,2 @@
+00:00:12.105 PWRT State Machine Status: State OFF         Last Event wakeup event	      
+00:00:19.726 PWRT State Machine Status: State OPERATIONAL Last Event wakeup event	      

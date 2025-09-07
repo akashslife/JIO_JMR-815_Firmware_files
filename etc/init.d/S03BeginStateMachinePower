@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+# Turn on PMIC power.
+
+#local gpio_charger_number=37; #block ntmore
+#Export the relevent interfaces name
+. /usr/local/bin/lte-gw-global-env.sh
+if [ -e /proc/device-tree/wlan_type ]; then
+        WLAN_TYPE=$(cat /proc/device-tree/wlan_type);
+else
+        WLAN_TYPE="ATH"
+fi
+
+if [ -e /proc/device-tree/altair_compatible_hw ] ; then
+	ALTAIR_HW_COMPAT=$(cat /proc/device-tree/altair_compatible_hw);
+else
+	ALTAIR_HW_COMPAT="0"
+fi
+	    
+if [ $PROJECT_TYPE == "PWRT" ]; then 
+#block ntmore
+#	if [ -e /sys/devices/soc.0/b0220200.pm/gpio_charger_no ]; then
+#		echo $gpio_charger_number > /sys/devices/soc.0/b0220200.pm/gpio_charger_no
+#	fi
+	
+#	wifi_init_script.sh // 2015.03.12 martin ; comment out because this doesn't work well 
+	case "$WLAN_TYPE" in
+	    "ATH")
+		echo "Turn ON power" > /dev/kmsg
+		i2cset -y 0 0x2d 0x24 0x4 > /dev/null 2>&1
+        ;;
+	    "RTL"|"RTL8189")
+		echo "Turn ON power" > /dev/kmsg
+		i2cset -y 0 0x2d 0x24 0x4 > /dev/null 2>&1
+# 2015.02.23 martin ; comment out below 6 lines because power on operation is wrong in power on time by poer key pressed. 
+#        echo "set default behaviour for long press" > /dev/kmsg
+#        STT=$(i2cget -y 0 0x2d 0x25)
+##        echo "---- READ "$STT > /dev/kmsg
+#        STT=$(($STT | 0x44))
+##        echo "---- SET "$STT > /dev/kmsg
+#        i2cset -y 0 0x2d 0x25 $STT > /dev/null 2>&1
+        ;;
+    	*)
+    	echo "Error: Invalid WLAN_TYPE - $WLAN_TYPE"
+    ;;
+	esac
+else
+	echo "not PWRT skipping script "$0   > /dev/kmsg      
+fi
+
+	
+
+

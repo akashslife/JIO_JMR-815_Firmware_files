@@ -1,0 +1,6 @@
+output,IMS,/tmp/atsw_out_imsatcomm_in,
+,,
+Normal,,
+%IMSAPI,
+%IMSTST,
++CIREG,

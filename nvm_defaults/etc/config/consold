@@ -1,0 +1,4 @@
+
+config 'environment' 'config'
+	option 'xml_file' '/etc/ue_lte/consoleDB/consoleDB.xml'
+        option 'log_debug_level' 2

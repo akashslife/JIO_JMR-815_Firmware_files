@@ -1,0 +1,154 @@
+#!/bin/sh
+# Help: use S99dbg-streamer 0 logs_MB
+#       - in order to disable the debug streamer logs enter -1 in the first parameter. e.g.: S99dbg-streamer -1 0
+#	- to disable the debug streamer logs and its allocated space use S99dbg-streamer 0 0
+#	- In order to enable the debug streamer logs without changing pre-allocated size and rebooting use: S99dbg-streamer 1 0
+#       - The script will self reboot if required to enable debug streamer and memory allocation for the logs
+#	- trying to enable only the feature without pre-allocating space and rebooting will FAIL!
+#
+#	Examples:
+#	- S99dbg-streamer 0 2  - allocate 2MB for debug streamer logs and enable logs. Will force reboot.
+#	- S99dbg-streamer 0 0  - disable dbg streamer logs and zero allocated logs space. Will force reboot.
+#	- S99dbg-streamer -1 X - disable debug streamer logs without changing allocation and without reboot.
+#	- S99dbg-streamer 1 X  - enable debug streamer logs without changing allocation and without reboot.
+
+readonly ENABLE=1
+readonly DISABLE=-1
+readonly ALLOCATE=0
+
+let do_reboot=0
+
+# activate debug streamer:
+#Changing debug streamer memory size and addresses in griffin:
+#At%DBGSTRM="memory","<startAddress>",<size(in MB)>
+#Example:  
+#> At%DBGSTRM="memory","A7E00000",2
+#OK
+
+#Disabling/enabling debug streamer 
+#At%DBGSTRM="mode","external"  - to enable debug streamer
+#At%DBGSTRM="mode","off" – to disable debug streamer
+
+atcmd_send() {
+ CMD=$1
+ TIMEOUT=$2	
+
+# echo "$1" > /dev/kmsg
+ /etc/ue_lte/at.sh $CMD $TIMEOUT | grep -q OK
+
+ if [ $? -ne 0 ]; then
+  echo $CMD FAIL!  > /dev/kmsg
+ fi
+}
+
+
+start() {
+	echo -n "Starting dbg-streamer: "
+	DBG_STREAMER_EN_DIS=${1:-0} #check if enabling debug streamer only without changing memory allocation
+
+	DBG_STREAMER_SIZE_MB=${2:--2}; #get value from command line or default to zero if command line was not used by external user
+	#echo ">>> Command line Debug streamer size $DBG_STREAMER_SIZE_MB MB >>>" > /dev/kmsg
+
+	UCI_DBG_STREAMER_ENABLED=`uci get -q lte-gw.debug_streamer.streamer_enabled`
+
+	# if called by user and not during boot ($DBG_STREAMER_SIZE_MB -ne -2)
+	if [ $DBG_STREAMER_SIZE_MB -ne -2 ]; then
+		if [ $DBG_STREAMER_EN_DIS -eq $ENABLE ] && [ "$UCI_DBG_STREAMER_ENABLED" == "disable" ]; then
+			echo ">>> setting UCI value to Enable >>>" > /dev/kmsg
+			UCI_DBG_STREAMER_ENABLED="enable"
+			`uci set lte-gw.debug_streamer.streamer_enabled="enable"`
+			`uci commit lte-gw`
+		fi
+
+		# if called by user as a script and NOT during boot (DBG_STREAMER_SIZE_MB=-2) 
+		if [ $DBG_STREAMER_EN_DIS -eq $DISABLE ] && [ "$UCI_DBG_STREAMER_ENABLED" == "enable" ]; then
+			echo ">>> setting UCI value to Disable >>>" > /dev/kmsg
+			UCI_DBG_STREAMER_ENABLED="disable"
+			`uci set lte-gw.debug_streamer.streamer_enabled="disable"`
+			`uci commit lte-gw`
+		fi
+
+		#update u-boot env vars
+		if [ $DBG_STREAMER_EN_DIS -eq $ALLOCATE ]; then
+			let dbgStreamerSize=$DBG_STREAMER_SIZE_MB*1024*1024;
+			echo ">>> update u-boot env var values dbgStreamerSize $dbgStreamerSize Bytes and rebooting >>>" > /dev/kmsg
+			`fw_setenv phy_dbgstreamer $dbgStreamerSize`
+			let do_reboot=1;	
+		fi
+	fi 
+
+	# If either the script was called during boot OR only Enable/Disable command was sent
+	# then read device tree values
+	if [ $DBG_STREAMER_SIZE_MB -eq -2 ] || [ $DBG_STREAMER_EN_DIS -ne $ALLOCATE ]; then
+		dbgStreamerAddr=$(find /proc/device-tree -name debug_streamer_addr)
+		dbgStreamerSize=$(find /proc/device-tree -name debug_streamer_size)
+
+		if [ "$dbgStreamerAddr" == "" ]; then
+			let dbgStreamerAddr=0xffffffff;
+		else
+			dbgStreamerAddr=$(cat $dbgStreamerAddr | hexdump -e '"%x"')
+			dbgStreamerAddr='A'$dbgStreamerAddr
+		fi
+		if [ "$dbgStreamerSize" == "" ]; then
+			echo "Debug streamer config not found" > /dev/kmsg
+			let dbgStreamerSize=0;
+		else
+			let dbgStreamerSize=$(cat $dbgStreamerSize | hexdump -e '"%d"')
+			#echo "Debug streamer size $DBG_STREAMER_SIZE_MB $dbgStreamerSize" > /dev/kmsg
+		fi
+		let DBG_STREAMER_SIZE_MB=$dbgStreamerSize/1024/1024;
+	fi
+
+	if [ $do_reboot -ne 1 ]; then
+		if [ "$UCI_DBG_STREAMER_ENABLED" == "enable" ] || [ $DBG_STREAMER_EN_DIS -eq $ENABLE ]; then
+			echo ">>> Debug streamer activated $DBG_STREAMER_SIZE_MB MB at 0x$dbgStreamerAddr ! >>>" > /dev/kmsg
+			if [ $DBG_STREAMER_SIZE_MB -gt 0 ]; then
+				atcmd_send "AT%DBGSTRM=\"memory\",\"$dbgStreamerAddr\",$DBG_STREAMER_SIZE_MB" 1
+				atcmd_send 'AT%DBGSTRM="mode","external"' 1
+			else
+				echo "********* BUT memory space not allocated! *******" > /dev/kmsg
+			fi
+		else
+			echo ">>> Debug streamer disabled by default >>>" > /dev/kmsg
+			atcmd_send 'AT%DBGSTRM="mode","off"' 1
+			if [ $dbgStreamerSize -ne 0 ]; then 
+				echo ">>> Debug streamer allocated at $dbgStreamerAddr size $DBG_STREAMER_SIZE_MB MB >>>" > /dev/kmsg
+			fi
+		fi
+	else
+		echo ">>> rebooting >>>" > /dev/kmsg
+		`reboot`
+		exit
+	fi
+	echo "done"
+}
+
+
+stop() {
+        echo -n "Stopping dbg-streamer: "
+	echo "done"
+}
+
+restart() {
+	stop
+	start
+}
+
+# See how we were called.
+case "$1" in
+  start)
+	start 0 $2
+	;;
+  stop)
+	stop
+	;;
+  restart|reload)
+	restart
+	;;
+  *)
+	start $1 $2
+	;;
+esac
+
+exit $?
+

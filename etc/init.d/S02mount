@@ -1,0 +1,81 @@
+#!/bin/sh
+# 
+# Mounting NVM and internal sflash
+#
+
+# create logs directory for applications logs
+mkdir /tmp/logs
+
+#----- mount for NVM ---------------------------------
+
+case "$1" in
+    start)
+    PNVM=$(cat /proc/mtd | grep nvm | cut -d: -f1 | sed -e 's/mtd/mtdblock/')
+    mount -t jffs2 /dev/$PNVM /nvm
+	
+	if [ -e /proc/device-tree/config_type ]; then
+	    if [ $(cat /proc/device-tree/config_type) == "Sflash_nfs" ]; then
+	        echo "$0: NVM mounted" > /dev/kmsg
+	        exit 0;
+	    fi
+	fi
+	
+	#----- mount for internal 2Mb sflash ------------------
+	SFLASH1_MNT_DIR=/sflash1
+	SFLASH1_PARTITION_NAME=alt3100-sflash1
+	
+	mount_func()
+	{
+	  mount -t jffs2 /dev/$PSFLASH $SFLASH1_MNT_DIR 2>&1 >/dev/null
+	  if [ $? -eq 0 ]; then
+	      echo "Mounting internal sflash: OK"
+	      exit 
+	  fi
+	}
+	
+	# Is mounting directory exists? (exists only in NOR SFLASH mode platform)
+	if [ ! -d $SFLASH1_MNT_DIR ]; then
+	#  echo "directory $SFLASH1_MNT_DIR not found!"
+	  exit	
+	fi
+	
+	# Find partition
+	CHAR_SFLASH=$(cat /proc/mtd | grep $SFLASH1_PARTITION_NAME | cut -d: -f1)
+	
+	# Is internal sflash switch ON ?
+	if [ ! $CHAR_SFLASH ]; then
+	#  echo "Internal sflash partition not found"
+	  exit
+	fi
+	
+	PSFLASH=$(echo $CHAR_SFLASH | sed -e 's/mtd/mtdblock/')
+	
+	# Should not happen in boot scenario
+	if [ $(df | grep -c /dev/$PSFLASH) -ne 0 ]; then
+	  echo "Internal sflash already mounted"
+	  exit
+	fi
+	
+	# Try to mount
+	mount_func
+	
+	# If we got here  an error occurred  - the device is probably not formatted
+	echo "Formating internal sflash..."
+	flash_erase -j -q /dev/$CHAR_SFLASH 0 0 2>&1
+	  
+	mount_func
+	
+	# If we got here an error occurred 
+	echo "Mounting internal sflash: ERROR($?)"
+	;;
+	
+	stop)
+	umount /nvm
+	echo "$0: NVM unmounted" > /dev/kmsg
+	;;
+	
+	restart)
+    $0 stop
+    $0 start
+    ;;
+esac

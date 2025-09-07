@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# init confmanager
+
+case "$1" in
+    start)
+       	CONFIGDIR=/nvm/etc/static-config
+       	confmanager --uci-config-directory=$CONFIGDIR >> /tmp/logs/confmng.log 2>&1 &
+        ;;
+    stop)
+        killall confmanager > /dev/null 2>&1
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+    status)
+        if pidof confmanager | sed "s/$$\$//" | grep -q [0-9] ; then
+        echo "running"
+        else
+        echo "stopped"
+        fi
+        ;;
+esac

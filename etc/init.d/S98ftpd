@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# GPL $Id: ftpd,v 1.2 2005/03/22 15:06:14 cvonk Exp $
+# system init for FTP server
+SERVICE_STATUS=`uci get admin.services.ftp`
+
+case "$1" in
+    start)
+        if [ $SERVICE_STATUS != "enable" ]
+        then
+            exit 0
+        fi
+        tcpsvd -E -u root 0.0.0.0 21 ftpd -w / &
+        ;;
+    stop)
+        ps | grep ftpd | awk '{print $1}' | xargs kill -9 2>/dev/null
+        ;;
+    restart)
+    $0 stop
+    $0 start
+    ;;
+esac

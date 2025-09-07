@@ -1,0 +1,10 @@
+config Environment fuel_gauge
+	option chipid '85'
+	option bus    '/dev/i2c-0'
+
+
+config Environment charger
+	option chipid '107'
+	option bus    '/dev/i2c-0'
+    option charger_type 'BQ24261'
+

@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# this cript runs default wifi calibration commands that were tested on RTL8192es
+
+ifconfig wlan0 down
+iwpriv wlan0 set_mib mp_specific=1
+ifconfig wlan0 up
+iwpriv wlan0 mp_start
+iwpriv wlan0 efuse_set HW_TX_POWER_CCK_A=2828282828282828282828282828
+iwpriv wlan0 efuse_set HW_TX_POWER_CCK_B=2828282828282828282828282828
+iwpriv wlan0 efuse_set HW_TX_POWER_HT40_1S_A=2323232323232323232323232323
+iwpriv wlan0 efuse_set HW_TX_POWER_HT40_1S_B=2323232323232323232323232323
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT20_A=0000000000000000000000000000
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT20_B=0000000000000000000000000000
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT20_OFDM_A=0000000000000000000000000000
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT20_OFDM_B=0000000000000000000000000000
+
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT40_2S_A=0000000000000000000000000000
+iwpriv wlan0 efuse_set HW_TX_POWER_DIFF_HT40_2S_B=0000000000000000000000000000
+iwpriv wlan0 efuse_set HW_11N_THER=29
+iwpriv wlan0 efuse_sync
+

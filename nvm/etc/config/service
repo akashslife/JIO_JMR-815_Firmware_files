@@ -1,0 +1,92 @@
+
+config InitScript ECM
+	option Enabled 'true'
+	option APNTableFile 'APNTable'
+	option APNTableFileRoam 'APNTable'
+	option DebugLevel 3
+
+config InitScript VDMC
+	option Enabled 'false'
+	option ConfigFile '/etc/config/vdmc/vzw-vdmc.conf'
+	option DebugLevel '3'
+
+config InitScript FOTAM
+	option Enabled 'false'
+	option LogSeverity '3'
+
+config InitScript LteSniffIP
+	option Enabled 'false'
+	option Value '6'
+
+config InitScript LWM2M
+	option Enabled 'false'
+	option LogSeverity '3'
+
+config InitScript CAT
+	option Enabled 'true'
+	option LogSeverity '3'
+
+config InitScript ATSW
+	option UnsolEnabled 'true'
+	option UPrefix '2'
+	option USuffix '2'
+	option LogSeverity '3'
+
+config InitScript DBPROBE
+	option Enabled 'true'
+
+config InitScript WWW
+	option main_page main
+
+config InitScript COREDUMP
+    option Enabled 'true'
+
+config InitScript TCPDUMP
+    option Enabled 'false'
+    option Interface 'lte0.1'
+
+config InitScript IMS
+	option Enabled 'false'
+	option DebugLevel '3'
+
+config InitScript SMSManager
+	option DebugLevel '3'
+
+config InitScript MOIP
+	option DebugLevel '3'
+
+config InitScript Mode
+	option Operator 'default'
+	option LstTestMode 'null'
+	option AutoDetectOperator 'false'
+	option ImsiMCC 'null'
+	option ImsiMNC 'null'
+	
+config InitScript ELC
+	option Enabled 'true'
+	option DebugLevel '2'
+
+config InitScript ErrorHandling
+	option reset 'true'
+	
+config InitScript PPP
+    option Enabled 'true'
+
+config InitScript GCSERVER
+	option DebugLevel '0'
+
+config InitScript VOICEENGINE
+	option DebugLevel '3'
+
+config InitScript AMAHUB
+	option DebugLevel '2'
+
+config InitScript SOCKSERV
+	option MaxNum '6'
+	option DebugLevel '3'
+
+config InitScript TRACKER
+        option DebugLevel '3'
+
+config InitScript LogToSDCard
+        option Enabled 'false'

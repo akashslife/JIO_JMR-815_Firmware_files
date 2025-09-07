@@ -1,0 +1,185 @@
+#!/bin/sh
+
+. /usr/local/bin/lte-gw-global-env.sh
+
+atcmd_send()
+{
+ CMD=$1
+ TIMEOUT=$2	
+
+ /etc/ue_lte/at.sh $CMD $TIMEOUT | grep -q OK
+
+ if [ $? -ne 0 ]; then
+  echo $CMD FAIL!  > /dev/kmsg
+ fi
+}
+
+
+# set fw logs sevirity (every SW upgrade)
+set_fw_logs_sevirity()
+{
+    if [ -f /tmp/new_version ]
+    then
+           echo ">>> Seting FW logs sevirity! >>>" > /dev/kmsg
+
+           atcmd_send 'AT%SETCFG="LOG","PDCP","ERROR"' 1
+           atcmd_send 'AT%SETCFG="LOG","RLC","ERROR"' 1
+    fi
+}
+
+# from this point it should be OK for the linux to go to low power mode
+set_low_power_mode()
+{
+    if ( [ $PROJECT_TYPE != "ETH_GW" ] && [ $PROJECT_TYPE != "GETH_GW" ] ); then 
+
+		if [ -e /sys/devices/soc.0/b0220200.pm/sleep_enable ]
+		then
+			:
+			echo 1 > /sys/devices/soc.0/b0220200.pm/sleep_enable
+		else
+			echo "note: sleep_enable file does not exist - probably PM is not defined in kernel" > /dev/kmsg
+		fi
+    fi   
+}
+set_ltedriver_softlink()
+{
+	mkdir /tmp/ltedrv
+	ln -s  /sys/devices/virtual/net/lte0/ue_fw_* /tmp/ltedrv
+}
+
+
+disable_ltedrv_health_mon()
+{
+        if ( [ $PROJECT_TYPE == "PWRT" ] || [ $PROJECT_TYPE == "WRT" ]) ; then
+#                if [ -e /proc/device-tree/sdcard_fs ]; then
+                        echo 0 > /tmp/ltedrv/ue_fw_health_mon_enable;
+#                fi
+        fi
+}
+
+
+GW_LOCAL_TOPOLOGY=`uci get lte-gw.local_param.local_topoloy`
+
+#will load nat helper driver in router mode - fixes FTP active mode issue(win cli)
+load_nat_helper()
+{
+    if [ $GW_LOCAL_TOPOLOGY == "router" ]; then
+		modprobe nf_nat_ftp
+    fi  
+}
+
+unload_nat_helper()
+{
+    if [ $GW_LOCAL_TOPOLOGY == "router" ]; then
+		modprobe -r nf_nat_ftp
+    fi  
+}
+
+update_wlan_version()
+{
+
+    if ( [ $PROJECT_TYPE == "PWRT" ] || [ $PROJECT_TYPE == "WRT" ]) ; then
+        WLAN_CUR_VER="WiFi: unknown version"
+        if [ -e /etc/config/pwrt ]; then
+            WLAN_SAV_VER=`uci get /etc/config/pwrt.info.WlanVer`
+        else
+            WLAN_SAV_VER=""
+        fi
+
+        if [ -f /proc/device-tree/wlan_type ]; then
+            WLAN_TYPE=$(cat /proc/device-tree/wlan_type);
+        else
+            WLAN_TYPE="ATH"
+        fi
+
+        if [ $WLAN_TYPE == "ATH" ]; then
+            WLAN_VERSION=`dmesg | grep -oE "Current ath6kl driver version is: [0-9.]+" | cut -c 35-`
+            if [ x"$WLAN_VERSION" == x ]; then
+                WLAN_CUR_VER="WiFi: unknown version"
+            else
+                WLAN_CUR_VER="Atheros v$WLAN_VERSION"
+            fi
+        elif [ $WLAN_TYPE == "RTL" ] || [ $WLAN_TYPE == "RTL8198" ]; then
+            WLAN_VERSION=`cat /proc/wlan0/mib_all | grep "Make info: v" | sed -r "s/.*Make info: v([0-9\.]+).*/\1/"`
+            if [ x"$WLAN_VERSION" == x ]; then
+                WLAN_CUR_VER="Realtek: unknown version"
+            else
+                WLAN_CUR_VER="Realtek v$WLAN_VERSION"
+            fi
+        fi
+
+        if [ "$WLAN_CUR_VER" != "$WLAN_SAV_VER" ]; then
+            uci set /etc/config/pwrt.info.WlanVer="$WLAN_CUR_VER"
+        fi
+    fi
+}
+
+enable_reset_on_panic()
+{ 
+    RESET_RECOVERY=`uci get service.ErrorHandling.reset`
+    if [ $RESET_RECOVERY == "true" ]
+    then
+        echo ">>> configuring reset on fatal >>>" >/dev/kmsg
+        echo 5 > /proc/sys/kernel/panic
+	echo 5 > /proc/sys/kernel/panic_on_oops
+            
+    fi 
+}
+
+disable_reset_on_panic()
+{ 
+    echo  0 > /proc/sys/kernel/panic
+}
+
+# set Altair internal testing environment (remote SV server)
+set_altair_test_env()
+{
+events_detector_directory="/etc/ue_lte/Events_Detector"
+events_detector_manager="/upload/Events_Detector_Application/events_detector_manager"
+
+    if [ -d $events_detector_directory ]; then
+        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" > /dev/kmsg
+        echo ">>>  Altair SV internal test environment Active !!! >>>" > /dev/kmsg
+        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" > /dev/kmsg
+    fi
+
+   if [ ! -d $events_detector_directory ]; then
+        if [ -f $events_detector_manager ] 
+        then
+            echo ">>> Seting Altair SV internal test environment !!! >>>" > /dev/kmsg
+            `$events_detector_manager &`
+        fi
+   fi
+}
+
+# print U-boot version
+print_uboot_ver()
+{
+    echo "U-boot Version:" > /dev/kmsg
+    /usr/sbin/fw_printenv ver > /dev/kmsg
+}
+
+#main
+case "$1" in 
+  start)
+        set_fw_logs_sevirity
+        set_low_power_mode
+    	set_ltedriver_softlink
+        disable_ltedrv_health_mon   
+        load_nat_helper
+        update_wlan_version
+        enable_reset_on_panic
+        set_altair_test_env
+        print_uboot_ver
+	;;
+  stop)
+        unload_nat_helper
+        disable_reset_on_panic
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+ 

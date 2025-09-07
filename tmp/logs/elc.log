@@ -1,0 +1,128 @@
+00:00:16.713 [D2] elc VER: 2019-02-19 18:30:17
+
+00:00:17.072 [D2] GPS CP LPP Assisted enabled in ecm.LteMode.EnableLPP
+00:00:17.079 [D2] ===============================================================
+00:00:17.090 [D2] config_file: elc
+00:00:17.091 [D2] debug_level: 2
+00:00:17.092 [D2] 
+00:00:17.093 [D2] interface:
+00:00:17.094 [D2] 	at_cmd_port: /tmp/atsw_out_elc
+00:00:17.095 [D2] 	at_output_port: /tmp/atsw19
+00:00:17.096 [D2] 	at_input_Unsolict_port: /tmp/atsw20
+00:00:17.097 [D2] 	config_tty_if: /dev/ttyGS2
+00:00:17.098 [D2] 	config_hid: /dev/hidg0
+00:00:17.099 [D2] 	client_bitmap: 1
+00:00:17.099 [D2] 	gnss_dev: /dev/cxd5600-i2c
+00:00:17.100 [D2] 
+00:00:17.101 [D2] config:
+00:00:17.101 [D2] 	mode: full_if
+00:00:17.101 [D2] 	ni_response_mode: auto
+00:00:17.101 [D2] 	expected_gps_version: 12608_AGPS
+00:00:17.101 [D2] 	tcxo_offset: -200
+00:00:17.102 [D2] 	tcxo_offset_mode: auto
+00:00:17.102 [D2] 	ephemeris_request_timing: anytime
+00:00:17.102 [D2] 	randomization_interval: 900
+00:00:17.103 [D2] 	response_time_limit: 3
+00:00:17.103 [D2] 	sfn0_unsolicited_ind: 0
+00:00:17.104 [D2] 	remote_delaid: enable
+00:00:17.104 [D2] 	acquisition_measurement_mask: disable
+00:00:17.104 [D2] 	tcxo_offset_permissible_range: 20
+00:00:17.104 [D2] 	backup_interval_time: 3600
+00:00:17.104 [D2] 	inject_system_time: disable
+00:00:17.105 [D2] 
+00:00:17.105 [D2] GNSS:
+00:00:17.105 [D2] 	GPS_sat: enable
+00:00:17.105 [D2] 	GLONASS_sat: disable
+00:00:17.106 [D2] 	gnss_sleep: enable
+00:00:17.106 [D2] 	chip_select: none
+00:00:17.106 [D2] 
+00:00:17.106 [D2] gnss_upgrade:
+00:00:17.106 [D2] 	upg_config_f: null
+00:00:17.107 [D2] 	upg_updater_f: /etc/GNSS_firmware/cxd5600_updater.sbin
+00:00:17.107 [D2] 	upg_image_f: /etc/GNSS_firmware/cxd5600_fw_r12608AGPS.sbin
+00:00:17.107 [D2] 
+00:00:17.107 [D2] timeout:
+00:00:17.107 [D2] 	io_response: 60000
+00:00:17.108 [D2] 	cmd_response_polling: 10
+00:00:17.108 [D2] 
+00:00:17.108 [D2] supl:
+00:00:17.108 [D2] 	supl_client: enable
+00:00:17.109 [D2] 	setid_imsi: enable
+00:00:17.109 [D2] 	setid_ip_addr: disable
+00:00:17.109 [D2] 	elc_update_xml: enable
+00:00:17.109 [D2] 	supl_for_every_gnss_start: FALSE
+00:00:17.109 [D2] 	supl_listen_port: 7275
+00:00:17.110 [D2] 	use_fixed_supl_srv_add: FALSE
+00:00:17.110 [D2] 	fixed_supl_srv_add: 
+00:00:17.120 [D2] 	supl_srvr_fqdn: supl.google.com
+00:00:17.121 [D2] 	tls_ver: 1.1
+00:00:17.122 [D2] 	secure: enable
+00:00:17.123 [D2] 	authentication: disable
+00:00:17.124 [D2] 	debugzone: FFFFFF7F
+00:00:17.125 [D2] 	debuglevel: FFFFFFFF
+00:00:17.126 [D2] 
+00:00:17.127 [D2] postech capabilities:
+00:00:17.128 [D2] 	AGPS_MSA: disable
+00:00:17.129 [D2] 	AGPS_MSB: disable
+00:00:17.130 [D2] 	ECID: enable
+00:00:17.141 [D2] 	OTDOA: enable
+00:00:17.141 [D2] 	pref_postech: otdoa
+00:00:17.142 [D2] 
+00:00:17.143 [D2] lpp capabilities:
+00:00:17.144 [D2] 	LPP Enable: 1
+00:00:17.145 [D2] 	LCS Enable: 1
+00:00:17.146 [D2] ===============================================================
+00:00:19.350 [D2] lpp_if:  lppElcConfigMapLppUpdateCapabilitiesReqToCP_LPP_GANSS_CAPABILITIES
+00:00:19.351 [D2] lpp_if:  lppElcConfigMapGNSS_SupportListToCP_LPP_GANSS_CAP_SUPP_ELEM
+00:00:19.351 [D2] lpp_if:  lppElcConfigMapGNSS_CommonAssistanceDataSupportToCP_LPP_GANSS_CAPABILITIES
+00:00:19.351 [D2] lpp_if:  lppElcConfigMapGNSS_GenericAssistanceDataSupportToCP_LPP_GANSS_Generic_Assistance_Data_Sup
+00:00:19.351 [D2] lpp_if:  lppElcConfigMapLppUpdateGnssAssistReqToCP_LPP_GANSS_REQUEST_ASSISTANCE
+00:00:19.353 [D2] Mode: FULL interface
+00:00:19.353 [D2] SUPL client is enabled
+00:00:19.426 [D2] GPS CP LPP Assisted enabled in ecm.LteMode.EnableLPP
+00:00:19.426 [D2] cb_notify_gps_sleep_allowed(GPS_SLEEP_ALLOWED)
+00:00:19.426 [D2] elc_modem_pm: ALLOW to sleep
+00:00:19.458 [D2] [SUPLManager]GPS_ACTUAL_ASSIST_MODE=GPS_ACTUAL_ASSIST_NOP
+00:00:19.698 [D2] lpp_if:  Open /tmp/lpp_cp_if device for GPS socket interface [0]
+00:00:20.430 [D2] lpp_if:  LPP-C -> ELC message received [LPP_READY_IND]
+00:00:20.431 [D2] lpp_if:  elcLppIfReadyInd
+00:00:20.435 [ERR] [cxd5600_if_get_ephemeris]Error. line=2914. Bad file descriptor
+00:00:20.436 [D2] ===============================================================
+00:00:20.436 [ERR] GPS version is , while expected version 12608_AGPS
+00:00:20.437 [D2] ===============================================================
+00:00:20.438 [D2] ephemeris request timing is 0, interval is 0
+00:00:20.438 [D2] is_acq_meas_mask is FALSE
+00:00:20.438 [D2] Timeout of backup timer = 3600
+00:00:20.438 [D2] pref_pos_method is 0
+00:00:20.439 [D2] Location measurement method is 1
+00:00:20.439 [D2] atUnsolicited_AT_Unsolicit_Srv_Init opened on /tmp/atsw20
+00:00:20.460 [D2] Checking registration and SUPL PDN states...
+00:00:20.465 [D2] atUnsolicited_handle_CEREG: Parsing %CEREG response (isUnsolicitedReply = 0)
+00:00:20.466 [D2] %CEREG indicates not registered nor roaming nor emergency (0) stopped parsing
+00:00:20.467 [D2] UE is not registered, roaming or emergency (stat=0), avoid configuring GPS
+00:00:20.471 [D2] Error sending AT%SUPLPDNACT?
+ while trying to query if SUPLPDNACT
+00:00:20.475 [D2] elc_atCmd_sendAndparse_GETCFG_BAND: AT response - Bands:  3 ,40 ,5
+
+00:00:20.476 [D2] band conv is 3
+00:00:20.477 [D2] band conv is 40
+00:00:20.478 [D2] band conv is 5
+00:00:20.479 [D2] Number of bands=3
+00:00:20.492 [D2] GPS configured for 3 LTE bands
+00:00:20.492 [D2] #0: 3
+00:00:20.492 [D2] #1: 40
+00:00:20.493 [D2] #2: 5
+00:00:20.493 [D2] atUnsolicited_Init()-Successful
+00:00:20.494 [D2] nmea_reader_init
+00:00:20.494 [D2] cb_notify_gps_sleep_allowed(GPS_SLEEP_SLEEPING)
+00:00:20.494 [D2] elc_modem_pm: ALLOW to sleep
+00:00:20.503 [D2] atUnsolicited_ThreadMain AT Unsolicit Server On, thread ID = 1961956592l
+00:00:20.550 [D2] AT client initialization
+00:00:20.553 [D2] elc_util_eventfd_init: event_fd=15
+00:00:20.558 [D2] entering epoll_wait...
+00:00:20.565 [D2] gpsc_register_client AT=0
+00:00:20.566 [D2] elcSrv_OpenSocket: create a socket
+00:00:20.566 [D2] elcSrv_OpenSocket: bind the socket
+00:00:20.566 [D2] elcSrv_OpenSocket: listen the socket
+00:00:20.567 [D2] elcSrv_OpenSocket: Waiting to accept connection on /tmp/atsw_out_elc .... 
+00:00:20.619 [D2] elcSrv_OpenSocket: Accepted connection on /tmp/atsw_out_elc with fd = 17 

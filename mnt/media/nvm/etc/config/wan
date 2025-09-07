@@ -1,0 +1,12 @@
+config Environment status
+        option ipv4_addr        ''
+        option ipv4_subnetmask  ''
+        option ipv4_default_gw  ''
+        option ipv4_pri_dns     ''
+        option ipv4_sec_dns     ''
+        option ipv6_addr_80     ''
+        option ipv6_addr_80_ip	''
+        option ipv6_addr_80_prefix ''
+        option ipv6_addr_2001	''
+        option ipv6_addr_2001_ip	''
+        option ipv6_addr_2001_prefix	''

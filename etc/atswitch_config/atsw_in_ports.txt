@@ -1,0 +1,46 @@
+AT switch input ports allocation:
+----------------------------------
+- atsw0:  Ext AT Ch (socat on NIC)
+- atsw1:  at.sh script
+- atsw2:  IMS SAC
+- atsw3:  eCM
+- atsw4:  SMS (unsolicited)
+- atsw5:  SMS (solicited)
+- atsw6:  db_probe
+- atsw7:  WEB GUI (solicited)
+- atsw8:  CAT
+- atsw9:  Ext AT Ch (VCOM)
+- atsw10: CWMPC
+- atsw11: < Customers usage >
+- atsw12: < Customers usage >
+- atsw13: < Customers usage >
+- atsw14: VVMUNSOL (jiojoin,vvm)
+- atsw15: at.sh script 
+- atsw16: PWRT SM (solicited)
+- atsw17: WEB GUI (unsolicited)
+- atsw18: Moip (VoLTE)
+- atsw19: eLC-GNSS (solicited)
+- atsw20: eLC-GNSS (unsolicited)
+- atsw21: MAL (eMBMS control) (solicited)
+- atsw22: SLIC Manager (solicited)
+- atsw23: SLIC Manager (unsolicited)
+- atsw24: PWRT SM (unsolicited)
+- atsw25: OMADM
+- atsw26: GC Server (solicited)
+- atsw27: FOTA Manager (solicited)
+- atsw28: FOTA Manager (unsolicited)
+- atsw29: GC Server (unsolicited)
+- atsw30: Fast serial
+- atsw31: MAL (eMBMS control) (unsolicited)
+- atsw32: MBIM (solicited)
+- atsw33: MBIM (unsolicited)
+- atsw34: TTYGSM1 (CMUX1)
+- atsw35: TTYGSM2 (CMUX2)
+- atsw36: TTYGSM3 (CMUX3)
+- atsw37: TTYGSM4 (CMUX4)
+- atsw38: SMSOverIMSClient
+- atsw41: traccer (gps)
+- atsw42: traccer (modem)
+- atsw43: traccer (unsol)
+
+
