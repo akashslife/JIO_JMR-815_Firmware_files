@@ -7,6 +7,8 @@ Do not redistribute or use extracted firmware for any unauthorized or commercial
 -----------------------------------------------------------
 1. Hardware Overview
 -----------------------------------------------------------
+(https://github.com/user-attachments/assets/addd5a14-245e-4bb0-ac9e-5df9999b93d0)
+
 Main SoC: Altair Semiconductor ALT3800-E0 (LTE Modem Processor)
 PHY Controller: Altair ALT6300-C0
 Memory: 128 MB LPDDR (FIDELIX FMN2ED1SBK)
@@ -33,13 +35,16 @@ Tip: Connect GND first, never connect 5V. Device runs on 3.3V logic.
 -----------------------------------------------------------
 3. Configure UART Terminal
 -----------------------------------------------------------
+
+(https://github.com/user-attachments/assets/804cacc4-47c2-42b5-aa41-b436fe69cc77)
+
 Using PuTTY:
 - Connect Arduino via USB
-- Note COM port (e.g., COM6)
+- Note COM port (e.g., COM6 in my case check device manager and com(numbers) ports)
 - Configure:
   Baud: 115200
-  Data bits: 8
-  Stop bits: 1
+  Data bits: -
+  Stop bits: -
   Parity: None
   Flow control: None
 
@@ -128,6 +133,8 @@ version      - Show U-Boot version
 -----------------------------------------------------------
 10. Firmware Info
 -----------------------------------------------------------
+<img width="1346" height="698" alt="jiojmr815 boot img" src="https://github.com/user-attachments/assets/7cffdc06-357f-484a-8847-64e2e0d2bf72" />
+
 Model: JMR815 By Akash
 Software Version: JMR815_R09.51
 Software Base: HN_02_01_08_00_58_IO
@@ -185,27 +192,6 @@ Software:
 - Realtek 8192ES WiFi
 - Altair LTE modem
 
------------------------------------------------------------
-15. Suggested Repo Structure
------------------------------------------------------------
-JMR815-UART-Docs/
-├── README.txt
-├── hardware/
-│   ├── board_top.jpg
-│   ├── board_chip_markings.jpg
-│   └── uart_connection.jpg
-├── logs/
-│   ├── boot_uart.log
-│   ├── mtdparts.txt
-│   └── linux_dmesg.log
-├── dumps/
-│   ├── uboot1.bin
-│   ├── kernel1.bin
-│   └── rootfs1.bin
-└── analysis/
-    ├── binwalk_results.txt
-    ├── unsquashfs_tree.txt
-    └── firmware_notes.txt
 
 Author: Akash Reddy
 Embedded Systems Researcher | Firmware Analysis Enthusiast
