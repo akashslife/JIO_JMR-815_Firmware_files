@@ -7,7 +7,8 @@ Do not redistribute or use extracted firmware for any unauthorized or commercial
 -----------------------------------------------------------
 1. Hardware Overview
 -----------------------------------------------------------
-(https://github.com/user-attachments/assets/addd5a14-245e-4bb0-ac9e-5df9999b93d0)
+![WhatsApp Image 2025-10-19 at 11 34 50 PM](https://github.com/user-attachments/assets/c14b0aa8-aa41-4e66-afbc-1f1f0d9a76b7)
+
 
 Main SoC: Altair Semiconductor ALT3800-E0 (LTE Modem Processor)
 PHY Controller: Altair ALT6300-C0
@@ -36,7 +37,8 @@ Tip: Connect GND first, never connect 5V. Device runs on 3.3V logic.
 3. Configure UART Terminal
 -----------------------------------------------------------
 
-(https://github.com/user-attachments/assets/804cacc4-47c2-42b5-aa41-b436fe69cc77)
+![WhatsApp Image 2025-10-19 at 11 34 08 PM](https://github.com/user-attachments/assets/00a03824-8ee7-43e0-8b54-39d42f964688)
+
 
 Using PuTTY:
 - Connect Arduino via USB
