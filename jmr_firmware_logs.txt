@@ -1,0 +1,282 @@
+U-boot info JIO JMR 815
+
+NAND boot... transferring control
+
+
+U-Boot 2012.10-svn3034 (Sep 29 2017 - 15:40:21)
+
+Board: ALT3800 Ver: 0.16 (CPU Speed 396.500 MHz)
+DRAM:  128 MiB (LPDDR, 16-bit, 199.333 MHz, FMN2ED1SBK)
+Now running in RAM - U-Boot at: 88098000
+NAND:  Enabling OTP support for Hynix
+256 MiB
+USB PHY has been successfully initialized!
+In:    usbtty
+Out:   usbtty
+Err:   usbtty
+Net:   mii0
+check reboot...0
+board_init_r: bootdelay is 5
+gpio: pin 1 (gpio 1) value is 1
+Hit any key to stop autoboot:  0
+# h
+?       - alias for 'help'
+base    - print or set address offset
+bdinfo  - print Board Info structure
+boot    - boot default, i.e., run 'bootcmd'
+bootd   - boot default, i.e., run 'bootcmd'
+bootelf - Boot from an ELF image in memory
+bootfw  - Load and boot FW from ELF image in memory
+bootm   - boot application image from memory
+bootp   - boot image via network using BOOTP/TFTP protocol
+bootvx  - Boot vxWorks from an ELF image
+chpart  - change active partition
+clocks  - print clock configuration
+cmp     - memory compare
+coninfo - print console devices and information
+cp      - memory copy
+crc32   - checksum calculation
+create_bdinfo- Create Board info
+dhcp    - boot image via network using DHCP/TFTP protocol
+dip     - show the Boot mode configuration options
+echo    - echo args to console
+editenv - edit environment variable
+env     - environment handling commands
+exit    - exit script
+false   - do nothing, unsuccessfully
+fdt     - flattened device tree utility commands
+fsinfo  - print information about filesystems
+fsload  - load binary file from a filesystem image
+fsloadbsp- load bsp binary files from a filesystem image
+fstest  - testing filesystems
+go      - start application at address '[*]addr' (possibly be indirect address)
+gpio    - input/set/clear/toggle gpio pins
+help    - print command description/usage
+i2c     - I2C sub-system
+iminfo  - print header information for application image
+imxtract- extract a part of a multi-image
+initfw  - Init FW PLLs
+itest   - return true/false on integer compare
+loadb   - load binary file over serial line (kermit mode)
+loads   - load S-Record file over serial line
+loady   - load binary file over serial line (ymodem mode)
+loop    - infinite loop on address range
+loopw   - infinite write loop on address range
+ls      - list files in a directory (default /)
+md      - memory display
+md5sum  - compute MD5 message digest
+mdc     - memory display cyclic
+mii     - MII utility commands
+mm      - memory modify (auto-incrementing address)
+mtdparts- define flash/nand partitions
+mtest   - simple RAM read/write test
+mw      - memory write (fill)
+mwc     - memory write cyclic
+nand    - NAND sub-system
+nandotp - NAND OTP sub-system
+nboot   - boot from NAND device
+nfs     - boot image via network using NFS protocol
+nm      - memory modify (constant address)
+ping    - send ICMP ECHO_REQUEST to network host
+printenv- print environment variables
+rarpboot- boot image via network using RARP/TFTP protocol
+reginfo - print register information
+reset   - Perform RESET of the CPU
+reset_cause- print reset cause
+run     - run commands in an environment variable
+saveenv - save environment variables to persistent storage
+setenv  - set environment variables
+show_bdinfo- Show board info
+showvar - print local hushshell variables
+sleep   - delay execution for some time
+source  - run script from memory
+test    - minimal test like /bin/sh
+tftpboot- boot image via network using TFTP protocol
+true    - do nothing, successfully
+unlzo   - decopress a lzo memory region
+unzip   - unzip a memory region
+version - print monitor, compiler and linker version
+# mtdparts
+
+device nand0 <alt3800_nfc>, # parts = 16
+ #: name                size            offset          mask_flags
+ 0: spl                 0x00080000      0x00000000      0
+ 1: uboot1              0x000c0000      0x00080000      0
+ 2: uboot2              0x000c0000      0x00140000      0
+ 3: env                 0x00040000      0x00200000      0
+ 4: backup_env          0x00040000      0x00240000      0
+ 5: nvm                 0x00300000      0x00280000      0
+ 6: kernel1             0x00400000      0x00580000      0
+ 7: dtb1                0x00040000      0x00980000      0
+ 8: rootfs1             0x02800000      0x009c0000      0
+ 9: kernel2             0x00400000      0x031c0000      0
+10: dtb2                0x00040000      0x035c0000      0
+11: rootfs2             0x02800000      0x03600000      0
+12: modem_fw1           0x00400000      0x05e00000      0
+13: modem_fw2           0x00400000      0x06200000      0
+14: ua                  0x00a00000      0x06600000      0
+15: tstorage            0x09000000      0x07000000      0
+
+active partition: nand0,5 - (nvm) 0x00300000 @ 0x00280000
+
+defaults:
+mtdids  : nand0=alt3800_nfc
+mtdparts: mtdparts=alt3800_nfc:512k(spl),768k(uboot1),768k(uboot2),256k(env),256k(backup_env),3m(nvm),4m(kernel1),256k(dtb1),40m(rootfs1),4m(kernel2),256k(dtb2),40m(rootfs2),4m(modem_fw1),4m(modem_fw2),10m(ua),-(tstorage)
+#
+
+
+NAND boot-booting info JIO JMR 815
+
+
+NAND boot... transferring control
+
+
+U-Boot 2012.10-svn3034 (Sep 29 2017 - 15:40:21)
+
+Board: ALT3800 Ver: 0.16 (CPU Speed 396.500 MHz)
+DRAM:  128 MiB (LPDDR, 16-bit, 199.333 MHz, FMN2ED1SBK)
+Now running in RAM - U-Boot at: 88098000
+NAND:  Enabling OTP support for Hynix
+256 MiB
+USB PHY has been successfully initialized!
+In:    usbtty
+Out:   usbtty
+Err:   usbtty
+Net:   mii0
+check reboot...0
+board_init_r: bootdelay is 5
+gpio: pin 1 (gpio 1) value is 1
+Hit any key to stop autoboot:  0
+
+NAND read: device 0 offset 0x5e00000, size 0x400000
+ 4194304 bytes read: OK
+device 0 offset 0x0, size 0x20
+ 32 bytes read: OK
+partition changed to nand0,5
+boot_number is 1
+Scanning JFFS2 FS: .. done.
+find_inode failed for name=iosysbp
+load: Failed to find inode
+### JFFS2 LOAD ERROR<0> for /bsp/iosysbp!
+>>>> bootfw:  wakeUpLTE at 0xa033204c
+>>>> bootfw:  wakeUpPHY at 0xa0000488
+
+Loading from nand0, offset 0x580000
+   Image Name:   ALT3800 Linux
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    2537435 Bytes = 2.4 MiB
+   Load Address: 82104000
+   Entry Point:  824b9c60
+
+NAND read: device 0 offset 0x980000, size 0x4000
+ 16384 bytes read: OK
+## Booting kernel from Legacy Image at 82800000 ...
+   Image Name:   ALT3800 Linux
+   Image Type:   MIPS Linux Kernel Image (gzip compressed)
+   Data Size:    2537435 Bytes = 2.4 MiB
+   Load Address: 82104000
+   Entry Point:  824b9c60
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 84000000
+   Booting using the fdt blob at 0x84000000
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 82ff9000, end 82fffda1 ... OK
+Building mtd parts altair,alt3800_nfc for device type 2
+[    0.000000] Linux version 3.4.22 (kmorkah@ubuntu-44) (gcc version 4.5.3 (0.1) ) #1 Wed Jun 19 10:53:21 KST 2019
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 30019558 (MIPS 34Kc)
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 06000000 @ 02100000 (usable)
+[    0.170000] /soc/gpio@b4969800: pio-map is not set!
+[    0.170000] /soc/gpio@b496a000: pio-map is not set!
+[    0.570000] i2c i2c-0: of_i2c: modalias failure on /soc/i2c0@bfc58000/fuel_gauge@55
+[    0.580000] i2c i2c-0: of_i2c: modalias failure on /soc/i2c0@bfc58000/charger@6b
+Starting logging: OK
+[    9.020000] s3c-hsotg bfc80000.usb: s3c_hsotg_udc_start: bad speed
+[    9.280000] OS Detection: os_type='OST_WIN_8', first_time=0
+[    9.280000] OS Detection: os_type='OST_WIN_8'
+[    9.280000] OS Detection: os_type='OST_WIN_8'
+[    9.290000] OS Detection: os_type='OST_WIN_8'
+[    9.300000] OS Detection: os_type='OST_WIN_8'
+[    9.300000] OS Detection: os_type='OST_WIN_8'
+[    9.320000] OS Detection: os_type='OST_WIN_8'
+[    9.320000] OS Detection: os_type='OST_WIN_8'
+[    9.330000] OS Detection: os_type='OST_WIN_8'
+[    9.330000] OS Detection: os_type='OST_WIN_8'
+[    9.350000] OS Detection: os_type='OST_WIN_8'
+[    9.350000] OS Detection: os_type='OST_WIN_8'
+[    9.360000] OS Detection: os_type='OST_WIN_8'
+[    9.360000] OS Detection: os_type='OST_WIN_8'
+[    9.690000] s3c-hsotg bfc80000.usb: s3c_hsotg_ep_disable: called for ep0
+[    9.850000] s3c-hsotg bfc80000.usb: s3c_hsotg_udc_start: bad speed
+AT+CEREG=2
+OK
+
+AT+CREG=2
+OK
+
+running at%tstlte="op_pwr_timers","normal"
+at%tstlte="op_pwr_timers","normal"
+OK
+OK
+call /usr/local/bin/set-no-host.sh 0
+wlan0     no private ioctls.
+
+wlan0     no private ioctls.
+
+Init start.....
+TX POWER=high
+setting 0 TXPOWER to HIGH
+Initialize wlan0 interface
+<<<wlan_8192c.sh wlan0>>>
+configure TX power
+<<<bridge.sh br0 eth0 wlan0 >>>
+ifconfig: SIOCGIFFLAGS: No such device
+Setup bridge...
+ifconfig: SIOCSIFADDR: No such device
+[   29.730000] rtl8192es_get_of_value ENTRY
+[   29.730000] rtl8192es_get_of_value did not find np
+[   29.740000] rtl8192es_get_of_value ENTRY
+[   29.740000] rtl8192es_get_of_value: found good GPIO 3
+[   29.750000] set_altair_wakeup_pin ENTRY
+[   29.770000] set_altair_wakeup_pin ENTRY after GPIO req gpio 3 : rc 0
+[   29.770000] requesting IRQ 36
+IWCONTROL_PID=1804
+WSCD_PID=1797
+
+ wlanif_name=[wlan0],__[flash.c-1061]
+cmd: wscd -start -c /var/wsc-wlan0.conf -w wlan0 -fi /var/wscd-wlan0.fifo
+
+WiFi Simple Config v2.9-wps2.0 (2019.06.19-01:59+0000).
+
+Register to wlan0
+iwcontrol RegisterPID to (wlan0)
+OK
+Starting dbg-streamer: 1970/01/01 00:00:32 socat[1844.0] E connect(3, AF=1 "/tmp/atsw15", 13): Connection refused
+done
+
+Starting sniffer: done
+Initialization Done!
+
+  --------------------------------------------------
+       NOTICE !!!!!!
+       Warnning !!!! This is Production Bank
+  --------------------------------------------------
+  This terminal is for the use of NTmore engineers only.
+
+  Model :  JMR815 By Akash
+  Software Version:  JMR815_R09.51
+  Software Base Version:  HN_02_01_08_00_58_LO
+  Software Modem Version:  HN_02_01_08_00_58_LO
+  Software Compiled date:  2019.06.19-10:51:49-r3692
+  Software bootloader Version : U-Boot 2012.10-svn3034 (Sep 29 2017 - 15:40:21)
+
+  Boot Number:               Boot Delay:     0
+  SD-CARD : 0
+  IMEI: 0000000000000
+  WIFI Macaddress: 000000000000
+
+  00:00:39 up 0 min,  load average: 1.36, 0.34, 0.11
+
+root@PWRT:/#
+
