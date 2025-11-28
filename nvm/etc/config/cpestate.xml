@@ -3,15 +3,15 @@
     <acsState>1</acsState>
     <rebootCommandKey></rebootCommandKey>
     <parameterKey></parameterKey>
-    <acsURL>https://macs.oss.jio.com:8443/ftacs-digest/ACS</acsURL>
-    <acsUser>RNTMFKD00544811</acsUser>
-    <acsPW>h5maCMMrNYnskVWYMnrazw==</acsPW>
+    <acsURL>https://macs.oss.jio.com:0000/ftacs-digest/ACS</acsURL>
+    <acsUser>changed</acsUser>
+    <acsPW>changed</acsPW>
     <cwmpReplyMin>0</cwmpReplyMin>
     <cwmpReplyMultiplier>0</cwmpReplyMultiplier>
     <connReqUser></connReqUser>
     <connReqPW></connReqPW>
     <informEnabled>1</informEnabled>
-    <informInterval>86400</informInterval>
+    <informInterval>changed</informInterval>
     <informTime>0</informTime>
     <upgradesManaged>0</upgradesManaged>
     <instanceID>0</instanceID>
